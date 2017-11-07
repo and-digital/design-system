@@ -4,22 +4,21 @@
 @import 'normalize';
 @import 'grid';
 @import 'base';
-@import 'header';
-
-// Insert new below
-@import 'buttons';
-@import 'fonts';
-@import 'type';
-@import 'icons';
-@import 'form';
-@import 'links';
-@import 'lists';
-@import 'module';
-@import 'quotes';
 
 // Components
-@import 'header';
-@import 'footer';
-// @import 'hero';
+@import 'components/buttons';
+@import 'components/fonts';
+@import 'components/type';
+@import 'components/icons';
+@import 'components/form';
+@import 'components/links';
+@import 'components/lists';
+@import 'components/quotes';
+
+// Modules
+@import 'modules/module';
+@import 'modules/header';
+@import 'modules/footer';
+@import 'modules/hero';
 
 @import 'trumps';

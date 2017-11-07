@@ -18,5 +18,8 @@
     "gulp-uglify": "^3.0.0",
     "node-sass": "^4.5.3",
     "yarn": "^0.27.5"
+  },
+  "dependencies": {
+    "gulp-sourcemaps": "^2.6.1"
   }
 }
