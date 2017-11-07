@@ -1,21 +1,13 @@
 var gulp = require('gulp'),
-  sass = require('gulp-sass'),
-  uglify = require('gulp-uglify'),
-  sourcemaps = require('gulp-sourcemaps'),
-  rename = require('gulp-rename'),
-  connect = require('gulp-connect'),
-  open = require('gulp-open');
+    sass = require('gulp-sass'),
+    sourcemaps = require('gulp-sourcemaps'),
+    connect = require('gulp-connect'),
+    open = require('gulp-open');
 
 gulp.task('default', function () {
   gulp.start([
     'gen-sass',
     'serve'
-  ]);
-});
-
-gulp.task('build', ['default'], function () {
-  gulp.start([
-    'uglify'
   ]);
 });
 
@@ -27,13 +19,6 @@ gulp.task('serve', function () {
 
   gulp.src('./brand.html')
     .pipe(open());
-});
-
-gulp.task('uglify', ['default'], function () {
-  gulp.src('brand.css')
-    .pipe(uglify())
-    .pipe(rename('brand.min.css'))
-    .pipe(gulp.dest(''));
 });
 
 gulp.task('gen-sass', function () {

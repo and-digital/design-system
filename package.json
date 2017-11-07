@@ -5,7 +5,6 @@
   "main": "brand.scss",
   "scripts": {
     "start": "gulp watch",
-    "build": "gulp"
   },
   "author": "sgregory@and.digital",
   "license": "ISC",
@@ -13,13 +12,9 @@
     "gulp": "^3.9.1",
     "gulp-connect": "^5.0.0",
     "gulp-open": "^2.0.0",
-    "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
-    "gulp-uglify": "^3.0.0",
+    "gulp-sourcemaps": "^2.6.1",
     "node-sass": "^4.5.3",
     "yarn": "^0.27.5"
-  },
-  "dependencies": {
-    "gulp-sourcemaps": "^2.6.1"
   }
 }
