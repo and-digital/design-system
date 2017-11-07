@@ -1,0 +1,97 @@
+// Colors
+$color-mine-shaft: #323232;
+$color-gray: #898989;
+$color-white: #FFFFFF;
+$color-red-orange: #FF323C;
+$color-supernova: #FFC800;
+$color-lima: #5AC328;
+$color-dodger-blue: #2897FF;
+$color-heliotrope: #A050FF;
+$color-hot-pink: #FF6ECF;
+$color-la-palma: #1EA014;
+$color-orchid: #E664C5;
+$color-white: #FFFFFF;
+$brand-darken-value: 5%;
+
+// Brand
+$color-brand-red: $color-red-orange;
+$color-brand-yellow: $color-supernova;
+$color-brand-green: $color-lima;
+$color-brand-blue: $color-dodger-blue;
+$color-brand-purple: $color-heliotrope;
+$color-brand-pink: $color-hot-pink;
+$color-brand-charcoal: $color-mine-shaft;
+$color-brand-accessibility-green: darken($color-brand-green, $brand-darken-value);
+$color-brand-accessibility-pink: darken($color-brand-pink, $brand-darken-value);
+
+$primary-link-default-border-color: $color-brand-charcoal;
+
+
+// Breakpoints
+$mobile: 480px !default;
+$tablet: 960px !default;
+$desktop: 1280px !default;
+
+$ms-only: "screen and (-ms-high-contrast: active), (-ms-high-contrast: none)";
+
+// Font
+$brand-font-regular: "Brown-Pro-Regular", Helvetica, Arial, sans-serif;
+$font-family-bold: "Brown-Pro-Bold", Helvetica, Arial, sans-serif;
+
+$font-weight-bold: 700;
+$font-weight-regular: 400;
+
+// Font sizes (in pixels)
+$font-heading-1: 42;
+$font-heading-2: 22;
+$font-heading-3: 28;
+$font-heading-4: 18;
+$font-base: 16;
+$font-lead: 20;
+$font-small: 14;
+
+$font-heading-1-mobile: 32;
+$font-heading-2-mobile: 20;
+$font-heading-3-mobile: 20;
+$font-heading-4-mobile: 18;
+$font-base-mobile: 14;
+$font-lead-mobile: 16;
+$font-small-mobile: 12;
+
+$font-hero: 112;
+$font-sidekick: 80;
+$font-butler: 42;
+$font-cascade-step: 105;
+$font-testimonial-quote: 20;
+$font-search-input: 42;
+$font-search-icon: 42;
+
+$font-search-input-mobile: 32;
+$font-search-icon-mobile: 24;
+
+// Icon-Sizes
+$icon-lrg: 28px;
+$icon-med: 24px;
+$icon-xl: 32px;
+
+$row-margin: -15px;
+$module-horizontal-spacing: 48px;
+$module-horizontal-spacing-tablet: 32px;
+$module-horizontal-spacing-mobile: 24px;
+$module-margin-bottom: $module-horizontal-spacing;
+
+// Lists
+$list-padding: 24px;
+$list-line-height: 1.4;
+
+// Links
+$primary-link-padding: 12px;
+$primary-link-margin: 16px 0;
+$primary-link-color-width: 1px;
+$primary-link-border: $primary-link-color-width solid $primary-link-default-border-color;
+$primary-link-border-bottom-hover: 3px;
+$button-vertical-padding: 8px;
+
+$paragraph-margin: 12px;
+
+$form-padding-bottom: 12px;

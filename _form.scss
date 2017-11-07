@@ -1,0 +1,25 @@
+.form {
+  &-error-message {
+    display: none;
+    color: $color-red-orange;
+    float: right;
+  }
+
+  &-error {
+    .form-error-message {
+      display: block;
+    }
+  }
+
+  &-input-wrap {
+    margin-bottom: 16px;
+  }
+
+  &-mandatory-text {
+    color: $color-gray;
+    position: absolute;
+    right: 15px;
+    bottom: $form-padding-bottom;
+    padding: $button-vertical-padding 0;
+  }
+}

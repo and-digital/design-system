@@ -1,0 +1,77 @@
+.module {
+  padding: $module-horizontal-spacing-mobile;
+  margin-bottom: 0;
+
+  &.red-background,
+  &.yellow-background,
+  &.green-background,
+  &.blue-background,
+  &.purple-background,
+  &.pink-background,
+  &.charcoal-background {
+    padding: $module-horizontal-spacing-mobile;
+    margin-bottom: $module-margin-bottom;
+    color: $color-white;
+  }
+
+  &-red {
+    background: $color-brand-red;
+  }
+
+  &-yellow {
+    background: $color-brand-yellow;
+  }
+
+  &-green {
+    background: $color-brand-green;
+  }
+
+  &-blue {
+    background: $color-brand-blue;
+  }
+
+  &-purple {
+    background: $color-brand-purple;
+  }
+
+  &-pink {
+    background: $color-brand-pink;
+  }
+
+  &-charcoal {
+    background: $color-brand-charcoal;
+  }
+}
+
+@include tablet {
+  .module {
+    padding: 0 $module-horizontal-spacing-tablet;
+
+    &.red-background,
+    &.yellow-background,
+    &.green-background,
+    &.blue-background,
+    &.purple-background,
+    &.pink-background,
+    &.charcoal-background{
+      padding: $module-horizontal-spacing-tablet;
+    }
+  }
+}
+
+@include desktop {
+  .module {
+    padding: 0 $module-horizontal-spacing;
+    margin-bottom: $module-margin-bottom;
+
+    &.red-background,
+    &.yellow-background,
+    &.green-background,
+    &.blue-background,
+    &.purple-background,
+    &.pink-background,
+    &.charcoal-background {
+      padding: $module-horizontal-spacing;
+    }
+  }
+}

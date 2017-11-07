@@ -1,0 +1,131 @@
+.primary-link {
+  border: $primary-link-border;
+  color: $color-brand-charcoal;
+  display: inline-block;
+  padding: 8px;
+  margin: 12px 0;
+  text-decoration: none;
+
+  &:hover {
+    border-bottom-width: $primary-link-border-bottom-hover;
+    padding-bottom: 8px - ($primary-link-border-bottom-hover - $primary-link-color-width);
+  }
+
+  &[href^="http://"]:after,
+  &[href^="https://"]:after {
+    margin-left: 8px;
+  }
+}
+
+.secondary-link {
+  @include font-size($font-small-mobile);
+  color: $color-mine-shaft;
+  text-decoration: none;
+
+  &:focus,
+  &:hover {
+    outline: 0;
+    text-decoration: underline !important;
+  }
+
+  &:after,
+  &[href^="http://"]:after,
+  &[href^="https://"]:after {
+    margin-left: 8px;
+    font-size: 1em;
+  }
+
+  &:after {
+    content: "\e903";
+    display: inline-block;
+    font-family: 'AND-Digital-Icons';
+    vertical-align: middle;
+  }
+}
+
+.tertiary-link {
+  span {
+    border-bottom: solid 1px;
+    border-color: inherit;
+    color: lighten($color-brand-charcoal, 40%);
+
+    &:hover {
+      color: inherit;
+    }
+  }
+}
+
+@include tablet {
+  .primary-link {
+    margin: $primary-link-margin;
+    padding: $primary-link-padding;
+
+    &:hover {
+      padding-bottom: $primary-link-padding - ($primary-link-border-bottom-hover - $primary-link-color-width);
+    }
+  }
+
+  .secondary-link {
+    @include font-size($font-small);
+  }
+
+  .tertiary-link {
+    display: block;
+  }
+}
+
+.pink-theme {
+  .primary-link {
+    color: $color-brand-pink;
+    border-color: $color-brand-pink;
+  }
+}
+
+.green-theme {
+  .primary-link {
+    color: $color-brand-green;
+    border-color: $color-brand-green;
+  }
+}
+
+.red-theme {
+  .primary-link {
+    color: $color-brand-red;
+    border-color: $color-brand-red;
+  }
+}
+
+.blue-theme {
+  .primary-link {
+    color: $color-brand-blue;
+    border-color: $color-brand-blue;
+  }
+}
+
+.yellow-theme {
+  .primary-link {
+    color: $color-brand-yellow;
+    border-color: $color-brand-yellow;
+  }
+}
+
+.purple-theme {
+  .primary-link {
+    color: $color-brand-purple;
+    border-color: $color-brand-purple;
+  }
+}
+
+.red-background,
+.purple-background,
+.yellow-background,
+.blue-background,
+.green-background,
+.pink-background {
+  color: $color-white;
+
+  .primary-link {
+    color: $color-white;
+    border-color: $color-white;
+  }
+}

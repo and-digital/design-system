@@ -1,0 +1,5 @@
+.button {
+  @extend button;
+  text-decoration: none;
+  -webkit-appearance: none;
+}

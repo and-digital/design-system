@@ -1,0 +1,72 @@
+.heading-1,
+.heading-2,
+.heading-3 ,
+.heading-3-small {
+  font-weight: $font-weight-bold;
+}
+
+.heading-1 {
+  @extend h1;
+}
+
+.heading-2 {
+  @extend h2;
+}
+
+.heading-3 {
+  @extend h3;
+}
+
+.heading-3-small {
+  @extend h4;
+}
+
+.text-red {
+  color: $color-brand-red;
+}
+
+.text-yellow {
+  color: $color-brand-yellow;
+}
+
+.text-green {
+  color: darken($color-brand-green, $brand-darken-value);
+}
+
+.text-blue {
+  color: $color-brand-blue;
+}
+
+.text-purple {
+  color: $color-brand-purple;
+}
+
+.text-pink {
+  color: darken($color-brand-pink, $brand-darken-value);
+}
+
+.font-charcoal {
+  color: $color-brand-charcoal;
+}
+
+.font-white {
+  color: $color-white;
+}
+
+.text {
+  &-small {
+    @extend small;
+  }
+
+  &-lead {
+    @include font-size($font-lead-mobile);
+  }
+}
+
+@include tablet {
+  .text {
+    &-lead {
+      @include font-size($font-lead);
+    }
+  }
+}
