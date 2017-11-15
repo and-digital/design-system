@@ -1,0 +1,102 @@
+.section-header {
+  margin-bottom: 24px;
+
+  @include tablet {
+    width: 100%;
+  }
+
+  &-title {
+    border-top: 2px solid;
+    width: 200px;
+    margin-top: 0;
+    padding-top: 16px;
+
+    &-red {
+      border-color: $color-brand-red;
+    }
+
+    &-yellow {
+      border-color: $color-brand-yellow;
+    }
+
+    &-green {
+      border-color: $color-brand-green;
+    }
+
+
+    &-blue {
+      border-color: $color-brand-blue;
+    }
+
+
+    &-purple {
+      border-color: $color-brand-purple;
+    }
+
+    &-pink {
+      border-color: $color-brand-pink;
+    }
+
+    &-charcoal {
+      border-color: $color-brand-charcoal;
+    }
+
+    &-white {
+      color: $color-white;
+      border-color: $color-white;
+    }
+  }
+
+  &-text {
+    @include font-size($font-lead);
+    max-width: 250px;
+  }
+}
+
+.red-theme {
+  .section-header-title {
+    border-color: $color-brand-red;
+  }
+}
+
+.yellow-theme {
+  .section-header-title {
+    border-color: $color-brand-yellow;
+  }
+}
+
+.green-theme {
+  .section-header-title {
+    border-color: $color-brand-green;
+  }
+}
+
+.blue-theme {
+  .section-header-title {
+    border-color: $color-brand-blue;
+  }
+}
+
+.purple-theme {
+  .section-header-title {
+    border-color: $color-brand-purple;
+  }
+}
+
+.pink-theme {
+  .section-header-title {
+    border-color: $color-brand-pink;
+  }
+}
+
+.module-green, .module-pink, .module-yellow {
+  .section-header-title {
+    border-color: $color-brand-charcoal;
+  }
+}
+
+.module-red, .module-blue, .module-purple {
+  .section-header-title {
+    border-color: $color-white;
+  }
+}

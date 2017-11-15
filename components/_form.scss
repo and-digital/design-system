@@ -1,3 +1,8 @@
+form {
+  position: relative;
+  padding-bottom: $form-padding-bottom;
+}
+
 .form {
   &-error-message {
     display: none;
@@ -13,6 +18,10 @@
 
   &-input-wrap {
     margin-bottom: 16px;
+  }
+
+  &-input-text-area {
+    height: 200px;
   }
 
   &-mandatory-text {

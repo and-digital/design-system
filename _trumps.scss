@@ -1,55 +1,8 @@
-.brand-red-background {
-  background-color: $color-brand-red;
-}
-
-.brand-yellow-background {
-  background-color: $color-brand-yellow;
-  color: $color-mine-shaft;
-}
-
-.brand-green-background {
-  background-color: $color-brand-green;
-  color: $color-mine-shaft;
-}
-
-.brand-blue-background {
-  background-color: $color-brand-blue;
-}
-
-.brand-purple-background {
-  background-color: $color-brand-purple;
-}
-
-.brand-pink-background {
-  background-color: $color-brand-pink;
-  color: $color-mine-shaft;
-}
-
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0,0,0,0);
-  border: 0;
-}
-
-.text {
-  &-left {
-    text-align: left;
-  }
-
-  &-center {
-    text-align: center;
-  }
-
-  &-right {
-    text-align: right;
-  }
-}
-
 [hidden] {
   display: none !important;
+}
+
+.module-full-width {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }

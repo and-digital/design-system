@@ -1,82 +1,93 @@
-.wysiwyg {
-
+h1, .heading-1,
+h2, .heading-2,
+h3, .heading-3 ,
+h4, .heading-3-small {
+  font-family: $brand-font-family-bold;
 }
 
-h1, .h1,
-h2, .h2,
-h3, .h3,
-h3, .h4 ,
-h3, .h5 {
-  color: $color-mine-shaft;
-  font-family: $font-family-bold;
-  font-weight: 700;
-  margin: $heading-margin;
+h1, .heading-1 {
+  @include font-size($font-heading-1-mobile);
+
+  @include tablet {
+    @include font-size($font-heading-1);
+  }
 }
 
-h1, .h1 {
-  font-size: $heading-1-font-size;
+h2, .heading-2 {
+  @include font-size($font-heading-2-mobile);
+
+  @include tablet {
+    @include font-size($font-heading-2);
+  }
 }
 
-h2, .h2 {
-  font-size: $heading-2-font-size;
+h3, .heading-3 {
+  @include font-size($font-heading-3-mobile);
+  margin-top: 0;
+
+  @include tablet {
+    @include font-size($font-heading-3);
+  }
 }
 
-h3, .h3 {
-  font-size: $heading-3-font-size;
-}
+h4, .heading-3-small {
+  @include font-size($font-heading-4-mobile);
 
-h4, .h4 {
-  font-size: $heading-4-font-size;
-}
-
-h5, .h5 {
-  font-size: $heading-5-font-size;
+  @include tablet {
+    @include font-size($font-heading-4);
+  }
 }
 
 .theme-red {
-  h1, .h1,
-  h2, .h2,
-  h3, .h3 {
+  h1,
+  h2,
+  h3,
+  h4 {
     color: $color-brand-red;
   }
 }
 
 .theme-yellow {
-  h1, .h1,
-  h2, .h2,
-  h3, .h3 {
+  h1,
+  h2,
+  h3,
+  h4 {
     color: $color-brand-yellow;
   }
 }
 
 .theme-blue {
-  h1, .h1,
-  h2, .h2,
-  h3, .h3 {
+  h1,
+  h2,
+  h3,
+  h4 {
     color: $color-brand-blue;
   }
 }
 
 .theme-pink {
-  h1, .h1,
-  h2, .h2,
-  h3, .h3 {
+  h1,
+  h2,
+  h3,
+  h4 {
     color: $color-brand-pink;
   }
 }
 
 .theme-purple {
-  h1, .h1,
-  h2, .h2,
-  h3, .h3 {
+  h1,
+  h2,
+  h3,
+  h4 {
     color: $color-brand-purple;
   }
 }
 
 .theme-green {
-  h1, .h1,
-  h2, .h2,
-  h3, .h3 {
+  h1,
+  h2,
+  h3,
+  h4 {
     color: $color-brand-green;
   }
 }

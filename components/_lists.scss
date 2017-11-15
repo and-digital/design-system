@@ -1,3 +1,20 @@
+ul,
+ol {
+  padding-left: $list-padding;
+
+  li {
+    line-height: $list-line-height;
+  }
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+
+
 .list {
   &-reset {
     margin: 0;

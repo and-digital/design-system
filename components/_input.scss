@@ -1,0 +1,64 @@
+input[type="text"] {
+  border: solid 1px $color-gray;
+  width: 100%;
+  padding-left: 10px;
+  height: 40px;
+
+  &:focus {
+    border-left: solid 3px $color-brand-charcoal;
+    outline: none;
+  }
+}
+
+input[type="submit"] {
+  @extend button;
+  margin-bottom: 0;
+}
+
+.pink-theme {
+  input[type="text"] {
+    &:focus {
+      border-left-color: $color-brand-pink;
+    }
+  }
+}
+
+.green-theme {
+  input[type="text"] {
+    &:focus {
+      border-left-color: $color-brand-green;
+    }
+  }
+}
+
+.red-theme {
+  input[type="text"] {
+    &:focus {
+      border-left-color: $color-brand-red;
+    }
+  }
+}
+
+.blue-theme {
+  input[type="text"] {
+    &:focus {
+      border-left-color: $color-brand-blue;
+    }
+  }
+}
+
+.yellow-theme {
+  input[type="text"] {
+    &:focus {
+      border-left-color: $color-brand-yellow;
+    }
+  }
+}
+
+.purple-theme {
+  input[type="text"] {
+    &:focus {
+      border-left-color: $color-brand-purple;
+    }
+  }
+}
