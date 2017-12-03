@@ -17,7 +17,7 @@ gulp.task('serve', function () {
     livereload: true
   });
 
-  gulp.src('./brand.html')
+  gulp.src('./index.html')
     .pipe(open());
 });
 
