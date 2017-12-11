@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cascade</title>
+  <link rel="stylesheet" id="fonts-css" href="https://s3-eu-west-1.amazonaws.com/static.andigital.com/fonts/fonts.css"
+        type="text/css" media="all">
+  <link rel="stylesheet" href="brand.css">
+</head>
+<body class>
+<header>
+  <nav class="header">
+    <a href="/" class="header-logo">
+      <img
+          class="header-logo-image"
+          src="https://static.andigital.com/new-logos/ANDigital_LOGO_LONG_RGB_ON_WHITE.png"
+          alt="AND Digital logo"
+      />
+    </a>
+
+    <ul class="header-main-navigation">
+      <li class="header-navigation-item">
+        <a class="header-link header-link-blue" href="/offerings/">
+          Offerings
+        </a>
+      </li>
+
+      <li class="header-navigation-item">
+        <a class="header-link header-link-red" href="/about/">
+          About
+        </a>
+      </li>
+
+      <li class="header-navigation-item">
+        <a class="header-link header-link-purple" href="/clients/">
+          Clients
+        </a>
+      </li>
+
+      <li class="header-navigation-item">
+        <a class="header-link header-link-green" href="/join-us/">
+          Join us
+        </a>
+      </li>
+
+      <li class="header-navigation-item header-link-active">
+        <a class="header-link header-link-green" href="/contact/">
+          Contact
+        </a>
+      </li>
+    </ul>
+    <ul class="header-secondary-navigation">
+      <li class="header-navigation-item">
+        <a href="/" class="header-link header-link-green">Blog</a>
+      </li>
+      <li class="header-navigation-item">
+        <a href="/" class="header-link header-link-purple">Events</a>
+      </li>
+      <li class="header-navigation-item">
+        <a href="/?s=" class="header-search">
+          <i class="and-icon-search"></i>
+          <span class="sr-only">Search</span>
+        </a>
+      </li>
+    </ul>
+    <ul class="header-mobile-navigation">
+      <li class="header-navigation-item header-search">
+        <a href="#" class="header-search">
+          <i class="and-icon-search"></i>
+          <span class="sr-only">Search</span>
+        </a>
+      </li>
+      <li class="header-navigation-item header-mobile-menu">
+        <button class="header-menu-button" type="button">
+          <i class="and-icon-menu"></i>
+        </button>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<section class="module">
+  <h1>Themes</h1>
+
+  <p>
+    You can set the colour theme of the page by putting a <code>{color}-theme</code> class on the body on the page.
+    You can use the selector in the top left to experiment with the different themes.
+   </p>
+
+  <p>This also works on individual modules but is discouraged for anything othe than a front page.</p>
+
+  <p>Theme classes style all links, buttons and headers where appropriate for you.</p>
+
+  The brand colours available are;
+
+  <ul>
+    <li>Pink <span class="image-swatch" style="background-color: #FF6ECF;"></span></li>
+    <li>Red <span class="image-swatch" style="background-color: #FF323C;"></span></li>
+    <li>Green <span class="image-swatch" style="background-color: #5AC328;"></span></li>
+    <li>Blue <span class="image-swatch" style="background-color: #2897FF;"></span></li>
+    <li>Purple <span class="image-swatch" style="background-color: #A050FF;"></span></li>
+    <li>Yellow <span class="image-swatch" style="background-color: #FFC800;"></span></li>
+    <li>Charcoal (Default) <span class="image-swatch"></span></li>
+  </ul>
+</section>
+
+<hr>
+
+<section class="module">
+  <h1>Headers</h1>
+  <p>
+    Headers can be used in a 'traditional' way and will work perfectly. However, if you choose to use HTML5 sectioning
+    (<code>&lt;section&gt;</code> or <code>&lt;article&gt;</code>), then you may use helper classes to achieve the same
+    look.
+  </p>
+
+  <p>
+    Helper classes are:
+
+    <code>
+      .heading-1
+      .heading-2
+      .heading-3
+      .heading-3-small
+    </code>
+
+    and these can be applied to any heading.
+  </p>
+
+  <section>
+    <h1>Heading 1</h1>
+    <h2>Heading 2</h2>
+    <h3>Heading 3</h3>
+    <h4>heading 4</h4>
+  </section>
+</section>
+
+<hr>
+
+<section class="module">
+  <h1>Type</h1>
+
+  <h2>Paragraghs</h2>
+  <p>A paragraph of text.</p>
+  <p>Another paragraph of text.</p>
+
+  <h2>Blockquote</h2>
+  <blockquote>
+    <q>Something someone said</q>
+  </blockquote>
+
+  <h2>Small</h2>
+  <small>small text</small>
+  <p>
+    Small text can also be achieved with the class
+    <code>.text-small</code>
+  </p>
+
+  <h2>lead text</h2>
+  <p>
+    Lead text can be achieved with the class
+    <code>text-lead</code>
+  </p>
+
+  <span class="text-lead">Lead text</span>
+</section>
+
+<hr>
+
+<section class="module">
+  <h1>Lists</h1>
+  <ul>
+    <li>List item 1</li>
+    <li>
+      List item 2
+      <ol>
+        <li>Sub list item 1</li>
+        <li>Sub list item 2</li>
+        <li>Sub list item 3</li>
+      </ol>
+    </li>
+    <li>
+      List item 3
+      <ul>
+        <li>Sub list item 1</li>
+        <li>Sub list item 2</li>
+        <li>Sub list item 3</li>
+      </ul>
+    </li>
+  </ul>
+
+  <ol>
+    <li>List item 1</li>
+    <li>
+      List item 2
+      <ol>
+        <li>Sub list item 1</li>
+        <li>Sub list item 2</li>
+        <li>Sub list item 3</li>
+      </ol>
+    </li>
+    <li>
+      List item 3
+      <ul>
+        <li>Sub list item 1</li>
+        <li>Sub list item 2</li>
+        <li>Sub list item 3</li>
+      </ul>
+    </li>
+  </ol>
+</section>
+
+<hr>
+
+<section class="module">
+  <h1>Links</h1>
+
+  <p><a href="#">Standard link</a></p>
+
+  <a href="#" class="link-primary">Primary link</a>
+
+  <p><a href="#" class="link-secondary">Secondary link</a></p>
+  <p><a href="http://and.digital" class="link-secondary link-external">Secondary link</a></p>
+
+  <h2>Buttons</h2>
+
+  <button type="submit">Send your email</button>
+  <a href="#" class="button">Button</a>
+</section>
+
+<hr>
+
+<section class="module">
+  <h1>Forms</h1>
+  <form action="">
+    <span class="form-mandatory-text">* required fields</span>
+    <div class="row">
+      <div class="col-md">
+        <div class="form-input-wrap">
+          <label for="name">
+            First Name
+            <span class="form-error-message">Required</span>
+          </label>
+          <input type="text" id="name">
+        </div>
+      </div>
+      <div class="col-md">
+        <div class="form-input-wrap">
+          <label for="name">
+            Last Name
+            <span class="form-error-message">Required</span>
+          </label>
+          <input type="text" id="name">
+        </div>
+      </div>
+    </div>
+
+    <button type="submit">Submit</button>
+    <input type="submit" value="Submit" />
+  </form>
+</section>
+
+<hr>
+
+<section class="module module-red">
+  <div class="row">
+    <div class="col-md-6">
+      <h1>Module with red background</h1>
+
+      <p>Just graduated or have a couple of years out of university with a Computer Science degree? Love creating your own digital products and learning new frameworks? Then the Graduate Developer role is for you!</p>
+      <p>At AND Digital, you can launch your career as a Software Engineer. You’ll get to take training specific to your experience and what you want to learn; from Front End Angular and React workshops to presentation skills training! You’ll be supported the entire way by your Squad Lead and the rest of your Squad; learning from some of the best technologists.</p>
+      <p>Our roles are based both in and around Manchester as well as London. With continuous feedback and regular opportunities to progress, what are you waiting for?</p>
+
+      <a href="#" class="link-primary">primary link</a>
+    </div>
+  </div>
+</section>
+
+<section class="module module-blue">
+  <div class="row">
+    <div class="col-md-6">
+      <h1>Module with blue background</h1>
+
+      <p>Just graduated or have a couple of years out of university with a Computer Science degree? Love creating your own digital products and learning new frameworks? Then the Graduate Developer role is for you!</p>
+      <p>At AND Digital, you can launch your career as a Software Engineer. You’ll get to take training specific to your experience and what you want to learn; from Front End Angular and React workshops to presentation skills training! You’ll be supported the entire way by your Squad Lead and the rest of your Squad; learning from some of the best technologists.</p>
+      <p>Our roles are based both in and around Manchester as well as London. With continuous feedback and regular opportunities to progress, what are you waiting for?</p>
+
+      <a href="#" class="link-primary">primary link</a>
+    </div>
+  </div>
+</section>
+
+<section class="module module-purple">
+  <div class="row">
+    <div class="col-md-6">
+      <h1>Module with purple background</h1>
+
+      <p>Just graduated or have a couple of years out of university with a Computer Science degree? Love creating your own digital products and learning new frameworks? Then the Graduate Developer role is for you!</p>
+      <p>At AND Digital, you can launch your career as a Software Engineer. You’ll get to take training specific to your experience and what you want to learn; from Front End Angular and React workshops to presentation skills training! You’ll be supported the entire way by your Squad Lead and the rest of your Squad; learning from some of the best technologists.</p>
+      <p>Our roles are based both in and around Manchester as well as London. With continuous feedback and regular opportunities to progress, what are you waiting for?</p>
+
+      <a href="#" class="link-primary">primary link</a>
+    </div>
+  </div>
+</section>
+
+<section class="module module-yellow">
+  <div class="row">
+    <div class="col-md-6">
+      <h1>Module with red background</h1>
+
+      <p>Just graduated or have a couple of years out of university with a Computer Science degree? Love creating your own digital products and learning new frameworks? Then the Graduate Developer role is for you!</p>
+      <p>At AND Digital, you can launch your career as a Software Engineer. You’ll get to take training specific to your experience and what you want to learn; from Front End Angular and React workshops to presentation skills training! You’ll be supported the entire way by your Squad Lead and the rest of your Squad; learning from some of the best technologists.</p>
+      <p>Our roles are based both in and around Manchester as well as London. With continuous feedback and regular opportunities to progress, what are you waiting for?</p>
+
+      <a href="#" class="link-primary">primary link</a>
+    </div>
+  </div>
+</section>
+
+<section class="module module-green">
+  <div class="row">
+    <div class="col-md-6">
+      <h1>Module with green background</h1>
+
+      <p>Just graduated or have a couple of years out of university with a Computer Science degree? Love creating your own digital products and learning new frameworks? Then the Graduate Developer role is for you!</p>
+      <p>At AND Digital, you can launch your career as a Software Engineer. You’ll get to take training specific to your experience and what you want to learn; from Front End Angular and React workshops to presentation skills training! You’ll be supported the entire way by your Squad Lead and the rest of your Squad; learning from some of the best technologists.</p>
+      <p>Our roles are based both in and around Manchester as well as London. With continuous feedback and regular opportunities to progress, what are you waiting for?</p>
+
+      <a href="#" class="link-primary">primary link</a>
+    </div>
+  </div>
+</section>
+
+<section class="module module-pink">
+  <div class="row">
+    <div class="col-md-6">
+      <h1>Module with purple background</h1>
+
+      <p>Just graduated or have a couple of years out of university with a Computer Science degree? Love creating your own digital products and learning new frameworks? Then the Graduate Developer role is for you!</p>
+      <p>At AND Digital, you can launch your career as a Software Engineer. You’ll get to take training specific to your experience and what you want to learn; from Front End Angular and React workshops to presentation skills training! You’ll be supported the entire way by your Squad Lead and the rest of your Squad; learning from some of the best technologists.</p>
+      <p>Our roles are based both in and around Manchester as well as London. With continuous feedback and regular opportunities to progress, what are you waiting for?</p>
+
+      <a href="#" class="link-primary">primary link</a>
+    </div>
+  </div>
+</section>
+
+<hr>
+
+<section class="module">
+  <h1>Section header</h1>
+  <div class="row">
+    <div class="col-md-3">
+      <header class="section-header">
+        <h2 class="section-header-title">Section header</h2>
+      </header>
+
+      <p class="section-header-text">Section text</p>
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <p class="text-lead">
+        Back in early 2014, our founder Paramjit Uppal brought together a small group of known leaders from the world of technology, consultancy and digital – and together they had a plan to build a remarkable business. They recognised that companies need to accelerate their digital capability to compete and win in the tech based economy – but there was a gap in the market of those that actually supported this.
+      </p>
+
+      <a href="#" class="link-primary">Primary link</a>
+    </div>
+  </div>
+</section>
+
+<section class="module red-theme">
+  <h1>Section header (with theme override)</h1>
+  <div class="row">
+    <div class="col-md-3">
+      <header class="section-header">
+        <h2 class="section-header-title">Section header</h2>
+      </header>
+
+      <p class="section-header-text">Section text</p>
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <p class="text-lead">
+        Back in early 2014, our founder Paramjit Uppal brought together a small group of known leaders from the world of technology, consultancy and digital – and together they had a plan to build a remarkable business. They recognised that companies need to accelerate their digital capability to compete and win in the tech based economy – but there was a gap in the market of those that actually supported this.
+      </p>
+    </div>
+  </div>
+</section>
+
+<style>
+  #theme-selector {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 10;
+  }
+
+  .image-swatch {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border: 1px solid black;
+    border-radius: 3px;
+    background-color: #323232;
+    vertical-align: middle;
+  }
+</style>
+<select id="theme-selector">
+  <option selected>None</option>
+  <option value="red">Red Theme</option>
+  <option value="blue">Blue Theme</option>
+  <option value="yellow">Yellow Theme</option>
+  <option value="purple">Purple Theme</option>
+  <option value="pink">Pink Theme</option>
+  <option value="green">Green Theme</option>
+</select>
+</body>
+<script>
+  document.querySelector('#theme-selector').addEventListener('change', function (el) {
+    if (el.target.value) {
+      document.querySelector('body').className = el.target.value + '-theme';
+    }
+  });
+</script>
+</html>

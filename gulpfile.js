@@ -1,24 +1,16 @@
 var gulp = require('gulp'),
     sass = require('gulp-sass'),
     sourcemaps = require('gulp-sourcemaps'),
-    connect = require('gulp-connect'),
+    browserSync = require('browser-sync'),
     open = require('gulp-open');
+var reload = browserSync.reload;
 
-gulp.task('default', function () {
-  gulp.start([
-    'gen-sass',
-    'serve'
-  ]);
-});
+gulp.task('default', ['gen-sass', 'serve', 'watch']);
 
 gulp.task('serve', function () {
-  connect.server({
-    root: './',
-    livereload: true
+  browserSync.init({
+    server: { baseDir: './' }
   });
-
-  gulp.src('./brand.html')
-    .pipe(open());
 });
 
 gulp.task('gen-sass', function () {
@@ -26,9 +18,10 @@ gulp.task('gen-sass', function () {
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest(''));
+    .pipe(gulp.dest(''))
+    .pipe(reload({ stream: true }));
 });
 
-gulp.task('watch', ['default'], function () {
-  gulp.watch('*.scss', ['gen-sass']);
+gulp.task('watch', function () {
+  gulp.watch('**/*.scss', ['gen-sass']);
 });

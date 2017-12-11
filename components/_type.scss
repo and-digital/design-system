@@ -1,72 +1,77 @@
-.heading-1,
-.heading-2,
-.heading-3 ,
-.heading-3-small {
-  font-weight: $font-weight-bold;
+p {
+  margin: 0 0 $paragraph-margin;
 }
 
-.heading-1 {
-  @extend h1;
+small, .text-small {
+  @include font-size($font-small-mobile);
+
+  @include tablet {
+    @include font-size($font-small);
+  }
 }
 
-.heading-2 {
-  @extend h2;
-}
-
-.heading-3 {
-  @extend h3;
-}
-
-.heading-3-small {
-  @extend h4;
-}
-
-.text-red {
-  color: $color-brand-red;
-}
-
-.text-yellow {
-  color: $color-brand-yellow;
-}
-
-.text-green {
-  color: darken($color-brand-green, $brand-darken-value);
-}
-
-.text-blue {
-  color: $color-brand-blue;
-}
-
-.text-purple {
-  color: $color-brand-purple;
-}
-
-.text-pink {
-  color: darken($color-brand-pink, $brand-darken-value);
-}
-
-.font-charcoal {
-  color: $color-brand-charcoal;
-}
-
-.font-white {
-  color: $color-white;
-}
 
 .text {
-  &-small {
-    @extend small;
+  &-red {
+    color: $color-brand-red;
+  }
+
+  &-yellow {
+    color: $color-brand-yellow;
+  }
+
+  &-green {
+    color: $color-brand-accessibility-green;
+  }
+
+  &-blue {
+    color: $color-brand-blue;
+  }
+
+  &-purple {
+    color: $color-brand-purple;
+  }
+
+  &-pink {
+    color: $color-brand-accessibility-pink;
+  }
+
+  &-charcoal {
+    color: $color-brand-charcoal;
+  }
+
+  &-white {
+    color: $color-white;
   }
 
   &-lead {
     @include font-size($font-lead-mobile);
-  }
-}
 
-@include tablet {
-  .text {
-    &-lead {
+    @include tablet {
       @include font-size($font-lead);
     }
   }
+
+  &-left {
+    text-align: left;
+  }
+
+  &-center {
+    text-align: center;
+  }
+
+  &-right {
+    text-align: right;
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
 }

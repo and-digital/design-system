@@ -1,0 +1,15 @@
+.purple-background,
+.blue-background,
+.red-background {
+  hr{
+    border-color: $color-white;
+  }
+}
+
+.yellow-background,
+.green-background,
+.pink-background {
+  hr{
+    border-color: $color-brand-charcoal;
+  }
+}

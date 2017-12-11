@@ -1,0 +1,12 @@
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: $font-weight-bold;
+  @include font-size($font-small-mobile);
+
+  @include tablet {
+    label {
+      @include font-size($font-small);
+    }
+  }
+}

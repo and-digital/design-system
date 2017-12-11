@@ -1,131 +1,225 @@
-.primary-link {
-  border: $primary-link-border;
+a {
   color: $color-brand-charcoal;
-  display: inline-block;
-  padding: 8px;
-  margin: 12px 0;
-  text-decoration: none;
+  text-decoration: underline;
 
-  &:hover {
-    border-bottom-width: $primary-link-border-bottom-hover;
-    padding-bottom: 8px - ($primary-link-border-bottom-hover - $primary-link-color-width);
-  }
-
-  &[href^="http://"]:after,
-  &[href^="https://"]:after {
-    margin-left: 8px;
+  &:hover,
+  &:active,
+  &:focus {
+    color: $color-brand-red;
+    text-decoration: none;
   }
 }
 
-.secondary-link {
-  @include font-size($font-small-mobile);
-  color: $color-mine-shaft;
-  text-decoration: none;
-
-  &:focus,
-  &:hover {
-    outline: 0;
-    text-decoration: underline !important;
-  }
-
-  &:after,
-  &[href^="http://"]:after,
-  &[href^="https://"]:after {
-    margin-left: 8px;
-    font-size: 1em;
-  }
-
-  &:after {
-    content: "\e903";
+.link {
+  &-primary {
+    padding: $link-primary-padding-mobile;
+    margin: 12px 0;
     display: inline-block;
-    font-family: 'AND-Digital-Icons';
-    vertical-align: middle;
-  }
-}
+    border: $link-primary-border;
+    text-align: center;
+    text-decoration: none;
+    color: $color-mine-shaft;
+    border-color: $color-mine-shaft;
 
-.tertiary-link {
-  span {
-    border-bottom: solid 1px;
-    border-color: inherit;
-    color: lighten($color-brand-charcoal, 40%);
-
-    &:hover {
+    &:hover,
+    &:focus {
+      padding-bottom: $link-primary-padding-mobile - ($link-primary-border-bottom-hover - $link-primary-color-width);
+      border-bottom: solid $link-primary-border-bottom-hover;
+      text-decoration: none;
       color: inherit;
     }
-  }
-}
 
-@include tablet {
-  .primary-link {
-    margin: $primary-link-margin;
-    padding: $primary-link-padding;
+    @include tablet {
+      padding: $link-primary-padding;
+      margin: 16px 0;
 
-    &:hover {
-      padding-bottom: $primary-link-padding - ($primary-link-border-bottom-hover - $primary-link-color-width);
+      &:hover {
+        padding-bottom: $link-primary-padding - ($link-primary-border-bottom-hover - $link-primary-color-width);
+      }
     }
   }
 
-  .secondary-link {
-    @include font-size($font-small);
+  &-secondary {
+    @include font-size($font-small-mobile);
+    color: $color-mine-shaft;
+    text-decoration: none;
+    position: relative;
+
+    &:after {
+      font-family: 'AND-Digital-Icons';
+      display: inline-block;
+      content: "\e946";
+      position: absolute;
+      right: -2em;
+      bottom: 0;
+    }
+
+    &:focus,
+    &:hover {
+      outline: 0;
+      text-decoration: none;
+      border-bottom: solid 1px;
+    }
+
+    @include tablet {
+      @include font-size($font-small);
+    }
   }
 
-  .tertiary-link {
-    display: block;
+  &-external {
+    &:after {
+      content: "\e944";
+      display: inline-block;
+      font-family: 'AND-Digital-Icons';
+      margin-left: 4px;
+    }
   }
 }
 
-.pink-theme {
-  .primary-link {
-    color: $color-brand-pink;
-    border-color: $color-brand-pink;
+.module-red,
+.module-yellow,
+.module-green,
+.module-blue,
+.module-purple,
+.module-pink,
+.module-charcoal {
+  a,
+  a:active,
+  a:visited {
+    color: $color-white;
+    border-color: $color-white;
+  }
+
+  .link-primary {
+    color: $color-white;
+    border-color: $color-white;
   }
 }
 
-.green-theme {
-  .primary-link {
-    color: $color-brand-green;
-    border-color: $color-brand-green;
-  }
-}
-
-.red-theme {
-  .primary-link {
-    color: $color-brand-red;
-    border-color: $color-brand-red;
-  }
-}
-
-.blue-theme {
-  .primary-link {
+.module-blue {
+  .link-primary {
     color: $color-brand-blue;
     border-color: $color-brand-blue;
   }
 }
 
+.module-yellow,
+.module-pink {
+  a,
+  a:active,
+  a:visited {
+    color: $color-brand-charcoal;
+    border-color: $color-brand-charcoal;
+  }
+
+  .link-primary {
+    color: $color-brand-charcoal;
+    border-color: $color-brand-charcoal;
+  }
+}
+
+.module-green {
+  .link-primary {
+    color: $color-brand-charcoal;
+    border-color: $color-brand-charcoal;
+  }
+}
+
+.red-theme {
+  a,
+  a:active,
+  a:visited {
+    color: $color-brand-red;
+  }
+
+  .link-primary {
+    border-color: $color-brand-red;
+    color: $color-brand-red;
+  }
+}
+
+.green-theme {
+  a,
+  a:active,
+  a:visited {
+    color: $color-brand-green;
+  }
+
+  .link-primary {
+    border-color: $color-brand-green;
+    color: $color-brand-green;
+  }
+}
+
+.blue-theme {
+  a,
+  a:active,
+  a:visited {
+    color: $color-brand-blue;
+  }
+
+  .link-primary {
+    border-color: $color-brand-blue;
+    color: $color-brand-blue;
+  }
+}
+
+.purple-theme {
+  a,
+  a:active,
+  a:visited {
+    color: $color-brand-purple;
+  }
+
+  .link-primary {
+    border-color: $color-brand-purple;
+    color: $color-brand-purple;
+  }
+}
+
+.pink-theme {
+  a,
+  a:active,
+  a:visited {
+    color: $color-brand-pink;
+  }
+
+  .link-primary {
+    border-color: $color-brand-pink;
+    color: $color-brand-pink;
+  }
+}
+
 .yellow-theme {
-  .primary-link {
+  a,
+  a:active,
+  a:visited {
+    color: $color-brand-yellow;
+  }
+
+  .link-primary {
     color: $color-brand-yellow;
     border-color: $color-brand-yellow;
   }
 }
 
-.purple-theme {
-  .primary-link {
-    color: $color-brand-purple;
-    border-color: $color-brand-purple;
-  }
-}
-
-.red-background,
-.purple-background,
-.yellow-background,
-.blue-background,
-.green-background,
-.pink-background {
-  color: $color-white;
-
-  .primary-link {
+.module-red,
+.module-blue,
+.module-purple {
+  .link-primary {
     color: $color-white;
     border-color: $color-white;
+    background: transparent;
   }
 }
+
+.module-yellow,
+.module-green,
+.module-pink {
+  .link-primary {
+    color: $color-brand-charcoal;
+    border-color: $color-brand-charcoal;
+    background: transparent;
+  }
+}
+

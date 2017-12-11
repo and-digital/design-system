@@ -2,16 +2,33 @@
   padding: $module-horizontal-spacing-mobile;
   margin-bottom: 0;
 
-  &.red-background,
-  &.yellow-background,
-  &.green-background,
-  &.blue-background,
-  &.purple-background,
-  &.pink-background,
-  &.charcoal-background {
+  @include tablet {
+    padding: 0 $module-horizontal-spacing-tablet;
+  }
+
+  @include desktop {
+    padding: 0 $module-horizontal-spacing;
+    margin-bottom: $module-margin-bottom;
+  }
+
+  &-red,
+  &-yellow,
+  &-green,
+  &-blue,
+  &-purple,
+  &-pink,
+  &-charcoal {
     padding: $module-horizontal-spacing-mobile;
     margin-bottom: $module-margin-bottom;
     color: $color-white;
+
+    @include tablet {
+      padding: $module-horizontal-spacing-tablet;
+    }
+
+    @include desktop {
+      padding: $module-horizontal-spacing;
+    }
   }
 
   &-red {
@@ -20,10 +37,12 @@
 
   &-yellow {
     background: $color-brand-yellow;
+    color: $color-brand-charcoal;
   }
 
   &-green {
     background: $color-brand-green;
+    color: $color-brand-charcoal;
   }
 
   &-blue {
@@ -36,42 +55,10 @@
 
   &-pink {
     background: $color-brand-pink;
+    color: $color-brand-charcoal;
   }
 
   &-charcoal {
     background: $color-brand-charcoal;
-  }
-}
-
-@include tablet {
-  .module {
-    padding: 0 $module-horizontal-spacing-tablet;
-
-    &.red-background,
-    &.yellow-background,
-    &.green-background,
-    &.blue-background,
-    &.purple-background,
-    &.pink-background,
-    &.charcoal-background{
-      padding: $module-horizontal-spacing-tablet;
-    }
-  }
-}
-
-@include desktop {
-  .module {
-    padding: 0 $module-horizontal-spacing;
-    margin-bottom: $module-margin-bottom;
-
-    &.red-background,
-    &.yellow-background,
-    &.green-background,
-    &.blue-background,
-    &.purple-background,
-    &.pink-background,
-    &.charcoal-background {
-      padding: $module-horizontal-spacing;
-    }
   }
 }

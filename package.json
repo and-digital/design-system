@@ -4,13 +4,14 @@
   "description": "AND Digital branding css",
   "main": "brand.scss",
   "scripts": {
-    "start": "gulp watch"
+    "start": "gulp",
+    "build": "gulp gen-sass"
   },
   "author": "sgregory@and.digital",
   "license": "ISC",
   "devDependencies": {
+    "browser-sync": "^2.18.13",
     "gulp": "^3.9.1",
-    "gulp-connect": "^5.0.0",
     "gulp-open": "^2.0.0",
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.6.1",

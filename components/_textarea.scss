@@ -1,0 +1,4 @@
+textarea {
+  @extend input[type="text"];
+  height: 200px;
+}
