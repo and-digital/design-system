@@ -8,10 +8,11 @@ button {
   display: inline-block;
   text-decoration: none;
   -webkit-appearance: none;
+  border-radius: 0;
 
   &:hover,
   &:focus {
-    padding-bottom: 8px - ($link-primary-border-bottom-hover - $link-primary-border);
+    padding-bottom: 10px - ($link-primary-border-bottom-hover - $link-primary-border);
     background-color: $color-brand-charcoal;
     color: $color-white;
     cursor: pointer;
