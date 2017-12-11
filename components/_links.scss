@@ -12,7 +12,7 @@ a {
 
 .link {
   &-primary {
-    padding: 8px;
+    padding: $link-primary-padding-mobile;
     margin: 12px 0;
     display: inline-block;
     border: $link-primary-border;
@@ -21,8 +21,9 @@ a {
     color: $color-mine-shaft;
     border-color: $color-mine-shaft;
 
-    &:hover {
-      padding-bottom: 8 + ($link-primary-border-bottom-hover - $link-primary-color-width);
+    &:hover,
+    &:focus {
+      padding-bottom: $link-primary-padding-mobile - ($link-primary-border-bottom-hover - $link-primary-color-width);
       border-bottom: solid $link-primary-border-bottom-hover;
       text-decoration: none;
       color: inherit;
@@ -33,7 +34,7 @@ a {
       margin: 16px 0;
 
       &:hover {
-        padding-bottom: $link-primary-padding - ($link-primary-border-bottom-hover - $link-primary-border);
+        padding-bottom: $link-primary-padding - ($link-primary-border-bottom-hover - $link-primary-color-width);
       }
     }
   }
@@ -42,21 +43,22 @@ a {
     @include font-size($font-small-mobile);
     color: $color-mine-shaft;
     text-decoration: none;
-    display: block;
+    position: relative;
+
+    &:after {
+      font-family: 'AND-Digital-Icons';
+      display: inline-block;
+      content: "\e946";
+      position: absolute;
+      right: -2em;
+      bottom: 0;
+    }
 
     &:focus,
     &:hover {
       outline: 0;
       text-decoration: none;
-
-      span {
-        border-bottom: solid 1px;
-      }
-    }
-
-    i {
-      vertical-align: middle;
-      padding-left: 8px;
+      border-bottom: solid 1px;
     }
 
     @include tablet {
@@ -70,7 +72,6 @@ a {
       display: inline-block;
       font-family: 'AND-Digital-Icons';
       margin-left: 4px;
-      font-size: $external-link-icon-small;
     }
   }
 }

@@ -80,6 +80,33 @@
 </header>
 
 <section class="module">
+  <h1>Themes</h1>
+
+  <p>
+    You can set the colour theme of the page by putting a <code>{color}-theme</code> class on the body on the page.
+    You can use the selector in the top left to experiment with the different themes.
+   </p>
+
+  <p>This also works on individual modules but is discouraged for anything othe than a front page.</p>
+
+  <p>Theme classes style all links, buttons and headers where appropriate for you.</p>
+
+  The brand colours available are;
+
+  <ul>
+    <li>Pink <span class="image-swatch" style="background-color: #FF6ECF;"></span></li>
+    <li>Red <span class="image-swatch" style="background-color: #FF323C;"></span></li>
+    <li>Green <span class="image-swatch" style="background-color: #5AC328;"></span></li>
+    <li>Blue <span class="image-swatch" style="background-color: #2897FF;"></span></li>
+    <li>Purple <span class="image-swatch" style="background-color: #A050FF;"></span></li>
+    <li>Yellow <span class="image-swatch" style="background-color: #FFC800;"></span></li>
+    <li>Charcoal (Default) <span class="image-swatch"></span></li>
+  </ul>
+</section>
+
+<hr>
+
+<section class="module">
   <h1>Headers</h1>
   <p>
     Headers can be used in a 'traditional' way and will work perfectly. However, if you choose to use HTML5 sectioning
@@ -108,6 +135,8 @@
   </section>
 </section>
 
+<hr>
+
 <section class="module">
   <h1>Type</h1>
 
@@ -135,6 +164,8 @@
 
   <span class="text-lead">Lead text</span>
 </section>
+
+<hr>
 
 <section class="module">
   <h1>Lists</h1>
@@ -179,18 +210,17 @@
   </ol>
 </section>
 
+<hr>
+
 <section class="module">
   <h1>Links</h1>
 
-  <p><a href="#">Standard link (internal)</a></p>
-  <p class="text-small"><a href="http://and.digital">Standard link (external)</a></p>
-
+  <p><a href="#">Standard link</a></p>
 
   <a href="#" class="link-primary">Primary link</a>
-  <a href="http://and.digital" class="link-primary">Primary link</a>
 
-  <p><a href="#" class="secondary-link">Secondary link</a></p>
-  <p><a href="http://and.digital" class="secondary-link">Secondary link</a></p>
+  <p><a href="#" class="link-secondary">Secondary link</a></p>
+  <p><a href="http://and.digital" class="link-secondary link-external">Secondary link</a></p>
 
   <h2>Buttons</h2>
 
@@ -198,7 +228,10 @@
   <a href="#" class="button">Button</a>
 </section>
 
+<hr>
+
 <section class="module">
+  <h1>Forms</h1>
   <form action="">
     <span class="form-mandatory-text">* required fields</span>
     <div class="row">
@@ -226,6 +259,8 @@
     <input type="submit" value="Submit" />
   </form>
 </section>
+
+<hr>
 
 <section class="module module-red">
   <div class="row">
@@ -311,6 +346,7 @@
   </div>
 </section>
 
+<hr>
 
 <section class="module">
   <h1>Section header</h1>
@@ -356,6 +392,16 @@
     top: 10px;
     left: 10px;
     z-index: 10;
+  }
+
+  .image-swatch {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border: 1px solid black;
+    border-radius: 3px;
+    background-color: #323232;
+    vertical-align: middle;
   }
 </style>
 <select id="theme-selector">

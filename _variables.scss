@@ -1,4 +1,5 @@
 // Colors
+// Please don't use colours directly in the code
 $color-mine-shaft: #323232;
 $color-gray: #898989;
 $color-white: #FFFFFF;
@@ -86,6 +87,7 @@ $list-line-height: 1.4;
 
 // Links
 $link-primary-padding: 12px;
+$link-primary-padding-mobile: 8px;
 $link-primary-margin: 16px 0;
 $link-primary-color-width: 1px;
 $link-primary-border: $link-primary-color-width solid $link-primary-default-border-color;
