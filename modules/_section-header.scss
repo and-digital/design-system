@@ -7,7 +7,7 @@
 
   &-title {
     border-top: 2px solid;
-    width: 200px;
+    max-width: 200px;
     margin-top: 0;
     padding-top: 16px;
 
@@ -53,37 +53,43 @@
   }
 }
 
-.red-theme {
+.red-theme,
+.module.red-theme {
   .section-header-title {
     border-color: $color-brand-red;
   }
 }
 
-.yellow-theme {
+.yellow-theme,
+.module.yellow-theme {
   .section-header-title {
     border-color: $color-brand-yellow;
   }
 }
 
-.green-theme {
+.green-theme,
+.module.green-theme {
   .section-header-title {
     border-color: $color-brand-green;
   }
 }
 
-.blue-theme {
+.blue-theme,
+.module.blue-theme {
   .section-header-title {
     border-color: $color-brand-blue;
   }
 }
 
-.purple-theme {
+.purple-theme,
+.module.purple-theme {
   .section-header-title {
     border-color: $color-brand-purple;
   }
 }
 
-.pink-theme {
+.pink-theme,
+.module.pink-theme {
   .section-header-title {
     border-color: $color-brand-pink;
   }

@@ -201,3 +201,24 @@ a {
     border-color: $color-brand-yellow;
   }
 }
+
+.module-red,
+.module-blue,
+.module-purple {
+  .link-primary {
+    color: $color-white;
+    border-color: $color-white;
+    background: transparent;
+  }
+}
+
+.module-yellow,
+.module-green,
+.module-pink {
+  .link-primary {
+    color: $color-brand-charcoal;
+    border-color: $color-brand-charcoal;
+    background: transparent;
+  }
+}
+
