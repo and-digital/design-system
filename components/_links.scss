@@ -22,7 +22,7 @@ a {
     border-color: $color-mine-shaft;
 
     &:hover {
-      padding-bottom: 8px - ($link-primary-border-bottom-hover - $link-primary-border);
+      padding-bottom: 8 + ($link-primary-border-bottom-hover - $link-primary-color-width);
       border-bottom: solid $link-primary-border-bottom-hover;
       text-decoration: none;
       color: inherit;
