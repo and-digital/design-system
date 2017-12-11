@@ -1,29 +1,33 @@
 # brAND
 
-If you wish to use brAND for your project, please consult the [Wiki](https://github.com/fakesamgregory/brAND/wiki/)
+brAND is a CSS library that can be used for all AND Digital products to maintain consistency across them.
 
+## CDN
+Coming soon...
 
-<hr>
+## NPM
+To install brAND in your node modules simply run...
 
-## Developer information
+`npm install br-and`
 
-Brand uses Yarn. To install dependencies, make sure you have [Yarn](https://yarnpkg.com/en/docs/install) installed globally.
+## SASS
+brAND uses SASS to build its components and modules. If you just want the basics (lighter, fluffier) then import `brand.scss`
 
-`yarn`
+```
+// your-main.scss
 
-## Wiki
+@import "node_modules/br-and/brand"; 
+```
 
-brAND's Wiki is stored as a submodule within the project. Run
+You can override *some* variables such as the breakpoints. Just include these variables before brand to override.
+Brand uses [Bootstraps mobile-first grid](https://getbootstrap.com/docs/4.0/layout/grid/).
 
-`git submodule init` then `git submodule update`
+More info in [Theming](https://github.com/fakesamgregory/brAND/wiki/theming).
 
-to get the latest wiki. To pull the latest changes after you have done this
+## Fonts
 
-`git submodule update --remote wiki`
+brAND uses assets stored on the CDN to load fonts and icons so you will need to include this in the head of your page.
 
-For [more info on git submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules)
-
-## To start
-`yarn start`
-
-Project will open in your browser.
+```
+<link rel="stylesheet" href="https://s3-eu-west-1.amazonaws.com/static.andigital.com/fonts/fonts.css" type="text/css">
+```
