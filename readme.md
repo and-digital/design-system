@@ -2,6 +2,8 @@
 
 brAND is a CSS library that can be used for all AND Digital products to maintain consistency across them.
 
+For more information on brAND, visit the [Wiki](https://github.com/fakesamgregory/brAND/wiki)
+
 ## CDN
 Coming soon...
 
