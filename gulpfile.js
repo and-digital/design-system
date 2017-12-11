@@ -18,33 +18,33 @@ gulp.task('serve', function () {
 });
 
 gulp.task('gen-sass', function () {
-  gulp.src('brand.scss')
+  gulp.src('scss/brand.scss')
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest(''))
+    .pipe(gulp.dest('dist'))
     .pipe(reload({ stream: true }));
 
-  gulp.src('brand-components.scss')
+  gulp.src('scss/brand-components.scss')
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest(''))
+    .pipe(gulp.dest('dist'))
     .pipe(reload({ stream: true }));
 });
 
 gulp.task('minify', function () {
-  gulp.src('./brand.css')
+  gulp.src('scss/brand.css')
     .pipe(cleanCSS({compatibility: 'ie8'}))
-    .pipe(rename('./brand.min.css'))
-    .pipe(gulp.dest('./'));
+    .pipe(rename('brand.min.css'))
+    .pipe(gulp.dest('dist'));
 
-  gulp.src('./brand-components.css')
+  gulp.src('scss/brand-components.css')
     .pipe(cleanCSS({compatibility: 'ie8'}))
-    .pipe(rename('./brand-components.min.css'))
-    .pipe(gulp.dest('./'));
+    .pipe(rename('brand-components.min.css'))
+    .pipe(gulp.dest('dist'));
 });
 
 gulp.task('watch', function () {
-  gulp.watch('**/*.scss', ['gen-sass']);
+  gulp.watch('scss/**/*.scss', ['gen-sass']);
 });
