@@ -18,7 +18,7 @@ brAND uses SASS to build its components and modules. If you just want the basics
 ```
 // your-main.scss
 
-@import "node_modules/br-and/brand"; 
+@import "node_modules/br-and/scss/brand"; 
 ```
 
 You can override *some* variables such as the breakpoints. Just include these variables before brand to override.
