@@ -1,4 +1,11 @@
-# brand
+# brAND
+
+If you wish to use brAND for your project, please consult the [Wiki](https://github.com/fakesamgregory/brAND/wiki/)
+
+
+<hr>
+
+## Developer information
 
 Brand uses Yarn. To install dependencies, make sure you have [Yarn](https://yarnpkg.com/en/docs/install) installed globally.
 
@@ -19,4 +26,4 @@ For [more info on git submodules](https://git-scm.com/book/en/v2/Git-Tools-Submo
 ## To start
 `yarn start`
 
-Project will open in your browser. This is not served.
+Project will open in your browser.

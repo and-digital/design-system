@@ -2,10 +2,14 @@ var gulp = require('gulp'),
     sass = require('gulp-sass'),
     sourcemaps = require('gulp-sourcemaps'),
     browserSync = require('browser-sync'),
-    open = require('gulp-open');
+    open = require('gulp-open'),
+    cleanCSS = require('gulp-clean-css'),
+    rename = require("gulp-rename");
+
 var reload = browserSync.reload;
 
 gulp.task('default', ['gen-sass', 'serve', 'watch']);
+gulp.task('build', ['gen-sass', 'minify']);
 
 gulp.task('serve', function () {
   browserSync.init({
@@ -20,6 +24,25 @@ gulp.task('gen-sass', function () {
     .pipe(sourcemaps.write())
     .pipe(gulp.dest(''))
     .pipe(reload({ stream: true }));
+
+  gulp.src('brand-components.scss')
+    .pipe(sourcemaps.init())
+    .pipe(sass().on('error', sass.logError))
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest(''))
+    .pipe(reload({ stream: true }));
+});
+
+gulp.task('minify', function () {
+  gulp.src('./brand.css')
+    .pipe(cleanCSS({compatibility: 'ie8'}))
+    .pipe(rename('./brand.min.css'))
+    .pipe(gulp.dest('./'));
+
+  gulp.src('./brand-components.css')
+    .pipe(cleanCSS({compatibility: 'ie8'}))
+    .pipe(rename('./brand-components.min.css'))
+    .pipe(gulp.dest('./'));
 });
 
 gulp.task('watch', function () {
