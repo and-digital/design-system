@@ -1,18 +1,20 @@
 {
-  "name": "brand",
-  "version": "1.0.0",
+  "name": "br-and",
+  "version": "1.0.2",
   "description": "AND Digital branding css",
   "main": "brand.scss",
   "scripts": {
     "start": "gulp",
-    "build": "gulp gen-sass"
+    "build": "gulp build"
   },
   "author": "sgregory@and.digital",
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.18.13",
     "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.9.0",
     "gulp-open": "^2.0.0",
+    "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.6.1",
     "node-sass": "^4.5.3",
