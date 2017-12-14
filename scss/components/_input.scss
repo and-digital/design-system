@@ -64,8 +64,7 @@ input[type="submit"] {
 }
 
 .pink-theme {
-  input[type="text"],
-  textarea {
+  input[type="text"] {
     &:focus {
       border-left-color: $color-brand-pink;
     }
@@ -73,8 +72,7 @@ input[type="submit"] {
 }
 
 .green-theme {
-  input[type="text"],
-  textarea {
+  input[type="text"] {
     &:focus {
       border-left-color: $color-brand-green;
     }
@@ -82,8 +80,7 @@ input[type="submit"] {
 }
 
 .red-theme {
-  input[type="text"],
-  textarea {
+  input[type="text"] {
     &:focus {
       border-left-color: $color-brand-red;
     }
@@ -97,8 +94,7 @@ input[type="submit"] {
     color: $color-brand-blue;
   }
 
-  input[type="text"],
-  textarea {
+  input[type="text"] {
     &:focus {
       border-left-color: $color-brand-blue;
     }
@@ -112,8 +108,7 @@ input[type="submit"] {
     color: $color-brand-yellow;
   }
 
-  input[type="text"],
-  textarea {
+  input[type="text"] {
     &:focus {
       border-left-color: $color-brand-yellow;
     }
@@ -127,8 +122,7 @@ input[type="submit"] {
     color: $color-brand-purple;
   }
 
-  input[type="text"],
-  textarea {
+  input[type="text"] {
     &:focus {
       border-left-color: $color-brand-purple;
     }
