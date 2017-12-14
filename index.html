@@ -443,9 +443,13 @@
 </select>
 </body>
 <script>
+  var body = document.querySelector('body');
+
   document.querySelector('#theme-selector').addEventListener('change', function (el) {
-    if (el.target.value) {
-      document.querySelector('body').className = el.target.value + '-theme';
+    if (el.target.value !== 'None') {
+      body.className = el.target.value + '-theme';
+    } else {
+      body.className = '';
     }
   });
 </script>

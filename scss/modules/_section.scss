@@ -1,0 +1,170 @@
+.section {
+  padding: $section-horizontal-spacing-mobile;
+  margin-bottom: $section-margin-bottom;
+
+  @include tablet {
+    padding: 0 $section-horizontal-spacing-tablet;
+  }
+
+  @include desktop {
+    padding: 0 $section-horizontal-spacing;
+    margin-bottom: $section-margin-bottom;
+  }
+
+  &-red,
+  &-yellow,
+  &-green,
+  &-blue,
+  &-purple,
+  &-pink,
+  &-charcoal {
+    padding: $section-horizontal-spacing-mobile;
+    color: $color-white;
+
+    @include tablet {
+      padding: $section-horizontal-spacing-tablet;
+    }
+
+    @include desktop {
+      padding: $section-horizontal-spacing;
+    }
+  }
+
+  &-red {
+    background: $color-brand-red;
+  }
+
+  &-yellow {
+    background: $color-brand-yellow;
+    color: $color-brand-charcoal;
+  }
+
+  &-green {
+    background: $color-brand-green;
+    color: $color-brand-charcoal;
+  }
+
+  &-blue {
+    background: $color-brand-blue;
+  }
+
+  &-purple {
+    background: $color-brand-purple;
+  }
+
+  &-pink {
+    background: $color-brand-pink;
+    color: $color-brand-charcoal;
+  }
+
+  &-charcoal {
+    background: $color-brand-charcoal;
+  }
+
+  &-header {
+    margin-bottom: 24px;
+
+    @include tablet {
+      width: 100%;
+    }
+  }
+
+  &-header-title {
+    border-top: 2px solid;
+    max-width: 200px;
+    margin-top: 0;
+    padding-top: 16px;
+  }
+
+  &-text {
+    @include font-size($font-lead);
+    max-width: 250px;
+  }
+}
+
+.red-theme,
+.section.red-theme {
+  .section-header-title {
+    border-color: $color-brand-red;
+  }
+}
+
+.yellow-theme,
+.section.yellow-theme {
+  .section-header-title {
+    border-color: $color-brand-yellow;
+  }
+}
+
+.green-theme,
+.section.green-theme {
+  .section-header-title {
+    border-color: $color-brand-green;
+  }
+}
+
+.blue-theme,
+.section.blue-theme {
+  .section-header-title {
+    border-color: $color-brand-blue;
+  }
+}
+
+.purple-theme,
+.section.purple-theme {
+  .section-header-title {
+    border-color: $color-brand-purple;
+  }
+}
+
+.pink-theme,
+.section.pink-theme {
+  .section-header-title {
+    border-color: $color-brand-pink;
+  }
+}
+
+.section-green,
+.section-pink,
+.section-yellow {
+  .section-header-title {
+    border-color: $color-brand-charcoal;
+  }
+}
+
+.section-red,
+.section-blue,
+.section-purple,
+.section-red,
+.section-blue,
+.section-purple{
+  .section-header-title {
+    border-color: $color-white;
+  }
+}
+
+.red-theme,
+.blue-theme,
+.pink-theme,
+.yellow-theme,
+.purple-theme,
+.green-theme {
+  .section-red,
+  .section-blue,
+  .section-purple,
+  .section-red,
+  .section-blue,
+  .section-purple{
+    .section-header-title {
+      border-color: $color-white;
+    }
+  }
+
+  .section-green,
+  .section-pink,
+  .section-yellow {
+    .section-header-title {
+      border-color: $color-brand-charcoal;
+    }
+  }
+}
