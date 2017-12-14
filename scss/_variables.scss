@@ -25,6 +25,8 @@ $color-brand-accessibility-pink: $color-orchid;
 $brand-darken-value: 4;
 
 $link-primary-default-border-color: $color-brand-charcoal;
+$link-secondary-icon: '\e946';
+$link-external-icon: '\e944';
 
 // Breakpoints
 $mobile: 480px !default;
@@ -36,6 +38,7 @@ $ms-only: "screen and (-ms-high-contrast: active), (-ms-high-contrast: none)";
 // Font
 $brand-font-regular: "Brown-Pro-Regular", Helvetica, Arial, sans-serif;
 $brand-font-family-bold: "Brown-Pro-Bold", Helvetica, Arial, sans-serif;
+$brand-font-family-icons: 'AND-Digital-Icons';
 
 $font-weight-bold: 700;
 $font-weight-regular: 400;

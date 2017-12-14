@@ -1,4 +1,4 @@
-button {
+.button {
   background-color: $color-brand-charcoal;
   color: $color-white;
   border: none;
@@ -24,6 +24,14 @@ button {
       padding-bottom: 10 - ($link-primary-border-bottom-hover - $link-primary-border);
     }
   }
+
+  &[type="submit"] {
+    margin-bottom: 0;
+
+    @include tablet {
+      margin-bottom: $submit-button-margin-bottom;
+    }
+  }
 }
 
 .blue-theme,
@@ -32,7 +40,7 @@ button {
 .green-theme,
 .yellow-theme,
 .pink-theme {
-  button {
+  .button {
     color: $color-brand-charcoal;
 
     &:hover, &:focus {
@@ -43,50 +51,40 @@ button {
 }
 
 .red-theme {
-  button {
+  .button {
     background-color: $color-brand-red;
     color: $color-white;
   }
 }
 
 .yellow-theme {
-  button {
+  .button {
     background-color: $color-brand-yellow;
   }
 }
 
 .green-theme {
-  button {
+  .button {
     background-color: $color-brand-green;
   }
 }
 
 .blue-theme {
-  button {
+  .button {
     background-color: $color-brand-blue;
     color: $color-white
   }
 }
 
 .purple-theme {
-  button {
+  .button {
     background-color: $color-brand-purple;
     color: $color-white;
   }
 }
 
 .pink-theme {
-  button {
+  .button {
     background-color: $color-brand-pink;
-  }
-}
-
-.button { @extend button; }
-
-button[type="submit"] {
-  margin-bottom: 0;
-
-  @include tablet {
-    margin-bottom: $submit-button-margin-bottom;
   }
 }

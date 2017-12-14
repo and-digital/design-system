@@ -62,3 +62,75 @@ input[type="submit"] {
     }
   }
 }
+
+.pink-theme {
+  input[type="text"],
+  textarea {
+    &:focus {
+      border-left-color: $color-brand-pink;
+    }
+  }
+}
+
+.green-theme {
+  input[type="text"],
+  textarea {
+    &:focus {
+      border-left-color: $color-brand-green;
+    }
+  }
+}
+
+.red-theme {
+  input[type="text"],
+  textarea {
+    &:focus {
+      border-left-color: $color-brand-red;
+    }
+  }
+}
+
+.blue-theme {
+  a,
+  a:active,
+  a:visited {
+    color: $color-brand-blue;
+  }
+
+  input[type="text"],
+  textarea {
+    &:focus {
+      border-left-color: $color-brand-blue;
+    }
+  }
+}
+
+.yellow-theme {
+  a,
+  a:active,
+  a:visited {
+    color: $color-brand-yellow;
+  }
+
+  input[type="text"],
+  textarea {
+    &:focus {
+      border-left-color: $color-brand-yellow;
+    }
+  }
+}
+
+.purple-theme {
+  a,
+  a:active,
+  a:visited {
+    color: $color-brand-purple;
+  }
+
+  input[type="text"],
+  textarea {
+    &:focus {
+      border-left-color: $color-brand-purple;
+    }
+  }
+}
