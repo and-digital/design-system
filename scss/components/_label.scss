@@ -5,8 +5,6 @@ label {
   @include font-size($font-small-mobile);
 
   @include tablet {
-    label {
-      @include font-size($font-small);
-    }
+    @include font-size($font-small);
   }
 }
