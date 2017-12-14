@@ -1,0 +1,280 @@
+.module {
+  padding: $module-horizontal-spacing-mobile;
+  margin-bottom: $module-margin-bottom;
+
+  @include tablet {
+    padding: 0 $module-horizontal-spacing-tablet;
+  }
+
+  @include desktop {
+    padding: 0 $module-horizontal-spacing;
+    margin-bottom: $module-margin-bottom;
+  }
+
+  &-red,
+  &-yellow,
+  &-green,
+  &-blue,
+  &-purple,
+  &-pink,
+  &-charcoal {
+    padding: $module-horizontal-spacing-mobile;
+    color: $color-white;
+
+    @include tablet {
+      padding: $module-horizontal-spacing-tablet;
+    }
+
+    @include desktop {
+      padding: $module-horizontal-spacing;
+    }
+  }
+
+  &-red {
+    background: $color-brand-red;
+  }
+
+  &-yellow {
+    background: $color-brand-yellow;
+    color: $color-brand-charcoal;
+  }
+
+  &-green {
+    background: $color-brand-green;
+    color: $color-brand-charcoal;
+  }
+
+  &-blue {
+    background: $color-brand-blue;
+  }
+
+  &-purple {
+    background: $color-brand-purple;
+  }
+
+  &-pink {
+    background: $color-brand-pink;
+    color: $color-brand-charcoal;
+  }
+
+  &-charcoal {
+    background: $color-brand-charcoal;
+  }
+
+  &-header {
+    margin-bottom: 24px;
+
+    @include tablet {
+      width: 100%;
+    }
+  }
+
+  &-header-title {
+    border-top: 2px solid;
+    max-width: 200px;
+    margin-top: 0;
+    padding-top: 16px;
+  }
+
+  &-text {
+    @include font-size($font-lead);
+    max-width: 250px;
+  }
+}
+
+.red-theme,
+.module.red-theme {
+  .module-header-title {
+    border-color: $color-brand-red;
+  }
+}
+
+.yellow-theme,
+.module.yellow-theme {
+  .module-header-title {
+    border-color: $color-brand-yellow;
+  }
+}
+
+.green-theme,
+.module.green-theme {
+  .module-header-title {
+    border-color: $color-brand-green;
+  }
+}
+
+.blue-theme,
+.module.blue-theme {
+  .module-header-title {
+    border-color: $color-brand-blue;
+  }
+}
+
+.purple-theme,
+.module.purple-theme {
+  .module-header-title {
+    border-color: $color-brand-purple;
+  }
+}
+
+.pink-theme,
+.module.pink-theme {
+  .module-header-title {
+    border-color: $color-brand-pink;
+  }
+}
+
+.module-green,
+.module-pink,
+.module-yellow {
+  .module-header-title {
+    border-color: $color-brand-charcoal;
+  }
+}
+
+.module-red,
+.module-blue,
+.module-purple,
+.module-red,
+.module-blue,
+.module-purple{
+  .module-header-title {
+    border-color: $color-white;
+  }
+}
+
+.red-theme,
+.blue-theme,
+.pink-theme,
+.yellow-theme,
+.purple-theme,
+.green-theme {
+  .module-red,
+  .module-blue,
+  .module-purple,
+  .module-red,
+  .module-blue,
+  .module-purple{
+    .module-header-title {
+      border-color: $color-white;
+    }
+  }
+
+  .module-green,
+  .module-pink,
+  .module-yellow {
+    .module-header-title {
+      border-color: $color-brand-charcoal;
+    }
+  }
+}
+
+.section-header {
+  margin-bottom: 24px;
+
+  @include tablet {
+    width: 100%;
+  }
+
+  &-title {
+    border-top: 2px solid;
+    max-width: 200px;
+    margin-top: 0;
+    padding-top: 16px;
+
+    &-red {
+      border-color: $color-brand-red;
+    }
+
+    &-yellow {
+      border-color: $color-brand-yellow;
+    }
+
+    &-green {
+      border-color: $color-brand-green;
+    }
+
+
+    &-blue {
+      border-color: $color-brand-blue;
+    }
+
+
+    &-purple {
+      border-color: $color-brand-purple;
+    }
+
+    &-pink {
+      border-color: $color-brand-pink;
+    }
+
+    &-charcoal {
+      border-color: $color-brand-charcoal;
+    }
+
+    &-white {
+      color: $color-white;
+      border-color: $color-white;
+    }
+  }
+
+  &-text {
+    @include font-size($font-lead);
+    max-width: 250px;
+  }
+}
+
+.red-theme,
+.module.red-theme {
+  .section-header-title {
+    border-color: $color-brand-red;
+  }
+}
+
+.yellow-theme,
+.module.yellow-theme {
+  .section-header-title {
+    border-color: $color-brand-yellow;
+  }
+}
+
+.green-theme,
+.module.green-theme {
+  .section-header-title {
+    border-color: $color-brand-green;
+  }
+}
+
+.blue-theme,
+.module.blue-theme {
+  .section-header-title {
+    border-color: $color-brand-blue;
+  }
+}
+
+.purple-theme,
+.module.purple-theme {
+  .section-header-title {
+    border-color: $color-brand-purple;
+  }
+}
+
+.pink-theme,
+.module.pink-theme {
+  .section-header-title {
+    border-color: $color-brand-pink;
+  }
+}
+
+.module-green, .module-pink, .module-yellow {
+  .section-header-title {
+    border-color: $color-brand-charcoal;
+  }
+}
+
+.module-red, .module-blue, .module-purple {
+  .section-header-title {
+    border-color: $color-white;
+  }
+}
+

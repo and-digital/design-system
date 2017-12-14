@@ -11,7 +11,7 @@ input[type="text"] {
 }
 
 input[type="submit"] {
-  @extend button;
+  @extend .button;
   margin-bottom: 0;
 }
 
@@ -56,6 +56,72 @@ input[type="submit"] {
 }
 
 .purple-theme {
+  input[type="text"] {
+    &:focus {
+      border-left-color: $color-brand-purple;
+    }
+  }
+}
+
+.pink-theme {
+  input[type="text"] {
+    &:focus {
+      border-left-color: $color-brand-pink;
+    }
+  }
+}
+
+.green-theme {
+  input[type="text"] {
+    &:focus {
+      border-left-color: $color-brand-green;
+    }
+  }
+}
+
+.red-theme {
+  input[type="text"] {
+    &:focus {
+      border-left-color: $color-brand-red;
+    }
+  }
+}
+
+.blue-theme {
+  a,
+  a:active,
+  a:visited {
+    color: $color-brand-blue;
+  }
+
+  input[type="text"] {
+    &:focus {
+      border-left-color: $color-brand-blue;
+    }
+  }
+}
+
+.yellow-theme {
+  a,
+  a:active,
+  a:visited {
+    color: $color-brand-yellow;
+  }
+
+  input[type="text"] {
+    &:focus {
+      border-left-color: $color-brand-yellow;
+    }
+  }
+}
+
+.purple-theme {
+  a,
+  a:active,
+  a:visited {
+    color: $color-brand-purple;
+  }
+
   input[type="text"] {
     &:focus {
       border-left-color: $color-brand-purple;
