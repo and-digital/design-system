@@ -7,6 +7,7 @@ a {
   &:focus {
     color: $color-brand-red;
     text-decoration: none;
+    outline: 0;
   }
 }
 
@@ -33,9 +34,21 @@ a {
       padding: $link-primary-padding;
       margin: 16px 0;
 
-      &:hover {
+      &:hover,
+      &:focus {
         padding-bottom: $link-primary-padding - ($link-primary-border-bottom-hover - $link-primary-color-width);
       }
+    }
+  }
+
+  &-secondary,
+  &-external {
+    &:after {
+      font-family: $brand-font-family-icons;
+      display: inline-block;
+      position: absolute;
+      left: 100%;
+      margin-left: 10px;
     }
   }
 
@@ -46,17 +59,11 @@ a {
     position: relative;
 
     &:after {
-      font-family: $brand-font-family-icons;
-      display: inline-block;
       content: $link-secondary-icon;
-      position: absolute;
-      right: -2em;
-      bottom: 0;
     }
 
     &:focus,
     &:hover {
-      outline: 0;
       text-decoration: none;
       border-bottom: solid 1px;
     }
@@ -69,9 +76,6 @@ a {
   &-external {
     &:after {
       content: $link-external-icon;
-      display: inline-block;
-      font-family: $brand-font-family-icons;
-      margin-left: 4px;
     }
   }
 }
@@ -102,7 +106,7 @@ a {
 
 .section-yellow,
 .section-pink,
-.section-green{
+.section-green {
   a,
   a:active,
   a:visited {
@@ -194,9 +198,9 @@ a {
   }
 }
 
-.section-red,
-.section-blue,
-.section-purple {
+.sectionn-red,
+.sectionn-blue,
+.sectionn-purple {
   .link-primary {
     color: $color-white;
     border-color: $color-white;
@@ -204,9 +208,9 @@ a {
   }
 }
 
-.section-yellow,
-.section-green,
-.section-pink {
+.sectionn-yellow,
+.sectionn-green,
+.sectionn-pink {
   .link-primary {
     color: $color-brand-charcoal;
     border-color: $color-brand-charcoal;
@@ -277,7 +281,7 @@ a {
 
   .section-yellow,
   .section-pink,
-  .section-green{
+  .section-green {
     a,
     a:active,
     a:visited {

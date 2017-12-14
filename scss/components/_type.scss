@@ -2,12 +2,17 @@ p {
   margin: 0 0 $paragraph-margin;
 }
 
-small, .text-small {
+small {
   @include font-size($font-small-mobile);
 
   @include tablet {
     @include font-size($font-small);
   }
+}
+
+strong {
+  font-family: $brand-font-family-bold;
+  font-weight: normal;
 }
 
 
@@ -51,6 +56,10 @@ small, .text-small {
       @include font-size($font-lead);
     }
   }
+
+  &-small { @extend small; }
+
+  &-strong { @extend strong; }
 
   &-left {
     text-align: left;

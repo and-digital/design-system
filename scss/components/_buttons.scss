@@ -13,9 +13,10 @@
   &:hover,
   &:focus {
     padding-bottom: 8 - ($link-primary-border-bottom-hover - $link-primary-border);
-    background-color: $color-brand-charcoal;
+    background-color: $color-brand-red;
     color: $color-white;
     cursor: pointer;
+    outline: 0;
   }
 
   @include tablet {
