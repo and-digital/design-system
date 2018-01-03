@@ -2,8 +2,6 @@
   background-color: #FFFFFF;
   display: flex;
   justify-content: space-between;
-  padding-left: 16px;
-  padding-right: 16px;
 
   &-logo {
     display: flex;
@@ -38,10 +36,14 @@
     a,
     .header-menu-button {
       text-decoration: none;
-      padding: 24px 12px 20px;
+      padding: 23px 12px 20px;
       display: block;
       font-size: 20px;
     }
+  }
+
+  &-link {
+    color: $color-brand-charcoal;
   }
 
   &-link-green {
@@ -157,7 +159,19 @@
   }
 }
 
-@include desktop {
+.red-theme,
+.blue-theme,
+.pink-theme,
+.yellow-theme,
+.purple-theme,
+.green-theme {
+  .header-link,
+  .header-search {
+    color: $color-brand-charcoal;
+  }
+}
+
+@include tablet {
   .header {
     &-secondary-navigation {
       display: block;

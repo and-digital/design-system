@@ -4,19 +4,19 @@
 }
 
 @mixin tablet {
-  @media (min-width: #{$mobile}) {
-    @content;
-  }
-}
-
-@mixin desktop {
   @media (min-width: #{$tablet}) {
     @content;
   }
 }
 
-@mixin desktop-wide {
+@mixin desktop {
   @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+
+@mixin desktop-wide {
+  @media (min-width: #{$desktop-wide}) {
     @content;
   }
 }
