@@ -1,15 +1,27 @@
 {
   "name": "br-and",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "AND Digital branding css",
   "main": "brand.scss",
   "scripts": {
     "start": "gulp",
     "build": "gulp build"
   },
+  "keywords": [
+    "css",
+    "sass",
+    "mobile-first",
+    "responsive",
+    "front-end",
+    "component library",
+    "web"
+  ],
+  "homepage": "https://brand.and.digital",
   "author": "sgregory@and.digital",
   "license": "ISC",
   "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
     "browser-sync": "^2.18.13",
     "gulp": "^3.9.1",
     "gulp-clean-css": "^3.9.0",
@@ -19,5 +31,12 @@
     "gulp-sourcemaps": "^2.6.1",
     "node-sass": "^4.5.3",
     "yarn": "^0.27.5"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/fakesamgregory/brand/issues"
+  },
+  "browserslist": [
+    "last 2 major version",
+    ">= 2%"
+  ]
 }

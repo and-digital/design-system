@@ -18,8 +18,10 @@
   &-purple,
   &-pink,
   &-charcoal {
-    padding: $section-horizontal-spacing-mobile;
     color: $color-white;
+    margin-left: --$row-margin;
+    margin-right: --$row-margin;
+    padding: $section-horizontal-spacing-mobile;
 
     @include tablet {
       padding: $section-horizontal-spacing-tablet;
