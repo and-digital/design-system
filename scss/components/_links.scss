@@ -86,21 +86,10 @@ a {
 .section-charcoal {
   a,
   a:active,
-  a:visited {
-    color: $color-white;
-    border-color: $color-white;
-  }
-
+  a:visited,
   .link-primary {
     color: $color-white;
     border-color: $color-white;
-  }
-}
-
-.section-blue {
-  .link-primary {
-    color: $color-brand-blue;
-    border-color: $color-brand-blue;
   }
 }
 
@@ -109,11 +98,7 @@ a {
 .section-green {
   a,
   a:active,
-  a:visited {
-    color: $color-brand-charcoal;
-    border-color: $color-brand-charcoal;
-  }
-
+  a:visited,
   .link-primary {
     color: $color-brand-charcoal;
     border-color: $color-brand-charcoal;
@@ -198,26 +183,6 @@ a {
   }
 }
 
-.sectionn-red,
-.sectionn-blue,
-.sectionn-purple {
-  .link-primary {
-    color: $color-white;
-    border-color: $color-white;
-    background: transparent;
-  }
-}
-
-.sectionn-yellow,
-.sectionn-green,
-.sectionn-pink {
-  .link-primary {
-    color: $color-brand-charcoal;
-    border-color: $color-brand-charcoal;
-    background: transparent;
-  }
-}
-
 .red-theme,
 .blue-theme,
 .pink-theme,
@@ -284,11 +249,7 @@ a {
   .section-green {
     a,
     a:active,
-    a:visited {
-      color: $color-brand-charcoal;
-      border-color: $color-brand-charcoal;
-    }
-
+    a:visited,
     .link-primary {
       color: $color-brand-charcoal;
       border-color: $color-brand-charcoal;
@@ -301,11 +262,7 @@ a {
   .section-charcoal {
     a,
     a:active,
-    a:visited {
-      color: $color-white;
-      border-color: $color-white;
-    }
-
+    a:visited,
     .link-primary {
       color: $color-white;
       border-color: $color-white;

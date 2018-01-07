@@ -83,7 +83,7 @@
     }
   }
 
-  &-text {
+  &-header-text {
     @include font-size($font-lead);
     max-width: 250px;
   }

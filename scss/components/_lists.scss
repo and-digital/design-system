@@ -25,6 +25,8 @@ ul {
   &-inline {
     li {
       display: inline-block;
+      margin-right: $list-inline-spacing;
+      margin-bottom: $list-inline-spacing;
     }
   }
 }
