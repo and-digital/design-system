@@ -3,6 +3,7 @@ h2, .heading-2,
 h3, .heading-3 ,
 h4, .heading-3-small {
   font-family: $brand-font-family-bold;
+  margin-bottom: 10px;
 }
 
 h1, .heading-1 {
@@ -89,5 +90,15 @@ h4, .heading-3-small {
   h3,
   h4 {
     color: $color-brand-green;
+  }
+}
+
+a {
+  &.heading-1,
+  &.heading-2,
+  &.heading-3 ,
+  &.heading-3-small {
+    text-decoration: none;
+    display: block;
   }
 }

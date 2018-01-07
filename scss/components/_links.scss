@@ -43,12 +43,14 @@ a {
 
   &-secondary,
   &-external {
+    position: relative;
+
     &:after {
       font-family: $brand-font-family-icons;
       display: inline-block;
       position: absolute;
-      left: 100%;
       margin-left: 10px;
+      margin-top: 3px;
     }
   }
 
@@ -56,7 +58,6 @@ a {
     @include font-size($font-small-mobile);
     color: $color-mine-shaft;
     text-decoration: none;
-    position: relative;
 
     &:after {
       content: $link-secondary-icon;
