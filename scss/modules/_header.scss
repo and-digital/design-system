@@ -2,6 +2,8 @@
   background-color: #FFFFFF;
   display: flex;
   justify-content: space-between;
+  padding-left: $grid-margin;
+  padding-right: $grid-margin;
 
   &-logo {
     display: flex;

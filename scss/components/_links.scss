@@ -43,12 +43,9 @@ a {
 
   &-secondary,
   &-external {
-    position: relative;
-
     &:after {
       font-family: $brand-font-family-icons;
       display: inline-block;
-      position: absolute;
       margin-left: 10px;
       margin-top: 3px;
     }
@@ -60,6 +57,7 @@ a {
     text-decoration: none;
 
     &:after {
+      position: absolute;
       content: $link-secondary-icon;
     }
 

@@ -1,0 +1,12 @@
+blockquote {
+  margin-left: 0;
+  margin-right: 0;
+
+  &:before {
+    margin-right: 5px;
+  }
+
+  &:before {
+    margin-left: 5px;
+  }
+}
