@@ -1,6 +1,8 @@
 .section {
-  padding: $section-horizontal-spacing-mobile;
+  padding: 0 $section-horizontal-spacing-mobile $section-horizontal-spacing-mobile;
   margin-bottom: $section-margin-bottom;
+  margin-left: $row-margin;
+  margin-right: $row-margin;
 
   @include tablet {
     padding: 0 $section-horizontal-spacing-tablet;
@@ -83,7 +85,7 @@
     }
   }
 
-  &-text {
+  &-header-text {
     @include font-size($font-lead);
     max-width: 250px;
   }

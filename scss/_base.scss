@@ -13,6 +13,7 @@ body {
   font-family: $brand-font-regular;
   @include font-size($font-base-mobile);
   min-width: 320px;
+  line-height: 1.42857143;
   color: $color-mine-shaft;
 
   @include tablet {
