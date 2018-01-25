@@ -1,0 +1,33 @@
+.cookie-notice {
+  margin-bottom: 0;
+  padding-top: 12px;
+  padding-bottom: 0;
+  position: relative;
+  background-color: theme-color("charcoal");
+  color: color("white");
+  overflow: hidden;
+
+  &-message {
+    @extend .col-md-6;
+    @extend .offset-md-3;
+    padding-right: 20px;
+  }
+
+  &-link {
+    color: color("white");
+
+    &:hover {
+      color: color("white");
+    }
+  }
+
+  &-close {
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    transform: translate(0, -50%);
+    color: color("white");
+    text-decoration: none;
+
+  }
+}

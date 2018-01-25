@@ -1,8 +1,7 @@
 // Colors
 // Please don't use colours directly in the code
+
 $color-mine-shaft: #323232;
-$color-gray: #898989;
-$color-white: #FFFFFF;
 $color-red-orange: #FF323C;
 $color-supernova: #FFC800;
 $color-dodger-blue: #2897FF;
@@ -12,19 +11,27 @@ $color-la-palma: #1EA014;
 $color-hot-pink: #FF6ECF;
 $color-orchid: #E664C5;
 
+$colors: (
+  "white": #FFFFFF,
+  "grey": #898989
+);
+
 // Brand
-$color-brand-red: $color-red-orange;
-$color-brand-yellow: $color-supernova;
-$color-brand-green: $color-lima;
-$color-brand-blue: $color-dodger-blue;
-$color-brand-purple: $color-heliotrope;
-$color-brand-pink: $color-hot-pink;
-$color-brand-charcoal: $color-mine-shaft;
-$color-brand-accessibility-green: $color-la-palma;
-$color-brand-accessibility-pink: $color-orchid;
+$theme-colors: (
+  "red": $color-red-orange,
+  "yellow": $color-supernova,
+  "green": $color-lima,
+  "blue": $color-dodger-blue,
+  "purple": $color-heliotrope,
+  "pink": $color-hot-pink,
+  "charcoal": $color-mine-shaft,
+  "green-accessible": $color-la-palma,
+  "pink-accessible": $color-orchid
+);
+
 $brand-darken-value: 4;
 
-$link-primary-default-border-color: $color-brand-charcoal;
+$link-primary-default-border-color: $color-mine-shaft;
 $link-secondary-icon: '\e946';
 $link-external-icon: '\e944';
 
@@ -74,6 +81,7 @@ $font-search-input-mobile: 32;
 $font-search-icon-mobile: 24;
 $font-superhero-mobile: 40;
 $external-link-icon-small: .75em;
+$footer-heading-font-size: 14;
 
 $icon-xl: 32;
 $icon-lrg: 28;

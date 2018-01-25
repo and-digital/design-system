@@ -1,20 +1,21 @@
 @import 'variables';
 @import 'mixins';
 
+@import 'utilitise';
 @import 'normalize';
 @import 'grid';
 @import 'base';
 
 // Components
 @import 'components/components';
+@import 'footer';
+@import 'header';
+@import 'section';
 
 // Modules
 @import 'modules/cookie-notice';
 @import 'modules/feature-list';
-@import 'modules/footer';
-@import 'modules/header';
 @import 'modules/hero';
-@import 'modules/section';
 @import 'modules/section-image';
 @import 'modules/testimonial';
 

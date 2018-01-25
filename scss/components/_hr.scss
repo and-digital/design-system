@@ -7,7 +7,7 @@ hr {
 .blue-background,
 .red-background {
   hr{
-    border-color: $color-white;
+    border-color: color("white");
   }
 }
 
@@ -15,7 +15,7 @@ hr {
 .green-background,
 .pink-background {
   hr{
-    border-color: $color-brand-charcoal;
+    border-color: theme-color("charcoal");
   }
 }
 

@@ -79,6 +79,18 @@
   </nav>
 </header>
 
+<div class="cookie-notice">
+  <p class="cookie-notice-message">
+    Our website uses cookies to ensure you get the best experience. For more information see our
+    <a href="/privacy-policy" class="cookie-notice-link">Privacy Policy</a>.
+  </p>
+
+  <button type="button" class="cookie-notice-close">
+    <i class="and-icon-close white-content" aria-hidden="true"></i>
+    <span class="sr-only">Close cookie notice</span>
+  </button>
+</div>
+
 <section class="hero" style="background-image: url(https://static.andigital.com/wp-content/uploads/2015/03/14162240/Beach-No-fisherman.png)">
   <div class="hero-content">
     <img class="hero-logo" src="https://static.andigital.com/wp-content/uploads/2017/05/02163341/AND_LOGO_RGB_ON_WHITE.png" alt="AND Digital">
@@ -89,7 +101,7 @@
 <main class="container-fluid">
 
   <h2 class="text-center">Themes</h2>
-  <section class="section">
+  <section>
 
     <p>
       You can set the colour theme of the page by putting a <code>{color}-theme</code> class on the body on the page.
@@ -116,7 +128,7 @@
   <hr>
 
   <h2 class="text-center">Headers</h2>
-  <section class="section">
+  <section>
     <p>
       Headers can be used in a 'traditional' way and will work perfectly. However, if you choose to use HTML5 sectioning
       (<code>&lt;section&gt;</code> or <code>&lt;article&gt;</code>), then you may use helper classes to achieve the
@@ -148,7 +160,7 @@
   <hr>
 
   <h2 class="text-center">Type</h2>
-  <section class="section">
+  <section>
 
     <h2>Paragraghs</h2>
     <p>A paragraph of text.</p>
@@ -178,7 +190,7 @@
   <hr>
 
   <h2 class="text-center">Lists</h2>
-  <section class="section">
+  <section>
     <ul>
       <li>List item 1</li>
       <li>
@@ -223,7 +235,7 @@
   <hr>
 
   <h2 class="text-center">Links</h2>
-  <section class="section">
+  <section>
 
     <p><a href="#">Standard link</a></p>
 
@@ -241,48 +253,22 @@
   <hr>
 
   <h2 class="text-center">Forms</h2>
-  <section class="section">
-    <div class="row">
-      <div class="col-md-6 offset-md-3">
-        <form action="">
-      <span class="form-mandatory-text">* required fields</span>
-      <div class="row">
-        <div class="col-md">
-          <div class="form-input-wrap">
-            <label for="name">
-              First Name
-              <span class="form-error-message">Required</span>
-            </label>
-            <input type="text" id="name">
-          </div>
+  <section>
+      <form action="">
+        <span class="form-mandatory-text">* required fields</span>
+        <div class="form-input-wrap">
+          <label for="name">
+            Text field
+            <span class="form-error-message">Required</span>
+          </label>
+          <input type="text" id="name">
         </div>
-        <div class="col-md">
-          <div class="form-input-wrap">
-            <label for="name">
-              Last Name
-              <span class="form-error-message">Required</span>
-            </label>
-            <input type="text" id="name">
-          </div>
+        <div class="form-input-wrap">
+          <label for="text">Textarea</label>
+          <textarea name="text" id="text" cols="30" rows="10"></textarea>
         </div>
-      </div>
-      <div class="row">
-        <div class="col">
-          <div class="form-input-wrap">
-            <label for="text">Comments</label>
-            <textarea name="text" id="text" cols="30" rows="10"></textarea>
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col">
-          <button type="submit" class="button">Submit</button>
-        </div>
-      </div>
-    </form>
-      </div>
-    </div>
+        <button type="submit" class="button">Submit</button>
+      </form>
   </section>
 
   <hr>
@@ -290,248 +276,240 @@
   <h2 class="text-center">Modules</h2>
 
   <section class="section">
-    <div class="row">
-      <div class="col-md-3">
-        <header class="section-header">
-          <h2 class="section-header-title">Section header</h2>
-        </header>
+    <div class="section-header">
+      <header class="section-header-header">
+        <h2 class="section-header-title">Section header</h2>
+      </header>
 
-        <p class="section-header-text">Section text</p>
-      </div>
-      <div class="col-md-6 col-sm-12">
-        <p class="text-lead">
-          Back in early 2014, our founder <a href="#">Paramjit Uppal</a> brought together a small group of known leaders
-          from the world of technology, consultancy and digital – and together they had a plan to build a remarkable
-          business. They recognised that companies need to accelerate their digital capability to compete and win in the
-          tech based economy – but there was a gap in the market of those that actually supported this.
-        </p>
+      <p class="section-header-text">Section text</p>
+    </div>
+    <div class="section-body">
+      <p class="text-lead">
+        Back in early 2014, our founder <a href="#">Paramjit Uppal</a> brought together a small group of known leaders
+        from the world of technology, consultancy and digital – and together they had a plan to build a remarkable
+        business. They recognised that companies need to accelerate their digital capability to compete and win in the
+        tech based economy – but there was a gap in the market of those that actually supported this.
+      </p>
 
-        <a href="#" class="link-primary">Primary link</a>
-      </div>
+      <a href="#" class="link-primary">Primary link</a>
     </div>
   </section>
 
-  <section class="section feature-list">
-    <div class="row">
-      <div class="col-md-3">
-        <header class="section-header">
-          <h2 class="section-header-title">Triple Feature List</h2>
-        </header>
+  <section class="feature-list feature-list-triple">
+    <div class="feature-list-header">
+      <header class="feature-list-header-header">
+        <h2 class="feature-list-header-title">Triple Feature List</h2>
+      </header>
 
-        <p class="section-header-text">Section text</p>
-      </div>
-      <div class="col-md-9">
-        <div class="row feature-list-list">
-          <div class="col-md-4 feature-list-item">
-            <a href="#" class="heading-3">
-              <img class="feature-list-image"
-                   src="https://static.andigital.com/wp-content/uploads/2017/08/08160428/joshua-hibbert-22841-copy.png"
-                   alt="">
+      <p class="feature-list-text">Section text</p>
+    </div>
+    <div class="feature-list-body">
+      <div class="feature-list-list">
+        <div class="feature-list-item">
+          <a href="#" class="heading-3">
+            <img class="feature-list-image"
+                 src="https://static.andigital.com/wp-content/uploads/2017/08/08160428/joshua-hibbert-22841-copy.png"
+                 alt="">
 
-              Guide
-            </a>
+            Guide
+          </a>
 
-            <p>
-              This is about optimising your ways of working in digital.
-              That means setting up ways that help you achieve your digital aspirations – quickly and sustainably.
-            </p>
+          <p>
+            This is about optimising your ways of working in digital.
+            That means setting up ways that help you achieve your digital aspirations – quickly and sustainably.
+          </p>
 
-            <a href="#" class="link-secondary">Find out more</a>
-          </div>
-          <div class="col-md-4 feature-list-item">
-            <a href="#" class="heading-3">
-              <img class="feature-list-image"
-                   src="https://static.andigital.com/wp-content/uploads/2015/03/20162148/Robot.jpg" alt="">
-
-              Build
-            </a>
-
-            <p>
-              Here’s where we power your product development teams with the skills and capacity they need to build great
-              tech.
-              We combine our people with yours, to form high-performance teams that deliver value – fast.
-            </p>
-
-            <p class="text-grey">Technologies you will be using</p>
-
-            <ul class="text-grey list-inline">
-              <li>
-                <i aria-hidden="true" class="and-icon-java icons-large"></i>
-                <span class="sr-only">java</span>
-              </li>
-              <li>
-                <i aria-hidden="true" class="and-icon-swift icons-large"></i>
-                <span class="sr-only">swift</span>
-              </li>
-              <li>
-                <i aria-hidden="true" class="and-icon-android icons-large"></i>
-                <span class="sr-only">android</span>
-              </li>
-              <li>
-                <i aria-hidden="true" class="and-icon-ios-seeklogo icons-large"></i>
-                <span class="sr-only">ios-seeklogo</span>
-              </li>
-              <li>
-                <i aria-hidden="true" class="and-icon-gitlab icons-large"></i>
-                <span class="sr-only">gitlab</span>
-              </li>
-              <li>
-                <i aria-hidden="true" class="and-icon-Jenkins icons-large"></i>
-                <span class="sr-only">Jenkins</span>
-              </li>
-              <li>
-                <i aria-hidden="true" class="and-icon-jira icons-large"></i>
-                <span class="sr-only">jira</span>
-              </li>
-            </ul>
-
-            <a href="#" class="link-secondary">Find out more</a>
-          </div>
-          <div class="col-md-4 feature-list-item">
-            <a href="#" class="heading-3">
-              <img class="feature-list-image"
-                   src="https://static.andigital.com/wp-content/uploads/2015/03/20162148/Coloured-Pencils-copy.jpeg"
-                   alt="">
-
-              Teach
-            </a>
-
-            <p>
-              We’ve built a life-long learning experience that covers a full breadth of tech and delivery skills.
-              Our Academy – with its classroom activities, bootcamps, coaching, self learning and communities – help
-              individuals and teams stay ahead.
-            </p>
-
-            <a href="#" class="link-secondary">Find out more</a>
-          </div>
+          <a href="#" class="link-secondary">Find out more</a>
         </div>
+        <div class="feature-list-item">
+          <a href="#" class="heading-3">
+            <img class="feature-list-image"
+                 src="https://static.andigital.com/wp-content/uploads/2015/03/20162148/Robot.jpg" alt="">
 
-        <a href="#" class="link-primary">View What We Do</a>
-      </div>
-    </div>
-  </section>
+            Build
+          </a>
 
-  <section class="section feature-list feature-list-images">
-    <div class="row">
-      <div class="col-md-3">
-        <header class="section-header">
-          <h2 class="section-header-title">Triple Feature List (clients)</h2>
-        </header>
-      </div>
-      <div class="col-md-9">
-        <div class="row feature-list-list">
-          <div class="col-md-4 feature-list-item">
-            <a href="#" class="feature-list-images-container">
-              <img class="feature-list-image"
-                   src="https://static.andigital.com/wp-content/uploads/2017/09/18142445/Thomas-Cook1-1024x444.png"
-                   alt="Thomas Cook">
-            </a>
+          <p>
+            Here’s where we power your product development teams with the skills and capacity they need to build great
+            tech.
+            We combine our people with yours, to form high-performance teams that deliver value – fast.
+          </p>
 
-            <p>
-              This is about optimising your ways of working in digital.
-              That means setting up ways that help you achieve your digital aspirations – quickly and sustainably.
-            </p>
+          <p class="text-grey">Technologies you will be using</p>
 
-            <a href="#" class="link-secondary">Find out more</a>
-          </div>
-          <div class="col-md-4 feature-list-item">
-            <a href="#" class="feature-list-images-container">
-              <img class="feature-list-image"
-                   src="https://static.andigital.com/wp-content/uploads/2017/09/18124624/Whitbread1.png"
-                   alt="Whitbread">
-            </a>
+          <ul class="text-grey list-inline">
+            <li>
+              <i aria-hidden="true" class="and-icon-java icons-large"></i>
+              <span class="sr-only">java</span>
+            </li>
+            <li>
+              <i aria-hidden="true" class="and-icon-swift icons-large"></i>
+              <span class="sr-only">swift</span>
+            </li>
+            <li>
+              <i aria-hidden="true" class="and-icon-android icons-large"></i>
+              <span class="sr-only">android</span>
+            </li>
+            <li>
+              <i aria-hidden="true" class="and-icon-ios-seeklogo icons-large"></i>
+              <span class="sr-only">ios-seeklogo</span>
+            </li>
+            <li>
+              <i aria-hidden="true" class="and-icon-gitlab icons-large"></i>
+              <span class="sr-only">gitlab</span>
+            </li>
+            <li>
+              <i aria-hidden="true" class="and-icon-Jenkins icons-large"></i>
+              <span class="sr-only">Jenkins</span>
+            </li>
+            <li>
+              <i aria-hidden="true" class="and-icon-jira icons-large"></i>
+              <span class="sr-only">jira</span>
+            </li>
+          </ul>
 
-            <p>
-              Here’s where we power your product development teams with the skills and capacity they need to build great
-              tech.
-              We combine our people with yours, to form high-performance teams that deliver value – fast.
-            </p>
-
-            <a href="#" class="link-secondary">Find out more</a>
-          </div>
-          <div class="col-md-4 feature-list-item">
-            <a href="#" class="feature-list-images-container">
-              <img
-                class="feature-list-image"
-                src="https://static.andigital.com/wp-content/uploads/2017/09/20105550/talktalk_master_logo_blue_rgb_large.png"
-                alt="Talk Talk">
-            </a>
-
-            <p>
-              We’ve built a life-long learning experience that covers a full breadth of tech and delivery skills.
-              Our Academy – with its classroom activities, bootcamps, coaching, self learning and communities – help
-              individuals and teams stay ahead.
-            </p>
-
-            <a href="#" class="link-secondary">Find out more</a>
-          </div>
+          <a href="#" class="link-secondary">Find out more</a>
         </div>
+        <div class="feature-list-item">
+          <a href="#" class="heading-3">
+            <img class="feature-list-image"
+                 src="https://static.andigital.com/wp-content/uploads/2015/03/20162148/Coloured-Pencils-copy.jpeg"
+                 alt="">
 
-        <a href="#" class="link-primary">View What We Do</a>
+            Teach
+          </a>
+
+          <p>
+            We’ve built a life-long learning experience that covers a full breadth of tech and delivery skills.
+            Our Academy – with its classroom activities, bootcamps, coaching, self learning and communities – help
+            individuals and teams stay ahead.
+          </p>
+
+          <a href="#" class="link-secondary">Find out more</a>
+        </div>
       </div>
+
+      <a href="#" class="link-primary">View What We Do</a>
     </div>
   </section>
 
-  <section class="section feature-list">
-    <div class="row">
-      <div class="col-md-3">
-        <header class="section-header">
-          <h2 class="section-header-title">Dual Feature List</h2>
-        </header>
+  <section class="feature-list feature-list-triple feature-list-images">
+    <div class="feature-list-header">
+      <header class="feature-list-header-header">
+        <h2 class="feature-list-header-title">Triple Feature List (clients)</h2>
+      </header>
+    </div>
+    <div class="feature-list-body">
+      <div class="feature-list-list">
+        <div class="feature-list-item">
+          <a href="#" class="feature-list-images-container">
+            <img class="feature-list-image"
+                 src="https://static.andigital.com/wp-content/uploads/2017/09/18142445/Thomas-Cook1-1024x444.png"
+                 alt="Thomas Cook">
+          </a>
 
-        <p class="section-header-text">Section text</p>
+          <p>
+            This is about optimising your ways of working in digital.
+            That means setting up ways that help you achieve your digital aspirations – quickly and sustainably.
+          </p>
+
+          <a href="#" class="link-secondary">Find out more</a>
+        </div>
+        <div class="feature-list-item">
+          <a href="#" class="feature-list-images-container">
+            <img class="feature-list-image"
+                 src="https://static.andigital.com/wp-content/uploads/2017/09/18124624/Whitbread1.png"
+                 alt="Whitbread">
+          </a>
+
+          <p>
+            Here’s where we power your product development teams with the skills and capacity they need to build great
+            tech.
+            We combine our people with yours, to form high-performance teams that deliver value – fast.
+          </p>
+
+          <a href="#" class="link-secondary">Find out more</a>
+        </div>
+        <div class="feature-list-item">
+          <a href="#" class="feature-list-images-container">
+            <img
+              class="feature-list-image"
+              src="https://static.andigital.com/wp-content/uploads/2017/09/20105550/talktalk_master_logo_blue_rgb_large.png"
+              alt="Talk Talk">
+          </a>
+
+          <p>
+            We’ve built a life-long learning experience that covers a full breadth of tech and delivery skills.
+            Our Academy – with its classroom activities, bootcamps, coaching, self learning and communities – help
+            individuals and teams stay ahead.
+          </p>
+
+          <a href="#" class="link-secondary">Find out more</a>
+        </div>
       </div>
-      <div class="col-md-9">
-        <div class="row feature-list-list">
-          <div class="col-md-6 feature-list-item">
-            <a href="#" class="heading-3">
-              <img class="feature-list-image feature-list-image-large"
-                   src="https://static.andigital.com/wp-content/uploads/2017/08/08160428/joshua-hibbert-22841-copy.png"
-                   alt="">
 
-              Growing Our Technology Capability Through Key Hires and Promotions
-            </a>
+      <a href="#" class="link-primary">View What We Do</a>
+    </div>
+  </section>
 
-            <p>
-              <span class="text-grey">4 January 2018 | </span>
-              <a href="#">Paramjit Uppal</a>
-            </p>
+  <section class="feature-list feature-list-dual">
+    <div class="feature-list-header">
+      <header class="feature-list-header-header">
+        <h2 class="feature-list-header-title">Dual Feature List</h2>
+      </header>
 
-            <p>
-              With some impactful recent hires and promotions,
-              we are continuing to grow our internal technology capability at pace for 2018.
-            </p>
+      <p class="section-header-text">Section text</p>
+    </div>
+    <div class="feature-list-body">
+      <div class="feature-list-list">
+        <div class="feature-list-item">
+          <a href="#" class="heading-3">
+            <img class="feature-list-image feature-list-image-large"
+                 src="https://static.andigital.com/wp-content/uploads/2017/08/08160428/joshua-hibbert-22841-copy.png"
+                 alt="">
 
-            <p>
-              <a href="#" class="link-secondary">Read full article</a>
-            </p>
+            Growing Our Technology Capability Through Key Hires and Promotions
+          </a>
 
-            <a href="#" class="link-primary">View All Articles</a>
-          </div>
-          <div class="col-md-6 feature-list-item">
-            <a href="#" class="heading-3">
-              <img class="feature-list-image feature-list-image-large"
-                   src="https://static.andigital.com/wp-content/uploads/2015/03/20162148/Robot.jpg" alt="">
+          <p>
+            <span class="text-grey">4 January 2018 | </span>
+            <a href="#">Paramjit Uppal</a>
+          </p>
 
-              Retail Leaders Breakfast – “The Art of Effectiveness” with Jonathan Sands OBE
-            </a>
+          <p>
+            With some impactful recent hires and promotions,
+            we are continuing to grow our internal technology capability at pace for 2018.
+          </p>
 
-            <p>
-              <span class="text-grey">8 February 2018 | 08:15 - 10:30 | </span>
-              <a href="#" class="link-external">Techspace Shoreditch, EC2A 3NW </a>
-            </p>
+          <p>
+            <a href="#" class="link-secondary">Read full article</a>
+          </p>
 
-            <p>
-              We are hosting the next in our series breakfasts for retail leaders on Thursday 8th February on
-              ‘The Art of Effectiveness’ with Jonathan Sands OBE.
-            </p>
+          <a href="#" class="link-primary">View All Articles</a>
+        </div>
+        <div class="feature-list-item">
+          <a href="#" class="heading-3">
+            <img class="feature-list-image feature-list-image-large"
+                 src="https://static.andigital.com/wp-content/uploads/2015/03/20162148/Robot.jpg" alt="">
 
-            <p>
-              <a href="#" class="link-secondary">View event</a>
-            </p>
+            Retail Leaders Breakfast – “The Art of Effectiveness” with Jonathan Sands OBE
+          </a>
 
-            <a href="#" class="link-primary">View All Events</a>
-          </div>
+          <p>
+            <span class="text-grey">8 February 2018 | 08:15 - 10:30 | </span>
+            <a href="#" class="link-external">Techspace Shoreditch, EC2A 3NW </a>
+          </p>
+
+          <p>
+            We are hosting the next in our series breakfasts for retail leaders on Thursday 8th February on
+            ‘The Art of Effectiveness’ with Jonathan Sands OBE.
+          </p>
+
+          <p>
+            <a href="#" class="link-secondary">View event</a>
+          </p>
+
+          <a href="#" class="link-primary">View All Events</a>
         </div>
       </div>
     </div>
@@ -577,22 +555,20 @@
     </div>
   </section>
 
-  <section class="section section-purple">
-    <div class="row">
-      <div class="col-md-6">
-        <h1 class="heading-3">Module with purple background</h1>
+  <section class="section section-purple row">
+    <div class="col-md-6">
+      <h1 class="heading-3">Module with purple background</h1>
 
-        <p>Just graduated or have a couple of years out of university with a Computer Science degree? Love creating your
-          own digital products and learning new frameworks? Then the Graduate Developer role is for you!</p>
-        <p>At AND Digital, you can launch your career as a Software Engineer. You’ll get to take training specific to
-          your experience and what you want to learn; from Front End Angular and React workshops to presentation skills
-          training! You’ll be supported the entire way by your Squad Lead and the rest of your Squad; learning from some
-          of the best technologists.</p>
-        <p>Our roles are based both in and around Manchester as well as London. With continuous feedback and regular
-          opportunities to progress, what are you waiting for?</p>
+      <p>Just graduated or have a couple of years out of university with a Computer Science degree? Love creating your
+        own digital products and learning new frameworks? Then the Graduate Developer role is for you!</p>
+      <p>At AND Digital, you can launch your career as a Software Engineer. You’ll get to take training specific to
+        your experience and what you want to learn; from Front End Angular and React workshops to presentation skills
+        training! You’ll be supported the entire way by your Squad Lead and the rest of your Squad; learning from some
+        of the best technologists.</p>
+      <p>Our roles are based both in and around Manchester as well as London. With continuous feedback and regular
+        opportunities to progress, what are you waiting for?</p>
 
-        <a href="#" class="link-primary">primary link</a>
-      </div>
+      <a href="#" class="link-primary">primary link</a>
     </div>
   </section>
 
@@ -661,41 +637,38 @@
 
   <hr>
   <section class="section red-theme">
-    <div class="row">
-      <div class="col-md-3">
-        <header class="section-header">
-          <h2 class="section-header-title">Section header (with theme override)</h2>
-        </header>
+    <div class="section-header">
+      <header class="section-header-header">
+        <h2 class="section-header-title">Section header (with theme override)</h2>
+      </header>
 
-        <p class="section-header-text">Section text</p>
-      </div>
-      <div class="col-md-6 col-sm-12">
-        <p class="text-lead">
-          Back in early 2014, our founder <a href="#">Paramjit Uppal</a> brought together a small group of known leaders
-          from the world of technology, consultancy and digital – and together they had a plan to build a remarkable
-          business. They recognised that companies need to accelerate their digital capability to compete and win in the
-          tech based economy – but there was a gap in the market of those that actually supported this.
-        </p>
+      <p class="section-header-text">Section text</p>
+    </div>
+    <div class="section-body">
+      <p class="text-lead">
+        Back in early 2014, our founder <a href="#">Paramjit Uppal</a> brought together a small group of known leaders
+        from the world of technology, consultancy and digital – and together they had a plan to build a remarkable
+        business. They recognised that companies need to accelerate their digital capability to compete and win in the
+        tech based economy – but there was a gap in the market of those that actually supported this.
+      </p>
 
-        <div>
-          <a href="#" class="link-primary">Primary link</a>
-        </div>
-        <a href="#" class="link-secondary">Secondary link</a>
+      <div>
+        <a href="#" class="link-primary">Primary link</a>
       </div>
+      <a href="#" class="link-secondary">Secondary link</a>
     </div>
   </section>
 
   <h2>Coloured section with section header</h2>
   <section class="section section-red">
-    <div class="row">
-      <div class="col-md-3">
-        <header class="section-header">
+      <div class="section-header">
+        <header class="section-header-header">
           <h2 class="section-header-title">Section header</h2>
         </header>
 
         <p class="section-header-text">Section text</p>
       </div>
-      <div class="col-md-6 col-sm-12">
+      <div class="section-body">
         <p class="text-lead">
           Back in early 2014, our founder <a href="#">Paramjit Uppal </a> brought together a small group of known
           leaders from the world of technology, consultancy and digital – and together they had a plan to build a
@@ -708,189 +681,186 @@
         </div>
         <a href="#" class="link-secondary">Secondary link</a>
       </div>
-    </div>
   </section>
 
   <section class="section section-blue">
-    <div class="row">
-      <div class="col-md-3">
-        <header class="section-header">
-          <h1 class="section-header-title">
-            Our Tech
-          </h1>
-        </header>
-        <p class="section-header-text">
-          This is our trusted Tech Toolkit that we take to clients, to build remarkable digital products with them.
-        </p>
-      </div>
-      <div class="col-md-9">
-        <div class="row">
-          <div class="col-md-4">
-            <h2 class="heading-3">
-              Languages
-            </h2>
+    <div class="section-header">
+      <header class="section-header-header">
+        <h1 class="section-header-title">
+          Our Tech
+        </h1>
+      </header>
+      <p class="section-header-text">
+        This is our trusted Tech Toolkit that we take to clients, to build remarkable digital products with them.
+      </p>
+    </div>
+    <div class="section-body section-body-full-width">
+      <div class="row">
+        <div class="col-md-4">
+          <h2 class="heading-3">
+            Languages
+          </h2>
 
-            <ul class="list-inline">
-              <li>
-                <i aria-hidden="true" class="and-icon-java icons-large"></i>
-                <span class="sr-only">java</span>
-              </li>
+          <ul class="list-inline">
+            <li>
+              <i aria-hidden="true" class="and-icon-java icons-large"></i>
+              <span class="sr-only">java</span>
+            </li>
 
-              <li>
-                <i aria-hidden="true" class="and-icon-javascript icons-large"></i>
-                <span class="sr-only">javascript</span>
-              </li>
+            <li>
+              <i aria-hidden="true" class="and-icon-javascript icons-large"></i>
+              <span class="sr-only">javascript</span>
+            </li>
 
-              <li>
-                <i aria-hidden="true" class="and-icon-swift icons-large"></i>
-                <span class="sr-only">swift</span>
-              </li>
+            <li>
+              <i aria-hidden="true" class="and-icon-swift icons-large"></i>
+              <span class="sr-only">swift</span>
+            </li>
 
-              <li>
-                <i aria-hidden="true" class="and-icon-php icons-large"></i>
-                <span class="sr-only">php</span>
-              </li>
+            <li>
+              <i aria-hidden="true" class="and-icon-php icons-large"></i>
+              <span class="sr-only">php</span>
+            </li>
 
-              <li>
-                <i aria-hidden="true" class="and-icon-python icons-large"></i>
-                <span class="sr-only">python</span>
-              </li>
+            <li>
+              <i aria-hidden="true" class="and-icon-python icons-large"></i>
+              <span class="sr-only">python</span>
+            </li>
 
-              <li>
-                <i aria-hidden="true" class="and-icon-ruby icons-large"></i>
-                <span class="sr-only">ruby</span>
-              </li>
+            <li>
+              <i aria-hidden="true" class="and-icon-ruby icons-large"></i>
+              <span class="sr-only">ruby</span>
+            </li>
 
-              <li>
-                <i aria-hidden="true" class="and-icon-c icons-large"></i>
-                <span class="sr-only">c</span>
-              </li>
+            <li>
+              <i aria-hidden="true" class="and-icon-c icons-large"></i>
+              <span class="sr-only">c</span>
+            </li>
 
-              <li>
-                <i aria-hidden="true" class="and-icon-dotnet icons-large"></i>
-                <span class="sr-only">dotnet</span>
-              </li>
+            <li>
+              <i aria-hidden="true" class="and-icon-dotnet icons-large"></i>
+              <span class="sr-only">dotnet</span>
+            </li>
 
-              <li>
-                <i aria-hidden="true" class="and-icon-csharp icons-large"></i>
-                <span class="sr-only">csharp</span>
-              </li>
-            </ul>
-          </div>
-          <div class="col-md-4">
-            <h2 class="heading-3">
-              Frameworks
-            </h2>
-
-            <ul class="list-inline">
-
-              <li>
-                <i aria-hidden="true" class="and-icon-node icons-large"></i>
-                <span class="sr-only">node</span>
-              </li>
-
-              <li>
-                <i aria-hidden="true" class="and-icon-react icons-large"></i>
-                <span class="sr-only">react</span>
-              </li>
-
-              <li>
-                <i aria-hidden="true" class="and-icon-vue icons-large"></i>
-                <span class="sr-only">vue</span>
-              </li>
-
-              <li>
-                <i aria-hidden="true" class="and-icon-nightwatch icons-large"></i>
-                <span class="sr-only">nightwatch</span>
-              </li>
-
-              <li>
-                <i aria-hidden="true" class="and-icon-bootstrap icons-large"></i>
-                <span class="sr-only">bootstrap</span>
-              </li>
-
-              <li>
-                <i aria-hidden="true" class="and-icon-spring icons-large"></i>
-                <span class="sr-only">spring</span>
-              </li>
-
-              <li>
-                <i aria-hidden="true" class="and-icon-angular icons-large"></i>
-                <span class="sr-only">angular</span>
-              </li>
-            </ul>
-          </div>
-          <div class="col-md-4">
-            <h2 class="heading-3 white-content">
-              Tools
-            </h2>
-            <ul class="list-inline">
-              <li>
-                <i aria-hidden="true" class="and-icon-msqlserver icons-large"></i>
-                <span class="sr-only">msqlserver</span>
-              </li>
-
-              <li>
-                <i aria-hidden="true" class="and-icon-blockchain icons-large"></i>
-                <span class="sr-only">blockchain</span>
-              </li>
-
-              <li>
-                <i aria-hidden="true" class="and-icon-terraform icons-large"></i>
-                <span class="sr-only">terraform</span>
-              </li>
-
-              <li>
-                <i aria-hidden="true" class="and-icon-ansible icons-large"></i>
-                <span class="sr-only">ansible</span>
-              </li>
-
-              <li>
-                <i aria-hidden="true" class="and-icon-docker icons-large"></i>
-                <span class="sr-only">docker</span>
-              </li>
-
-              <li>
-                <i aria-hidden="true" class="and-icon-elastic icons-large"></i>
-                <span class="sr-only">elastic</span>
-              </li>
-
-              <li>
-                <i aria-hidden="true" class="and-icon-bower icons-large"></i>
-                <span class="sr-only">bower</span>
-              </li>
-
-              <li>
-                <i aria-hidden="true" class="and-icon-mongo icons-large"></i>
-                <span class="sr-only">mongo</span>
-              </li>
-
-              <li>
-                <i aria-hidden="true" class="and-icon-redis icons-large"></i>
-                <span class="sr-only">redis</span>
-              </li>
-
-              <li>
-                <i aria-hidden="true" class="and-icon-gulp icons-large"></i>
-                <span class="sr-only">gulp</span>
-              </li>
-
-              <li>
-                <i aria-hidden="true" class="and-icon-npm icons-large"></i>
-                <span class="sr-only">npm</span>
-              </li>
-
-              <li>
-                <i aria-hidden="true" class="and-icon-android icons-large"></i>
-                <span class="sr-only">android</span>
-              </li>
-            </ul>
-          </div>
+            <li>
+              <i aria-hidden="true" class="and-icon-csharp icons-large"></i>
+              <span class="sr-only">csharp</span>
+            </li>
+          </ul>
         </div>
-        <div class="row">
-          <div class="col">
-            <a href="/join-us/" class="link-primary">Join Our Team</a>
-          </div>
+        <div class="col-md-4">
+          <h2 class="heading-3">
+            Frameworks
+          </h2>
+
+          <ul class="list-inline">
+
+            <li>
+              <i aria-hidden="true" class="and-icon-node icons-large"></i>
+              <span class="sr-only">node</span>
+            </li>
+
+            <li>
+              <i aria-hidden="true" class="and-icon-react icons-large"></i>
+              <span class="sr-only">react</span>
+            </li>
+
+            <li>
+              <i aria-hidden="true" class="and-icon-vue icons-large"></i>
+              <span class="sr-only">vue</span>
+            </li>
+
+            <li>
+              <i aria-hidden="true" class="and-icon-nightwatch icons-large"></i>
+              <span class="sr-only">nightwatch</span>
+            </li>
+
+            <li>
+              <i aria-hidden="true" class="and-icon-bootstrap icons-large"></i>
+              <span class="sr-only">bootstrap</span>
+            </li>
+
+            <li>
+              <i aria-hidden="true" class="and-icon-spring icons-large"></i>
+              <span class="sr-only">spring</span>
+            </li>
+
+            <li>
+              <i aria-hidden="true" class="and-icon-angular icons-large"></i>
+              <span class="sr-only">angular</span>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h2 class="heading-3 white-content">
+            Tools
+          </h2>
+          <ul class="list-inline">
+            <li>
+              <i aria-hidden="true" class="and-icon-msqlserver icons-large"></i>
+              <span class="sr-only">msqlserver</span>
+            </li>
+
+            <li>
+              <i aria-hidden="true" class="and-icon-blockchain icons-large"></i>
+              <span class="sr-only">blockchain</span>
+            </li>
+
+            <li>
+              <i aria-hidden="true" class="and-icon-terraform icons-large"></i>
+              <span class="sr-only">terraform</span>
+            </li>
+
+            <li>
+              <i aria-hidden="true" class="and-icon-ansible icons-large"></i>
+              <span class="sr-only">ansible</span>
+            </li>
+
+            <li>
+              <i aria-hidden="true" class="and-icon-docker icons-large"></i>
+              <span class="sr-only">docker</span>
+            </li>
+
+            <li>
+              <i aria-hidden="true" class="and-icon-elastic icons-large"></i>
+              <span class="sr-only">elastic</span>
+            </li>
+
+            <li>
+              <i aria-hidden="true" class="and-icon-bower icons-large"></i>
+              <span class="sr-only">bower</span>
+            </li>
+
+            <li>
+              <i aria-hidden="true" class="and-icon-mongo icons-large"></i>
+              <span class="sr-only">mongo</span>
+            </li>
+
+            <li>
+              <i aria-hidden="true" class="and-icon-redis icons-large"></i>
+              <span class="sr-only">redis</span>
+            </li>
+
+            <li>
+              <i aria-hidden="true" class="and-icon-gulp icons-large"></i>
+              <span class="sr-only">gulp</span>
+            </li>
+
+            <li>
+              <i aria-hidden="true" class="and-icon-npm icons-large"></i>
+              <span class="sr-only">npm</span>
+            </li>
+
+            <li>
+              <i aria-hidden="true" class="and-icon-android icons-large"></i>
+              <span class="sr-only">android</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <a href="/join-us/" class="link-primary">Join Our Team</a>
         </div>
       </div>
     </div>
@@ -981,16 +951,134 @@
     </div>
   </section>
 
-  <section class="section section-green">
-    <div class="row">
+  <section class="section section-green row">
       <div class="col-md-6 offset-md-3">
         <h1 class="heading-3">A contact banner</h1>
 
         <a href="#" class="link-primary">Get in touch</a>
       </div>
+  </section>
+
+  <section class="section">
+    <div class="section-header">
+      <header class="section-header-header">
+        <h2 class="section-header-title">Icon list</h2>
+      </header>
+    </div>
+    <div class="section-body section-body-full-width">
+      <div class="row">
+        <div class="col">
+          <div class="icons-circle">
+            <i aria-hidden="true" class="and-icon-wonder"></i>
+          </div>
+
+          <h3 class="heading-3-small">Wonder</h3>
+
+          <p>
+            Imagine the impossible then make it a reality.
+            Love what you do. Play and learn by engaging in your passion every day.
+            Challenge yourself to go further.
+          </p>
+        </div>
+        <div class="col">
+          <div class="icons-circle">
+            <i aria-hidden="true" class="and-icon-share"></i>
+          </div>
+
+          <h3 class="heading-3-small">Share</h3>
+
+          <p>
+            Collaborate internally and externally. Be part of the digital revolution.
+            Lead the discussion and build a following. Give back.
+          </p>
+        </div>
+        <div class="col">
+          <div class="icons-circle">
+            <i aria-hidden="true" class="and-icon-delight"></i>
+          </div>
+
+          <h3 class="heading-3-small">Delight</h3>
+
+          <p>
+            Exceed expectations by delivering better results, faster.
+            Leave our clients wanting more of what we can bring.
+            Build your own skills and our clients’ capabilities.
+          </p>
+        </div>
+      </div>
     </div>
   </section>
 </main>
+
+<footer>
+  <div class="footer">
+    <div class="footer-logo-area">
+      <img src="and-logo.png" alt="AND Digital">
+    </div>
+    <div class="footer-body">
+      <div class="footer-section">
+        <h2 class="footer-heading">Club Ada</h2>
+
+        <address>
+          71-91 Aldwych, <br>
+          London, WC2B 4HN
+        </address>
+
+        <a href="#" class="link-external">View location</a>
+      </div>
+      <div class="footer-section">
+        <h2 class="footer-heading">Club Ada</h2>
+
+        <address>
+          71-91 Aldwych, <br>
+          London, WC2B 4HN
+        </address>
+
+        <a href="#" class="link-external">View location</a>
+      </div>
+      <div class="footer-section">
+        <h2 class="footer-heading">Club Ada</h2>
+
+        <address>
+          71-91 Aldwych, <br>
+          London, WC2B 4HN
+        </address>
+
+        <a href="#" class="link-external">View location</a>
+      </div>
+      <div class="footer-section">
+        <h2 class="footer-heading">Club Ada</h2>
+
+        <address>
+          71-91 Aldwych, <br>
+          London, WC2B 4HN
+        </address>
+
+        <a href="#" class="link-external">View location</a>
+      </div>
+      <div class="footer-section">
+        <h2 class="footer-heading">Club Ada</h2>
+
+        <address>
+          71-91 Aldwych, <br>
+          London, WC2B 4HN
+        </address>
+
+        <a href="#" class="link-external">View location</a>
+      </div>
+      <div class="footer-section">
+        <h2 class="footer-heading">Club Ada</h2>
+
+        <address>
+          71-91 Aldwych, <br>
+          London, WC2B 4HN
+        </address>
+
+        <a href="#" class="link-external">View location</a>
+      </div>
+    </div>
+  </div>
+</footer>
 
 <style>
   #theme-selector {
@@ -1034,4 +1122,5 @@
     body.className = bodyClass;
   });
 </script>
+<script src="./node_modules/@fakesamgregory/underscore-helpers/index.js"></script>
 </html>

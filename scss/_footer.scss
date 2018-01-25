@@ -1,11 +1,44 @@
-//#and-footer {
-//  color: $color-white;
-//  background: $color-mine-shaft;
-//  padding: 20px 48px 40px;
+.footer {
+  @extend .row;
+  @include font-size($font-small);
+
+  color: color("white");
+  background: theme-color("charcoal");
+  padding: 20px 48px 40px;
+
+  &-logo-area {
+    @extend .section-header;
+  }
+
+  &-body {
+    @extend .row;
+    @extend .section-body-full-width;
+  }
+
+  &-heading {
+    @include font-size($footer-heading-font-size);
+    padding-bottom: 8px;
+    color: theme-color("red");
+  }
+
+  &-section {
+    @extend .col-6;
+    @extend .col-md-4;
+  }
+
+  a {
+    color: color("white");
+    text-decoration: none;
+
+    &:hover {
+      color: theme-color("blue");
+    }
+  }
+}
 //
 //  dl, a {
 //    margin-top: 24px;
-//    color: $color-white;
+//    color: color("white");
 //  }
 //
 //  dt {
@@ -27,10 +60,10 @@
 //  a {
 //    &:active, &:hover, &:focus {
 //      text-decoration: none;
-//      color: $color-brand-blue;
+//      color: theme-color("blue");
 //    }
 //
-//    color: $color-white;
+//    color: color("white");
 //  }
 //
 //  .clubs {

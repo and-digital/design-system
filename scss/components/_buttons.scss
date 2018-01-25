@@ -1,8 +1,8 @@
 .button {
-  background-color: $color-brand-charcoal;
-  color: $color-white;
+  background-color: theme-color("charcoal");
+  color: color("white");
   border: none;
-  border-bottom: solid 4px $color-brand-charcoal;
+  border-bottom: solid 4px theme-color("charcoal");
   padding: $button-vertical-padding 12px;
   margin: 12px 0;
   display: inline-block;
@@ -13,8 +13,8 @@
   &:hover,
   &:focus {
     padding-bottom: 8 - ($link-primary-border-bottom-hover - $link-primary-border);
-    background-color: $color-brand-red;
-    color: $color-white;
+    background-color: theme-color("red");
+    color: color("white");
     cursor: pointer;
     outline: 0;
   }
@@ -42,50 +42,50 @@
 .yellow-theme,
 .pink-theme {
   .button {
-    color: $color-brand-charcoal;
+    color: theme-color("charcoal");
 
     &:hover, &:focus {
-      background-color: $color-mine-shaft;
-      color: $color-white;
+      background-color: theme-color("charcoal");
+      color: color("white");
     }
   }
 }
 
 .red-theme {
   .button {
-    background-color: $color-brand-red;
-    color: $color-white;
+    background-color: theme-color("red");
+    color: color("white");
   }
 }
 
 .yellow-theme {
   .button {
-    background-color: $color-brand-yellow;
+    background-color: theme-color("yellow");
   }
 }
 
 .green-theme {
   .button {
-    background-color: $color-brand-green;
+    background-color: theme-color("green");
   }
 }
 
 .blue-theme {
   .button {
-    background-color: $color-brand-blue;
-    color: $color-white
+    background-color: theme-color("blue");
+    color: color("white")
   }
 }
 
 .purple-theme {
   .button {
-    background-color: $color-brand-purple;
-    color: $color-white;
+    background-color: theme-color("purple");
+    color: color("white");
   }
 }
 
 .pink-theme {
   .button {
-    background-color: $color-brand-pink;
+    background-color: theme-color("pink");
   }
 }

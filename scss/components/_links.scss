@@ -1,11 +1,11 @@
 a {
-  color: $color-brand-charcoal;
+  color: theme-color("red");
   text-decoration: underline;
 
   &:hover,
   &:active,
   &:focus {
-    color: $color-brand-red;
+    color: theme-color("red");
     text-decoration: none;
     outline: 0;
   }
@@ -19,8 +19,8 @@ a {
     border: $link-primary-border;
     text-align: center;
     text-decoration: none;
-    color: $color-mine-shaft;
-    border-color: $color-mine-shaft;
+    color: theme-color("charcoal");
+    border-color: theme-color("charcoal");
 
     &:hover,
     &:focus {
@@ -53,7 +53,7 @@ a {
 
   &-secondary {
     @include font-size($font-small-mobile);
-    color: $color-mine-shaft;
+    color: theme-color("charcoal");
     text-decoration: none;
 
     &:after {
@@ -87,8 +87,8 @@ a {
   a:active,
   a:visited,
   .link-primary {
-    color: $color-white;
-    border-color: $color-white;
+    color: color("white");
+    border-color: color("white");
   }
 }
 
@@ -99,8 +99,8 @@ a {
   a:active,
   a:visited,
   .link-primary {
-    color: $color-brand-charcoal;
-    border-color: $color-brand-charcoal;
+    color: theme-color("charcoal");
+    border-color: theme-color("charcoal");
   }
 }
 
@@ -108,12 +108,12 @@ a {
   a,
   a:active,
   a:visited {
-    color: $color-brand-red;
+    color: theme-color("red");
   }
 
   .link-primary {
-    border-color: $color-brand-red;
-    color: $color-brand-red;
+    border-color: theme-color("red");
+    color: theme-color("red");
   }
 }
 
@@ -121,12 +121,12 @@ a {
   a,
   a:active,
   a:visited {
-    color: $color-brand-green;
+    color: theme-color("green");
   }
 
   .link-primary {
-    border-color: $color-brand-green;
-    color: $color-brand-green;
+    border-color: theme-color("green");
+    color: theme-color("green");
   }
 }
 
@@ -134,12 +134,12 @@ a {
   a,
   a:active,
   a:visited {
-    color: $color-brand-blue;
+    color: theme-color("blue");
   }
 
   .link-primary {
-    border-color: $color-brand-blue;
-    color: $color-brand-blue;
+    border-color: theme-color("blue");
+    color: theme-color("blue");
   }
 }
 
@@ -147,12 +147,12 @@ a {
   a,
   a:active,
   a:visited {
-    color: $color-brand-purple;
+    color: theme-color("purple");
   }
 
   .link-primary {
-    border-color: $color-brand-purple;
-    color: $color-brand-purple;
+    border-color: theme-color("purple");
+    color: theme-color("purple");
   }
 }
 
@@ -160,12 +160,12 @@ a {
   a,
   a:active,
   a:visited {
-    color: $color-brand-pink;
+    color: theme-color("pink");
   }
 
   .link-primary {
-    border-color: $color-brand-pink;
-    color: $color-brand-pink;
+    border-color: theme-color("pink");
+    color: theme-color("pink");
   }
 }
 
@@ -173,12 +173,12 @@ a {
   a,
   a:active,
   a:visited {
-    color: $color-brand-yellow;
+    color: theme-color("yellow");
   }
 
   .link-primary {
-    color: $color-brand-yellow;
-    border-color: $color-brand-yellow;
+    color: theme-color("yellow");
+    border-color: theme-color("yellow");
   }
 }
 
@@ -190,56 +190,56 @@ a {
 .green-theme {
   .red-theme {
     .link-primary {
-      border-color: $color-brand-red;
-      color: $color-brand-red;
+      border-color: theme-color("red");
+      color: theme-color("red");
     }
     a {
-      color: $color-brand-red;
+      color: theme-color("red");
     }
   }
   .blue-theme {
     .link-primary {
-      border-color: $color-brand-blue;
-      color: $color-brand-blue;
+      border-color: theme-color("blue");
+      color: theme-color("blue");
     }
     a {
-      color: $color-brand-blue;
+      color: theme-color("blue");
     }
   }
   .pink-theme {
     .link-primary {
-      border-color: $color-brand-pink;
-      color: $color-brand-pink;
+      border-color: theme-color("pink");
+      color: theme-color("pink");
     }
     a {
-      color: $color-brand-pink;
+      color: theme-color("pink");
     }
   }
   .yellow-theme {
     .link-primary {
-      border-color: $color-brand-yellow;
-      color: $color-brand-yellow;
+      border-color: theme-color("yellow");
+      color: theme-color("yellow");
     }
     a {
-      color: $color-brand-yellow;
+      color: theme-color("yellow");
     }
   }
   .purple-theme {
     .link-primary {
-      border-color: $color-brand-purple;
-      color: $color-brand-purple;
+      border-color: theme-color("purple");
+      color: theme-color("purple");
     }
     a {
-      color: $color-brand-purple;
+      color: theme-color("purple");
     }
   }
   .green-theme {
     .link-primary {
-      border-color: $color-brand-green;
-      color: $color-brand-green;
+      border-color: theme-color("green");
+      color: theme-color("green");
     }
     a {
-      color: $color-brand-green;
+      color: theme-color("green");
     }
   }
 
@@ -250,8 +250,8 @@ a {
     a:active,
     a:visited,
     .link-primary {
-      color: $color-brand-charcoal;
-      border-color: $color-brand-charcoal;
+      color: theme-color("charcoal");
+      border-color: theme-color("charcoal");
     }
   }
 
@@ -263,8 +263,8 @@ a {
     a:active,
     a:visited,
     .link-primary {
-      color: $color-white;
-      border-color: $color-white;
+      color: color("white");
+      border-color: color("white");
     }
   }
 }
