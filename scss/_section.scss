@@ -1,6 +1,9 @@
 .section {
-  padding: $section-horizontal-spacing-mobile;
+  @extend .row;
+  padding: 0 $section-horizontal-spacing-mobile $section-horizontal-spacing-mobile;
   margin-bottom: $section-margin-bottom;
+  margin-left: $row-margin;
+  margin-right: $row-margin;
 
   @include tablet {
     padding: 0 $section-horizontal-spacing-tablet;
@@ -18,7 +21,7 @@
   &-purple,
   &-pink,
   &-charcoal {
-    color: $color-white;
+    color: color("white");
     margin-left: --$row-margin;
     margin-right: --$row-margin;
     padding: $section-horizontal-spacing-mobile;
@@ -33,37 +36,41 @@
   }
 
   &-red {
-    background: $color-brand-red;
+    background: theme-color("red");
   }
 
   &-yellow {
-    background: $color-brand-yellow;
-    color: $color-brand-charcoal;
+    background: theme-color("yellow");
+    color: theme-color("charcoal");
   }
 
   &-green {
-    background: $color-brand-green;
-    color: $color-brand-charcoal;
+    background: theme-color("green");
+    color: theme-color("charcoal");
   }
 
   &-blue {
-    background: $color-brand-blue;
+    background: theme-color("blue");
   }
 
   &-purple {
-    background: $color-brand-purple;
+    background: theme-color("purple");
   }
 
   &-pink {
-    background: $color-brand-pink;
-    color: $color-brand-charcoal;
+    background: theme-color("pink");
+    color: theme-color("charcoal");
   }
 
   &-charcoal {
-    background: $color-brand-charcoal;
+    background: theme-color("charcoal");
   }
 
   &-header {
+    @extend .col-md-3;
+  }
+
+  &-header-header {
     margin-bottom: 24px;
 
     @include tablet {
@@ -87,47 +94,55 @@
     @include font-size($font-lead);
     max-width: 250px;
   }
+
+  &-body {
+    @extend .col-md-6;
+  }
+
+  &-body-full-width {
+    @extend .col-md-9;
+  }
 }
 
 .red-theme,
 .section.red-theme {
   .section-header-title {
-    border-color: $color-brand-red;
+    border-color: theme-color("red");
   }
 }
 
 .yellow-theme,
 .section.yellow-theme {
   .section-header-title {
-    border-color: $color-brand-yellow;
+    border-color: theme-color("yellow");
   }
 }
 
 .green-theme,
 .section.green-theme {
   .section-header-title {
-    border-color: $color-brand-green;
+    border-color: theme-color("green");
   }
 }
 
 .blue-theme,
 .section.blue-theme {
   .section-header-title {
-    border-color: $color-brand-blue;
+    border-color: theme-color("blue");
   }
 }
 
 .purple-theme,
 .section.purple-theme {
   .section-header-title {
-    border-color: $color-brand-purple;
+    border-color: theme-color("purple");
   }
 }
 
 .pink-theme,
 .section.pink-theme {
   .section-header-title {
-    border-color: $color-brand-pink;
+    border-color: theme-color("pink");
   }
 }
 
@@ -135,7 +150,7 @@
 .section-pink,
 .section-yellow {
   .section-header-title {
-    border-color: $color-brand-charcoal;
+    border-color: theme-color("charcoal");
   }
 }
 
@@ -146,7 +161,7 @@
 .section-blue,
 .section-purple{
   .section-header-title {
-    border-color: $color-white;
+    border-color: color("white");
   }
 }
 
@@ -163,7 +178,7 @@
   .section-blue,
   .section-purple{
     .section-header-title {
-      border-color: $color-white;
+      border-color: color("white");
     }
   }
 
@@ -171,7 +186,7 @@
   .section-pink,
   .section-yellow {
     .section-header-title {
-      border-color: $color-brand-charcoal;
+      border-color: theme-color("charcoal");
     }
   }
 }

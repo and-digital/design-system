@@ -44,7 +44,7 @@ h4, .heading-3-small {
   h2,
   h3,
   h4 {
-    color: $color-brand-red;
+    color: theme-color("red");
   }
 }
 
@@ -53,7 +53,7 @@ h4, .heading-3-small {
   h2,
   h3,
   h4 {
-    color: $color-brand-yellow;
+    color: theme-color("yellow");
   }
 }
 
@@ -62,7 +62,7 @@ h4, .heading-3-small {
   h2,
   h3,
   h4 {
-    color: $color-brand-blue;
+    color: theme-color("blue");
   }
 }
 
@@ -71,7 +71,7 @@ h4, .heading-3-small {
   h2,
   h3,
   h4 {
-    color: $color-brand-pink;
+    color: theme-color("pink");
   }
 }
 
@@ -80,7 +80,7 @@ h4, .heading-3-small {
   h2,
   h3,
   h4 {
-    color: $color-brand-purple;
+    color: theme-color("purple");
   }
 }
 
@@ -89,14 +89,14 @@ h4, .heading-3-small {
   h2,
   h3,
   h4 {
-    color: $color-brand-green;
+    color: theme-color("green");
   }
 }
 
 a {
   &.heading-1,
   &.heading-2,
-  &.heading-3 ,
+  &.heading-3,
   &.heading-3-small {
     text-decoration: none;
     display: block;

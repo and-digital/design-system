@@ -1,11 +1,11 @@
 input[type="text"] {
-  border: solid 1px $color-gray;
+  border: solid 1px color("grey");
   width: 100%;
   padding-left: 10px;
   height: 40px;
 
   &:focus {
-    border-left: solid 3px $color-brand-charcoal;
+    border-left: solid 3px theme-color("charcoal");
     outline: none;
   }
 }
@@ -18,7 +18,7 @@ input[type="submit"] {
 .pink-theme {
   input[type="text"] {
     &:focus {
-      border-left-color: $color-brand-pink;
+      border-left-color: theme-color("pink");
     }
   }
 }
@@ -26,7 +26,7 @@ input[type="submit"] {
 .green-theme {
   input[type="text"] {
     &:focus {
-      border-left-color: $color-brand-green;
+      border-left-color: theme-color("green");
     }
   }
 }
@@ -34,7 +34,7 @@ input[type="submit"] {
 .red-theme {
   input[type="text"] {
     &:focus {
-      border-left-color: $color-brand-red;
+      border-left-color: theme-color("red");
     }
   }
 }
@@ -42,7 +42,7 @@ input[type="submit"] {
 .blue-theme {
   input[type="text"] {
     &:focus {
-      border-left-color: $color-brand-blue;
+      border-left-color: theme-color("blue");
     }
   }
 }
@@ -50,7 +50,7 @@ input[type="submit"] {
 .yellow-theme {
   input[type="text"] {
     &:focus {
-      border-left-color: $color-brand-yellow;
+      border-left-color: theme-color("yellow");
     }
   }
 }
@@ -58,7 +58,7 @@ input[type="submit"] {
 .purple-theme {
   input[type="text"] {
     &:focus {
-      border-left-color: $color-brand-purple;
+      border-left-color: theme-color("purple");
     }
   }
 }
@@ -66,7 +66,7 @@ input[type="submit"] {
 .pink-theme {
   input[type="text"] {
     &:focus {
-      border-left-color: $color-brand-pink;
+      border-left-color: theme-color("pink");
     }
   }
 }
@@ -74,7 +74,7 @@ input[type="submit"] {
 .green-theme {
   input[type="text"] {
     &:focus {
-      border-left-color: $color-brand-green;
+      border-left-color: theme-color("green");
     }
   }
 }
@@ -82,7 +82,7 @@ input[type="submit"] {
 .red-theme {
   input[type="text"] {
     &:focus {
-      border-left-color: $color-brand-red;
+      border-left-color: theme-color("red");
     }
   }
 }
@@ -91,12 +91,12 @@ input[type="submit"] {
   a,
   a:active,
   a:visited {
-    color: $color-brand-blue;
+    color: theme-color("blue");
   }
 
   input[type="text"] {
     &:focus {
-      border-left-color: $color-brand-blue;
+      border-left-color: theme-color("blue");
     }
   }
 }
@@ -105,12 +105,12 @@ input[type="submit"] {
   a,
   a:active,
   a:visited {
-    color: $color-brand-yellow;
+    color: theme-color("yellow");
   }
 
   input[type="text"] {
     &:focus {
-      border-left-color: $color-brand-yellow;
+      border-left-color: theme-color("yellow");
     }
   }
 }
@@ -119,12 +119,12 @@ input[type="submit"] {
   a,
   a:active,
   a:visited {
-    color: $color-brand-purple;
+    color: theme-color("purple");
   }
 
   input[type="text"] {
     &:focus {
-      border-left-color: $color-brand-purple;
+      border-left-color: theme-color("purple");
     }
   }
 }

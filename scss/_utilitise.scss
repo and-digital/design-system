@@ -1,0 +1,8 @@
+// Functions
+@function theme-color($key: "primary") {
+  @return map-get($theme-colors, $key);
+}
+
+@function color($key: theme-color($key: "charcoal")) {
+  @return map-get($colors, $key);
+}

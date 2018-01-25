@@ -14,11 +14,33 @@ body {
   @include font-size($font-base-mobile);
   min-width: 320px;
   line-height: 1.42857143;
-  color: $color-mine-shaft;
+  color: theme-color("charcoal");
 
   @include tablet {
     @include font-size($font-base);
   }
+}
+
+button {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  background: none;
+  border: 0;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  padding: 0;
+  -webkit-appearance: button; /* for input */
+  -webkit-user-select: none; /* for button */
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+address {
+  font-style: normal;
 }
 
 

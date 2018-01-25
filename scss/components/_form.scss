@@ -21,7 +21,7 @@ form {
   }
 
   &-mandatory-text {
-    color: $color-gray;
+    color: color("grey");
     position: absolute;
     right: 15px;
     bottom: $form-padding-bottom;

@@ -18,39 +18,39 @@ strong {
 
 .text {
   &-red {
-    color: $color-brand-red;
+    color: theme-color("red");
   }
 
   &-yellow {
-    color: $color-brand-yellow;
+    color: theme-color("yellow");
   }
 
   &-green {
-    color: $color-brand-accessibility-green;
+    color: theme-color("green-accessible");
   }
 
   &-blue {
-    color: $color-brand-blue;
+    color: theme-color("blue");
   }
 
   &-purple {
-    color: $color-brand-purple;
+    color: theme-color("purple");
   }
 
   &-pink {
-    color: $color-brand-accessibility-pink;
+    color: theme-color("pink-accessible");
   }
 
   &-charcoal {
-    color: $color-brand-charcoal;
+    color: theme-color("charcoal");
   }
 
   &-grey {
-    color: $color-gray;
+    color: color("grey");
   }
 
   &-white {
-    color: $color-white;
+    color: color("white");
   }
 
   &-lead {

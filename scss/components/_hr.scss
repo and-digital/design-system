@@ -1,8 +1,13 @@
+hr {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
 .purple-background,
 .blue-background,
 .red-background {
   hr{
-    border-color: $color-white;
+    border-color: color("white");
   }
 }
 
@@ -10,6 +15,8 @@
 .green-background,
 .pink-background {
   hr{
-    border-color: $color-brand-charcoal;
+    border-color: theme-color("charcoal");
   }
 }
+
+

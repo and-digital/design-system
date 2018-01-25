@@ -1,4 +1,6 @@
 .feature-list {
+  @extend .section;
+
   &-image {
     min-height: 180px;
     width: 100%;
@@ -23,5 +25,62 @@
   &-list {
     display: flex;
     flex-wrap: wrap;
+  }
+
+  &-header {
+    @extend .section-header;
+  }
+
+  &-header-header {
+    @extend .section-header-header;
+  }
+
+  &-header-title {
+    @extend .section-header-title
+  }
+
+  &-body {
+    @extend .section-body-full-width;
+  }
+}
+
+.feature-list-images {
+  .feature-list-image {
+    object-fit: contain;
+    max-width: 100%;
+    max-height: 180px;
+    min-height: 0;
+    min-width: 0;
+
+  }
+
+  &-container {
+    display: block;
+    max-width: 260px;
+    min-height: 190px;
+
+    @include tablet {
+      margin: 0 auto;
+    }
+  }
+}
+
+.feature-list.feature-list-triple {
+  .feature-list-item {
+    @extend .col-md-4;
+  }
+
+  .feature-list-list {
+    @extend .row;
+  }
+}
+
+.feature-list.feature-list-dual {
+  .feature-list-item {
+    @extend .col-md-6;
+  }
+
+  .feature-list-list {
+    @extend .row;
   }
 }

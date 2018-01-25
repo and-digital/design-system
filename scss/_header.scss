@@ -2,6 +2,8 @@
   background-color: #FFFFFF;
   display: flex;
   justify-content: space-between;
+  padding-left: $grid-margin;
+  padding-right: $grid-margin;
 
   &-logo {
     display: flex;
@@ -43,41 +45,40 @@
   }
 
   &-link {
-    color: $color-brand-charcoal;
+    color: theme-color("charcoal");
   }
 
   &-link-green {
-    border-color: $color-brand-accessibility-green;
+    border-color: theme-color("green-accessible");
   }
 
   &-link-red  {
-    border-color: $color-brand-red;
+    border-color: theme-color("red");
   }
 
   &-link-purple  {
-    border-color: $color-brand-purple;
+    border-color: theme-color("purple");
   }
 
   &-link-pink  {
-    border-color: $color-brand-accessibility-pink;
+    border-color: theme-color("pink-accessible");
   }
 
   &-link-blue {
-    border-color: $color-brand-blue;
+    border-color: theme-color("blue");
   }
 
   &-menu-button {
     margin: 0;
-    color: #000000;
+    color: theme-color("charcoal");
     background-color: transparent;
     border: none;
-    height: 100%;
 
     &:hover,
     &:focus,
     &:active {
       background-color: transparent;
-      color: #000;
+      color: theme-color("charcoal");
       outline: none;
     }
   }
@@ -85,7 +86,7 @@
   &-search {
     &:hover,
     &:focus {
-      color: $color-brand-blue;
+      color: theme-color("blue");
     }
   }
 
@@ -127,34 +128,29 @@
     transition: background-color 0.4s ease;
 
     &-green:hover {
-      background-color: $color-brand-accessibility-green;
-      color: $color-white;
+      background-color: theme-color("green-accessible");
+      color: theme-color("green-accessible");
     }
 
     &-red:hover {
-      background-color: $color-brand-red;
-      color: $color-white
+      background-color: theme-color("red");
+      color: color("white")
     }
 
     &-purple:hover {
-      background-color: $color-brand-purple;
-      border-color: $color-brand-purple;
-      color: $color-white;
-    }
-
-    &-green:hover {
-      background-color: $color-brand-accessibility-green;
-      color: $color-white;
+      background-color: theme-color("purple");
+      border-color: theme-color("purple");
+      color: color("white");
     }
 
     &-pink:hover {
-      background-color: $color-brand-accessibility-pink;
-      color: $color-white;
+      background-color: theme-color("pink-accessible");
+      color: color("white");
     }
 
     &-blue:hover {
-      background-color: $color-brand-blue;
-      color: $color-white;
+      background-color: theme-color("blue");
+      color: color("white");
     }
   }
 }
@@ -167,7 +163,7 @@
 .green-theme {
   .header-link,
   .header-search {
-    color: $color-brand-charcoal;
+    color: theme-color("charcoal");
   }
 }
 
@@ -202,36 +198,36 @@
       &-green:hover,
       &-active .header-link-green {
         background-color: transparent;
-        border-color: $color-brand-accessibility-green;
-        color: $color-brand-accessibility-green;
+        border-color: theme-color("green-accessible");
+        color: theme-color("green-accessible");
       }
 
       &-red:hover,
       &-active .header-link-red {
         background-color: transparent;
-        border-color: $color-brand-red;
-        color: $color-brand-red;
+        border-color: theme-color("red");
+        color: theme-color("red");
       }
 
       &-purple:hover,
       &-active .header-link-purple {
         background-color: transparent;
-        border-color: $color-brand-purple;
-        color: $color-brand-purple;
+        border-color: theme-color("purple");
+        color: theme-color("purple");
       }
 
       &-pink:hover,
       &-active .header-link-pink {
         background-color: transparent;
-        border-color: $color-brand-accessibility-pink;
-        color: $color-brand-accessibility-pink;
+        border-color: theme-color("pink-accessible");
+        color: theme-color("pink-accessible");
       }
 
       &-blue:hover,
       &-active .header-link-blue {
         background-color: transparent;
-        border-color: $color-brand-blue;
-        color: $color-brand-blue;
+        border-color: theme-color("blue");
+        color: theme-color("blue");
       }
     }
   }
@@ -252,7 +248,7 @@
 //  z-index: 60;
 //
 //  &-background {
-//    background: $color-white;
+//    background: color("white");
 //    bottom: 0;
 //    left: 0;
 //    opacity: 0.7;
@@ -374,7 +370,7 @@
 //        top: 0;
 //        bottom: 0;
 //        padding-top: 70px;
-//        background-color: $color-white;
+//        background-color: color("white");
 //        -webkit-transition: width 0.2s ease-in-out;
 //        -moz-transition: width 0.2s ease-in-out;
 //        -ms-transition: width 0.2s ease-in-out;
@@ -414,22 +410,22 @@
 //
 //              &.header-red {
 //                background-color: $brand-red;
-//                color: $color-white;
+//                color: color("white");
 //              }
 //
 //              &.header-purple {
 //                background-color: $brand-purple;
-//                color: $color-white;
+//                color: color("white");
 //              }
 //
 //              &.header-green {
 //                background-color: $color-la-palma;
-//                color: $color-white;
+//                color: color("white");
 //              }
 //
 //              &.header-pink {
 //                background-color: $color-orchid;
-//                color: $color-white;
+//                color: color("white");
 //              }
 //            }
 //          }
@@ -450,7 +446,7 @@
 //        background: none;
 //        border: 0;
 //        font-size: 24px;
-//        color: $color-mine-shaft;
+//        color: theme-color("charcoal");
 //        display: inline-block;
 //        margin: auto 0;
 //        padding: 0;
