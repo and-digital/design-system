@@ -1,7 +1,6 @@
 h1, .heading-1,
 h2, .heading-2,
-h3, .heading-3 ,
-h4, .heading-3-small {
+h3, .heading-3 {
   font-family: $brand-font-family-bold;
   margin-bottom: 10px;
 }
@@ -23,27 +22,17 @@ h2, .heading-2 {
 }
 
 h3, .heading-3 {
-  @include font-size($font-heading-3-mobile);
-  margin-top: 0;
+  @include font-size($font-heading-3);
 
   @include tablet {
     @include font-size($font-heading-3);
   }
 }
 
-h4, .heading-3-small {
-  @include font-size($font-heading-4-mobile);
-
-  @include tablet {
-    @include font-size($font-heading-4);
-  }
-}
-
 .theme-red {
   h1,
   h2,
-  h3,
-  h4 {
+  h3 {
     color: theme-color("red");
   }
 }
@@ -51,8 +40,7 @@ h4, .heading-3-small {
 .theme-yellow {
   h1,
   h2,
-  h3,
-  h4 {
+  h3 {
     color: theme-color("yellow");
   }
 }
@@ -60,8 +48,7 @@ h4, .heading-3-small {
 .theme-blue {
   h1,
   h2,
-  h3,
-  h4 {
+  h3 {
     color: theme-color("blue");
   }
 }
@@ -69,8 +56,7 @@ h4, .heading-3-small {
 .theme-pink {
   h1,
   h2,
-  h3,
-  h4 {
+  h3 {
     color: theme-color("pink");
   }
 }
@@ -78,8 +64,7 @@ h4, .heading-3-small {
 .theme-purple {
   h1,
   h2,
-  h3,
-  h4 {
+  h3 {
     color: theme-color("purple");
   }
 }
@@ -87,8 +72,7 @@ h4, .heading-3-small {
 .theme-green {
   h1,
   h2,
-  h3,
-  h4 {
+  h3 {
     color: theme-color("green");
   }
 }
@@ -96,8 +80,7 @@ h4, .heading-3-small {
 a {
   &.heading-1,
   &.heading-2,
-  &.heading-3,
-  &.heading-3-small {
+  &.heading-3, {
     text-decoration: none;
     display: block;
   }
