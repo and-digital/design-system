@@ -17,6 +17,18 @@
     }
   }
 
+  &-item-title {
+    @include font-size($font-feature-list-link-mobile);
+    font-family: $brand-font-family-bold;
+    text-decoration: none;
+    margin-bottom: .5rem;
+    display: block;
+
+    @include tablet {
+      @include font-size($font-feature-list-link);
+    }
+  }
+
   &-image-large {
     min-height: 268px;
     height: 268px;
