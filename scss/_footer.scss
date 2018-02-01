@@ -7,7 +7,7 @@
 
   &-row {
     @extend .row;
-    margin-top: 28px;
+    margin-top: $footer-margin;
   }
 
   &-logo-area {
@@ -17,7 +17,7 @@
   &-body {
     @extend .row;
     @extend .section-body-full-width;
-    margin-bottom: 28px;
+    margin-bottom: $footer-margin;
   }
 
   &-heading {
@@ -92,138 +92,3 @@
     }
   }
 }
-//
-//  dl, a {
-//    margin-top: 24px;
-//    color: color("white");
-//  }
-//
-//  dt {
-//    font-size: $font-base;
-//    font-weight: bold;
-//    padding-bottom: 8px;
-//    display: block;
-//  }
-//
-//  dd {
-//    margin-left: 0;
-//
-//    &.location {
-//      padding-top: 8px;
-//      display: block;
-//    }
-//  }
-//
-//  a {
-//    &:active, &:hover, &:focus {
-//      text-decoration: none;
-//      color: theme-color("blue");
-//    }
-//
-//    color: color("white");
-//  }
-//
-//  .clubs {
-//    .logo {
-//      height: 36px;
-//      padding-left: 0px;
-//      margin-top: 24px;
-//    }
-//
-//    i {
-//      padding-left: 4px;
-//    }
-//  }
-//
-//  .social {
-//    margin-top: 64px;
-//
-//    i {
-//      font-size: $font-xlrg;
-//      margin: 8px;
-//    }
-//  }
-//
-//  .agreements-and-links {
-//    a {
-//      margin: 0 8px;
-//    }
-//
-//    .if-mobile {
-//      display: none;
-//    }
-//
-//    article {
-//      padding-right: 0;
-//    }
-//  }
-//
-//  .agreements-and-links {
-//    margin-top: $font-xlrg;
-//  }
-//
-//  .rights-reserved {
-//    position: absolute;
-//    right: 0;
-//  }
-//
-//
-//  @media #{$tablet} {
-//    padding: $font-xlrg 0px $font-xlrg 12px;
-//
-//    .row {
-//      width: calc(100% + 15px);
-//      font-size: $font-sml;
-//    }
-//
-//    .clubs {
-//      .logo {
-//        margin-top: 0;
-//        margin-left: 8px;
-//        margin-bottom: 24px;
-//      }
-//
-//      .col-xs-6 {
-//        padding: 0 0 0 8px;
-//        margin-top: 24px;
-//      }
-//
-//      dt {
-//        font-size: $font-sml;
-//      }
-//    }
-//
-//    .social {
-//      margin: 2 * 24px -15px 0;
-//
-//      i {
-//        margin: 6px;
-//        font-size: $font-lrg;
-//      }
-//    }
-//
-//    .agreements-and-links {
-//      margin-top: 0;
-//      padding-left: 4px;
-//
-//      a {
-//        margin: 0 4px;
-//      }
-//
-//      .if-mobile {
-//        display: block;
-//        margin-top: 10px;
-//      }
-//
-//      .col-xs-12 {
-//        margin-top: $font-xlrg;
-//      }
-//    }
-//
-//    .rights-reserved {
-//      padding-left: 4px;
-//      position: relative;
-//      font-size: $font-sml;
-//    }
-//  }
-//}
