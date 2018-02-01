@@ -27,6 +27,10 @@
       margin-bottom: $submit-button-margin-bottom;
     }
   }
+
+  &--full-width {
+    width: 100%;
+  }
 }
 
 .blue-theme,

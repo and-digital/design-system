@@ -89,11 +89,15 @@ $icon-xl: 32;
 $icon-lrg: 28;
 $icon-med: 24;
 
+// Sections
 $row-margin: -15px;
 $section-horizontal-spacing: 48px;
 $section-horizontal-spacing-tablet: 48px;
 $section-horizontal-spacing-mobile: 32px;
 $section-margin-bottom: $section-horizontal-spacing;
+
+// Paragraph
+$paragraph-margin: 12px;
 
 // Lists
 $list-padding: 24px;
@@ -109,6 +113,5 @@ $link-border-bottom: solid $link-border-bottom-width;
 $button-vertical-padding: 8px;
 $submit-button-margin-bottom: 15px;
 
-$paragraph-margin: 12px;
-
+// Forms
 $form-padding-bottom: 12px;
