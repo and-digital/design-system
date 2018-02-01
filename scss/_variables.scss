@@ -101,12 +101,11 @@ $list-line-height: 1.4;
 $list-inline-spacing: 12px;
 
 // Links
-$link-primary-padding: 12px;
+$link-primary-padding: 10px;
 $link-primary-padding-mobile: 8px;
 $link-primary-margin: 16px 0;
-$link-primary-color-width: 1px;
-$link-primary-border: $link-primary-color-width solid $link-primary-default-border-color;
-$link-primary-border-bottom-hover: 3px;
+$link-border-bottom-width: 4px;
+$link-border-bottom: solid $link-border-bottom-width;
 $button-vertical-padding: 8px;
 $submit-button-margin-bottom: 15px;
 
