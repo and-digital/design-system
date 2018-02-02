@@ -1,16 +1,16 @@
 .testimonial {
-  &-profile {
+  &__profile {
     display: flex;
     align-items: center;
     text-align: center;
   }
 
-  &-image {
+  &__image {
     max-width: 170px;
     margin: 10px;
   }
 
-  &-quote {
+  &__quote {
     @include font-size($font-lead-mobile);
 
     @include tablet {

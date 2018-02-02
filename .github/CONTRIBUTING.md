@@ -23,7 +23,7 @@ Look for a project's contribution instructions. If there are any, follow them.
 - Add the original repository as a remote called `upstream`.
 - If you created your fork a while ago be sure to pull upstream changes into your local repository.
 - Create a new branch to work on! Branch from `develop` if it exists, else from `master`.
-- Implement/fix your feature, comment your code clearly.
+- Implement/fix your feature, comment your code clearly and try your best to consider using variable.
 - Follow the code style of the project, including indentation.
 - If the project has tests run them!
 - Write or adapt tests as needed.

@@ -1,10 +1,10 @@
 .img {
-  &-fluid {
+  &--fluid {
     width: 100%;
     height: auto;
   }
 
-  &-circle {
+  &--circle {
     border-radius: 50%;
   }
 }

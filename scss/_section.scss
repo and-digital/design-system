@@ -14,13 +14,13 @@
     margin-bottom: $section-margin-bottom;
   }
 
-  &-red,
-  &-yellow,
-  &-green,
-  &-blue,
-  &-purple,
-  &-pink,
-  &-charcoal {
+  &--red,
+  &--yellow,
+  &--green,
+  &--blue,
+  &--purple,
+  &--pink,
+  &--charcoal {
     color: color("white");
     margin-left: --$row-margin;
     margin-right: --$row-margin;
@@ -35,42 +35,42 @@
     }
   }
 
-  &-red {
+  &--red {
     background: theme-color("red");
   }
 
-  &-yellow {
+  &--yellow {
     background: theme-color("yellow");
     color: theme-color("charcoal");
   }
 
-  &-green {
+  &--green {
     background: theme-color("green");
     color: theme-color("charcoal");
   }
 
-  &-blue {
+  &--blue {
     background: theme-color("blue");
   }
 
-  &-purple {
+  &--purple {
     background: theme-color("purple");
   }
 
-  &-pink {
+  &--pink {
     background: theme-color("pink");
     color: theme-color("charcoal");
   }
 
-  &-charcoal {
+  &--charcoal {
     background: theme-color("charcoal");
   }
 
-  &-header {
+  &__header {
     @extend .col-md-3;
   }
 
-  &-header-header {
+  &__header-header {
     margin-bottom: 24px;
 
     @include tablet {
@@ -78,7 +78,7 @@
     }
   }
 
-  &-header-title {
+  &__header-title {
     border-top: 2px solid;
     max-width: 200px;
     margin-top: 0;
@@ -90,77 +90,77 @@
     }
   }
 
-  &-header-text {
+  &__header-text {
     @include font-size($font-lead);
     max-width: 250px;
   }
 
-  &-body {
+  &__body {
     @extend .col-md-6;
-  }
 
-  &-body-full-width {
-    @extend .col-md-9;
+    &--full-width {
+      @extend .col-md-9;
+    }
   }
 }
 
 .red-theme,
 .section.red-theme {
-  .section-header-title {
+  .section__header-title {
     border-color: theme-color("red");
   }
 }
 
 .yellow-theme,
 .section.yellow-theme {
-  .section-header-title {
+  .section__header-title {
     border-color: theme-color("yellow");
   }
 }
 
 .green-theme,
 .section.green-theme {
-  .section-header-title {
+  .section__header-title {
     border-color: theme-color("green");
   }
 }
 
 .blue-theme,
 .section.blue-theme {
-  .section-header-title {
+  .section__header-title {
     border-color: theme-color("blue");
   }
 }
 
 .purple-theme,
 .section.purple-theme {
-  .section-header-title {
+  .section__header-title {
     border-color: theme-color("purple");
   }
 }
 
 .pink-theme,
 .section.pink-theme {
-  .section-header-title {
+  .section__header-title {
     border-color: theme-color("pink");
   }
 }
 
-.section-green,
-.section-pink,
-.section-yellow {
-  .section-header-title {
+.section--green,
+.section--pink,
+.section--yellow {
+  .section__header-title {
     border-color: theme-color("charcoal");
   }
 }
 
-.section-red,
-.section-blue,
-.section-purple,
-.section-red,
-.section-blue,
-.section-purple{
-  .section-header-title {
+.section--red,
+.section--blue,
+.section--purple,
+.section--red,
+.section--blue,
+.section--purple{
+  .section__header-title {
     border-color: color("white");
   }
 }
@@ -171,21 +171,21 @@
 .yellow-theme,
 .purple-theme,
 .green-theme {
-  .section-red,
-  .section-blue,
-  .section-purple,
-  .section-red,
-  .section-blue,
-  .section-purple{
-    .section-header-title {
+  .section--red,
+  .section--blue,
+  .section--purple,
+  .section--red,
+  .section--blue,
+  .section--purple{
+    .section__header-title {
       border-color: color("white");
     }
   }
 
-  .section-green,
-  .section-pink,
-  .section-yellow {
-    .section-header-title {
+  .section--green,
+  .section--pink,
+  .section--yellow {
+    .section__header-title {
       border-color: theme-color("charcoal");
     }
   }

@@ -32,7 +32,7 @@ a {
   }
 
   &-secondary,
-  &-external {
+  &--external {
     &:after {
       font-family: $brand-font-family-icons;
       display: inline-block;
@@ -62,17 +62,17 @@ a {
     }
   }
 
-  &-external {
+  &--external {
     &:after {
       content: $link-external-icon;
     }
   }
 }
 
-.section-red,
-.section-blue,
-.section-purple,
-.section-charcoal {
+.section--red,
+.section--blue,
+.section--purple,
+.section--charcoal {
   a,
   a:active,
   a:visited,
@@ -82,9 +82,9 @@ a {
   }
 }
 
-.section-yellow,
-.section-pink,
-.section-green {
+.section--yellow,
+.section--pink,
+.section--green {
   a,
   a:active,
   a:visited,
@@ -233,9 +233,9 @@ a {
     }
   }
 
-  .section-yellow,
-  .section-pink,
-  .section-green {
+  .section--yellow,
+  .section--pink,
+  .section--green {
     a,
     a:active,
     a:visited,
@@ -245,10 +245,10 @@ a {
     }
   }
 
-  .section-red,
-  .section-blue,
-  .section-purple,
-  .section-charcoal {
+  .section--red,
+  .section--blue,
+  .section--purple,
+  .section--charcoal {
     a,
     a:active,
     a:visited,

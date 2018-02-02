@@ -1,17 +1,16 @@
 # BrAND
 
-BrAND is the CSS library that should be used for all AND Digital products to maintain consistency and branding.
+BrAND is a CSS library that should be used for all AND Digital products to maintain consistency and branding. It should 
+speed up intial set up and help you remain on brand even if it changes.
 
-To get started, visit 
-
-For more information on BrAND, visit the [Wiki](https://github.com/fakesamgregory/BrAND/wiki)
+For more information on how to use BrAND, visit the [Wiki](https://github.com/fakesamgregory/BrAND/wiki)
 
 ## Quick start
 Several quick start options are available:
 
-- [Download the latest release](http://and.digital/design/download).
+- [Download the latest release](https://github.com/fakesamgregory/brAND/releases).
 - Clone the repo: `git clone https://github.com/ANDigital/and-brand.git`.
-- Install with npm: `npm install @and.digital/brand`.
+- Install with npm: `npm i @fakesamgregory/brand --save-dev`.
 
 Check the [Wiki](https://github.com/fakesamgregory/brAND/wiki/getting-started) for information on getting started 
 and how to use the library.
@@ -23,16 +22,21 @@ Coming soon...
 To install BrAND in your node modules simply run...
 
 ```
-npm install @and.digital/brand
+npm i @fakesamgregory/brand
 ```
 
 ## SASS
-BrAND uses SASS to build its components and modules. If you just want the basics (lighter, fluffier) then import `brand.scss`
+BrAND uses SASS to build its components and modules. 
+- brand-components.scss - 'Atoms' (lighter, fluffier).
+- brand.scss - Including modules
 
 ```scss
 // your-main.scss
 
-@import "node_modules/@and.digital/brand/scss/brand"; 
+@import "node_modules/@fakesamgregory/brand/scss/brand-components"; 
+
+// or 
+@import "node_modules/@fakesamgregory/brand/scss/brand";
 ```
 
 You can override *some* variables such as the breakpoints. Just include these variables before brand to override.

@@ -16,13 +16,13 @@ ul {
 
 
 .list {
-  &-reset {
+  &--reset {
     margin: 0;
     padding: 0;
     list-style: none;
   }
 
-  &-inline {
+  &--inline {
     li {
       display: inline-block;
       margin-right: $list-inline-spacing;

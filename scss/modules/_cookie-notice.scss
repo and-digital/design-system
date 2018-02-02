@@ -7,13 +7,13 @@
   color: color("white");
   overflow: hidden;
 
-  &-message {
+  &__message {
     @extend .col-md-6;
     @extend .offset-md-3;
     padding-right: 20px;
   }
 
-  &-link {
+  &__link {
     color: color("white");
 
     &:hover {
@@ -21,7 +21,7 @@
     }
   }
 
-  &-close {
+  &__close {
     position: absolute;
     top: 50%;
     right: 16px;

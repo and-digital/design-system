@@ -5,38 +5,38 @@
   background: theme-color("charcoal");
   padding: 20px 48px 40px;
 
-  &-row {
+  &__row {
     @extend .row;
     margin-top: $footer-margin;
   }
 
-  &-logo-area {
-    @extend .section-header;
+  &__logo-area {
+    @extend .section__header;
   }
 
-  &-body {
+  &__body {
     @extend .row;
-    @extend .section-body-full-width;
+    @extend .section__body--full-width;
     margin-bottom: $footer-margin;
   }
 
-  &-heading {
+  &__heading {
     @include font-size($footer-heading-font-size);
     padding-bottom: 8px;
     color: theme-color("red");
     margin-bottom: 0;
   }
 
-  &-section {
+  &__section {
     @extend .col-6;
     @extend .col-md-4;
   }
 
-  &-links-link {
+  &__links-link {
     @extend .text-small;
   }
 
-  &-social-icon {
+  &__social-icon {
     @include font-size($footer-social-icon-mobile);
     margin: 8px;
 
@@ -45,7 +45,7 @@
     }
   }
 
-  &-copywrite {
+  &__copywrite {
     @extend .col-md-3;
 
     @include tablet {
@@ -53,14 +53,14 @@
     }
   }
 
-  &-links-list,
-  &-social-links {
-    @extend .list-inline;
+  &__links-list,
+  &__social-links {
+    @extend .list--inline;
     @extend .offset-md-3;
     @extend .col-md-6;
 
-    .footer-social-links-item,
-    .footer-links-item {
+    .footer__social-links-item,
+    .footer__links-item {
       @include tablet {
         margin-bottom: 0;
       }
@@ -68,7 +68,7 @@
   }
 
 
-  &-links-item {
+  &__links-item {
     &:before {
       content: "/ ";
       padding-right: 8px;
