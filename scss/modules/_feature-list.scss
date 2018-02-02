@@ -40,19 +40,19 @@
   }
 
   &__header {
-    @extend .section-header;
+    @extend .section__header;
   }
 
   &__header-header {
-    @extend .section-header-header;
+    @extend .section__header-header;
   }
 
   &__header-title {
-    @extend .section-header-title
+    @extend .section__header-title
   }
 
   &__body {
-    @extend .section-body-full-width;
+    @extend .section__body--full-width;
   }
 }
 

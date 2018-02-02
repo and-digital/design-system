@@ -42,6 +42,16 @@
       display: block;
       font-size: 20px;
     }
+
+  }
+
+  &__search {
+    color: theme-color("charcoal");
+
+    &:hover,
+    &:focus {
+      color: theme-color("blue");
+    }
   }
 
   &__link {
@@ -84,15 +94,10 @@
     }
   }
 
-  &__search {
-    &:hover,
-    &:focus {
-      color: theme-color("blue");
-    }
-  }
+
 
   &__mobile-menu,
-  &__search {
+  &__navigation-item--search {
     height: 100%;
 
     .and-icon-search,
@@ -191,43 +196,80 @@
       }
     }
 
+    %green-hover {
+      background-color: transparent;
+      border-color: theme-color("green-accessible");
+      color: theme-color("green-accessible");
+    }
+
+    %red-hover {
+      background-color: transparent;
+      border-color: theme-color("red");
+      color: theme-color("red");
+    }
+
+    %purple-hover {
+      background-color: transparent;
+      border-color: theme-color("purple");
+      color: theme-color("purple");
+    }
+
+    %pink-hover {
+      background-color: transparent;
+      border-color: theme-color("pink-accessible");
+      color: theme-color("pink-accessible");
+    }
+
+    %blue-hover {
+      background-color: transparent;
+      border-color: theme-color("blue");
+      color: theme-color("blue");
+    }
+
     &__link {
       border-left: none;
       border-top: 4px solid transparent;
 
-      &--green:hover,
-      &--active .header-link-green {
-        background-color: transparent;
-        border-color: theme-color("green-accessible");
-        color: theme-color("green-accessible");
+      &--green:hover {
+        @extend %green-hover;
       }
 
-      &--red:hover,
-      &--active .header-link-red {
-        background-color: transparent;
-        border-color: theme-color("red");
-        color: theme-color("red");
+      &--red:hover {
+        @extend %red-hover;
       }
 
-      &--purple:hover,
-      &--active .header-link-purple {
-        background-color: transparent;
-        border-color: theme-color("purple");
-        color: theme-color("purple");
+      &--purple:hover {
+        @extend %purple-hover;
       }
 
-      &--pink:hover,
-      &--active .header-link-pink {
-        background-color: transparent;
-        border-color: theme-color("pink-accessible");
-        color: theme-color("pink-accessible");
+      &--pink:hover {
+        @extend %pink-hover;
       }
 
-      &--blue:hover,
-      &--active .header-link-blue {
-        background-color: transparent;
-        border-color: theme-color("blue");
-        color: theme-color("blue");
+      &--blue:hover {
+        @extend %blue-hover;
+      }
+    }
+
+    &__navigation-item--active {
+      .header__link--green {
+        @extend %green-hover;
+      }
+
+      .header__link--red {
+        @extend %red-hover;
+      }
+
+      .header__link--purple {
+        @extend %purple-hover;
+      }
+
+      .header__link--pink {
+        @extend %pink-hover;
+
+        .header__link--blue {
+          @extend %blue-hover;
+        }
       }
     }
   }

@@ -12,7 +12,7 @@ a {
 }
 
 .link {
-  &--primary {
+  &-primary {
     padding: $link-primary-padding-mobile;
     margin: 12px 0;
     display: inline-block;
@@ -41,7 +41,7 @@ a {
     }
   }
 
-  &--secondary,
+  &-secondary,
   &--external {
     &:after {
       font-family: $brand-font-family-icons;
@@ -51,7 +51,7 @@ a {
     }
   }
 
-  &--secondary {
+  &-secondary {
     @include font-size($font-small-mobile);
     color: theme-color("charcoal");
     text-decoration: none;
@@ -79,26 +79,26 @@ a {
   }
 }
 
-.section-red,
-.section-blue,
-.section-purple,
-.section-charcoal {
+.section--red,
+.section--blue,
+.section--purple,
+.section--charcoal {
   a,
   a:active,
   a:visited,
-  .link--primary {
+  .link-primary {
     color: color("white");
     border-color: color("white");
   }
 }
 
-.section-yellow,
-.section-pink,
-.section-green {
+.section--yellow,
+.section--pink,
+.section--green {
   a,
   a:active,
   a:visited,
-  .link--primary {
+  .link-primary {
     color: theme-color("charcoal");
     border-color: theme-color("charcoal");
   }
@@ -111,7 +111,7 @@ a {
     color: theme-color("red");
   }
 
-  .link--primary {
+  .link-primary {
     border-color: theme-color("red");
     color: theme-color("red");
   }
@@ -124,7 +124,7 @@ a {
     color: theme-color("green");
   }
 
-  .link--primary {
+  .link-primary {
     border-color: theme-color("green");
     color: theme-color("green");
   }
@@ -137,7 +137,7 @@ a {
     color: theme-color("blue");
   }
 
-  .link--primary {
+  .link-primary {
     border-color: theme-color("blue");
     color: theme-color("blue");
   }
@@ -150,7 +150,7 @@ a {
     color: theme-color("purple");
   }
 
-  .link--primary {
+  .link-primary {
     border-color: theme-color("purple");
     color: theme-color("purple");
   }
@@ -163,7 +163,7 @@ a {
     color: theme-color("pink");
   }
 
-  .link--primary {
+  .link-primary {
     border-color: theme-color("pink");
     color: theme-color("pink");
   }
@@ -176,7 +176,7 @@ a {
     color: theme-color("yellow");
   }
 
-  .link--primary {
+  .link-primary {
     color: theme-color("yellow");
     border-color: theme-color("yellow");
   }
@@ -189,7 +189,7 @@ a {
 .purple-theme,
 .green-theme {
   .red-theme {
-    .link--primary {
+    .link-primary {
       border-color: theme-color("red");
       color: theme-color("red");
     }
@@ -198,7 +198,7 @@ a {
     }
   }
   .blue-theme {
-    .link--primary {
+    .link-primary {
       border-color: theme-color("blue");
       color: theme-color("blue");
     }
@@ -207,7 +207,7 @@ a {
     }
   }
   .pink-theme {
-    .link--primary {
+    .link-primary {
       border-color: theme-color("pink");
       color: theme-color("pink");
     }
@@ -216,7 +216,7 @@ a {
     }
   }
   .yellow-theme {
-    .link--primary {
+    .link-primary {
       border-color: theme-color("yellow");
       color: theme-color("yellow");
     }
@@ -225,7 +225,7 @@ a {
     }
   }
   .purple-theme {
-    .link--primary {
+    .link-primary {
       border-color: theme-color("purple");
       color: theme-color("purple");
     }
@@ -234,7 +234,7 @@ a {
     }
   }
   .green-theme {
-    .link--primary {
+    .link-primary {
       border-color: theme-color("green");
       color: theme-color("green");
     }
@@ -243,26 +243,26 @@ a {
     }
   }
 
-  .section-yellow,
-  .section-pink,
-  .section-green {
+  .section--yellow,
+  .section--pink,
+  .section--green {
     a,
     a:active,
     a:visited,
-    .link--primary {
+    .link-primary {
       color: theme-color("charcoal");
       border-color: theme-color("charcoal");
     }
   }
 
-  .section-red,
-  .section-blue,
-  .section-purple,
-  .section-charcoal {
+  .section--red,
+  .section--blue,
+  .section--purple,
+  .section--charcoal {
     a,
     a:active,
     a:visited,
-    .link--primary {
+    .link-primary {
       color: color("white");
       border-color: color("white");
     }

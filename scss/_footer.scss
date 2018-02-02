@@ -7,12 +7,12 @@
   padding: 20px 48px 40px;
 
   &__logo-area {
-    @extend .section-header;
+    @extend .section__header;
   }
 
   &__body {
     @extend .row;
-    @extend .section-body-full-width;
+    @extend .section__body--full-width;
   }
 
   &__heading {
