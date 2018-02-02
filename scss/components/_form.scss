@@ -4,23 +4,23 @@ form {
 }
 
 .form {
-  &-error-message {
+  &__error-message {
     display: none;
     color: $color-red-orange;
     float: right;
   }
 
-  &-error {
+  &__error {
     .form-error-message {
       display: block;
     }
   }
 
-  &-input-wrap {
+  &__input-wrap {
     margin-bottom: 16px;
   }
 
-  &-mandatory-text {
+  &__mandatory-text {
     color: color("grey");
     position: absolute;
     right: 15px;

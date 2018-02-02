@@ -1,9 +1,9 @@
 .icons {
-  &-medium {
+  &--medium {
     @include font-size($icon-med);
   }
 
-  &-large {
+  &--large {
     @include font-size($icon-lrg);
   }
 
@@ -11,7 +11,7 @@
     @include font-size($icon-xl);
   }
 
-  &-circle {
+  &--circle {
     width: 70px;
     height: 70px;
     font-size: 4rem;

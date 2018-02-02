@@ -5,15 +5,15 @@
   margin-right: -15px;
   margin-left: -15px;
 
-  &-text,
-  &-image {
+  &__text,
+  &__image {
     @include tablet {
       flex: 0 0 50%;
       max-width: 50%;
     }
   }
 
-  &-text {
+  &__text {
     padding: $section-horizontal-spacing-mobile;
 
     @include tablet {
@@ -21,7 +21,7 @@
     }
   }
 
-  &-image {
+  &__image {
     display: none;
     padding: 0;
     background-size: cover;

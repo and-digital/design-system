@@ -6,22 +6,22 @@
   background: theme-color("charcoal");
   padding: 20px 48px 40px;
 
-  &-logo-area {
+  &__logo-area {
     @extend .section-header;
   }
 
-  &-body {
+  &__body {
     @extend .row;
     @extend .section-body-full-width;
   }
 
-  &-heading {
+  &__heading {
     @include font-size($footer-heading-font-size);
     padding-bottom: 8px;
     color: theme-color("red");
   }
 
-  &-section {
+  &__section {
     @extend .col-6;
     @extend .col-md-4;
   }
