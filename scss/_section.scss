@@ -102,6 +102,41 @@
       @extend .col-md-9;
     }
   }
+
+  &--image {
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+
+    .section__text,
+    .section__image {
+      @include tablet {
+        flex: 0 0 50%;
+        max-width: 50%;
+      }
+    }
+
+    .section__text {
+      padding: $section-horizontal-spacing-mobile;
+
+      @include tablet {
+        padding: $section-horizontal-spacing;
+      }
+    }
+
+    .section__image {
+      display: none;
+      padding: 0;
+      background-size: cover;
+      background-position: center;
+
+      @include tablet {
+        display: block;
+      }
+    }
+  }
 }
 
 .red-theme,
