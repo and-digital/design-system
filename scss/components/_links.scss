@@ -13,10 +13,10 @@ a {
 
 .link {
   &-primary {
-    padding: $link-primary-padding-mobile;
-    margin: 12px 0;
+    padding: $link-primary-padding;
+    margin: $link-primary-padding 0;
     display: inline-block;
-    border: $link-primary-border;
+    border: solid 1px;
     text-align: center;
     text-decoration: none;
     color: theme-color("charcoal");
@@ -24,20 +24,10 @@ a {
 
     &:hover,
     &:focus {
-      padding-bottom: $link-primary-padding-mobile - ($link-primary-border-bottom-hover - $link-primary-color-width);
-      border-bottom: solid $link-primary-border-bottom-hover;
+      padding-bottom: 1 + ($link-primary-padding - $link-border-bottom-width);
+      border-bottom-width: $link-border-bottom-width;
       text-decoration: none;
       color: inherit;
-    }
-
-    @include tablet {
-      padding: $link-primary-padding;
-      margin: 16px 0;
-
-      &:hover,
-      &:focus {
-        padding-bottom: $link-primary-padding - ($link-primary-border-bottom-hover - $link-primary-color-width);
-      }
     }
   }
 

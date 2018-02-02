@@ -2,9 +2,10 @@
   background-color: theme-color("charcoal");
   color: color("white");
   border: none;
-  border-bottom: solid 4px theme-color("charcoal");
-  padding: $button-vertical-padding 12px;
-  margin: 12px 0;
+  border-bottom: $link-border-bottom;
+  border-bottom-color: theme-color("charcoal");
+  padding: $link-primary-padding;
+  margin: $link-primary-padding 0;
   display: inline-block;
   text-decoration: none;
   -webkit-appearance: none;
@@ -12,18 +13,11 @@
 
   &:hover,
   &:focus {
-    padding-bottom: 8 - ($link-primary-border-bottom-hover - $link-primary-border);
+    padding-bottom: 4 + ($link-primary-padding - $link-border-bottom-width);
     background-color: theme-color("red");
     color: color("white");
     cursor: pointer;
     outline: 0;
-  }
-
-  @include tablet {
-    &:hover,
-    &:focus {
-      padding-bottom: 10 - ($link-primary-border-bottom-hover - $link-primary-border);
-    }
   }
 
   &[type="submit"] {
@@ -32,6 +26,10 @@
     @include tablet {
       margin-bottom: $submit-button-margin-bottom;
     }
+  }
+
+  &--full-width {
+    width: 100%;
   }
 }
 

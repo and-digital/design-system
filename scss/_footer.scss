@@ -1,10 +1,14 @@
 .footer {
-  @extend .row;
   @include font-size($font-small);
 
   color: color("white");
   background: theme-color("charcoal");
   padding: 20px 48px 40px;
+
+  &__row {
+    @extend .row;
+    margin-top: $footer-margin;
+  }
 
   &__logo-area {
     @extend .section__header;
@@ -13,17 +17,70 @@
   &__body {
     @extend .row;
     @extend .section__body--full-width;
+    margin-bottom: $footer-margin;
   }
 
   &__heading {
     @include font-size($footer-heading-font-size);
     padding-bottom: 8px;
     color: theme-color("red");
+    margin-bottom: 0;
   }
 
   &__section {
     @extend .col-6;
     @extend .col-md-4;
+  }
+
+  &__links-link {
+    @extend .text-small;
+  }
+
+  &__social-icon {
+    @include font-size($footer-social-icon-mobile);
+    margin: 8px;
+
+    @include tablet {
+      @include font-size($footer-social-icon);
+    }
+  }
+
+  &__copywrite {
+    @extend .col-md-3;
+
+    @include tablet {
+      text-align: right;
+    }
+  }
+
+  &__links-list,
+  &__social-links {
+    @extend .list--inline;
+    @extend .offset-md-3;
+    @extend .col-md-6;
+
+    .footer__social-links-item,
+    .footer__links-item {
+      @include tablet {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+
+  &__links-item {
+    &:before {
+      content: "/ ";
+      padding-right: 8px;
+      display: inline-block;
+    }
+
+    &:first-child {
+      &:before {
+        content: "";
+        padding: 0;
+      }
+    }
   }
 
   a {
@@ -35,138 +92,3 @@
     }
   }
 }
-//
-//  dl, a {
-//    margin-top: 24px;
-//    color: color("white");
-//  }
-//
-//  dt {
-//    font-size: $font-base;
-//    font-weight: bold;
-//    padding-bottom: 8px;
-//    display: block;
-//  }
-//
-//  dd {
-//    margin-left: 0;
-//
-//    &.location {
-//      padding-top: 8px;
-//      display: block;
-//    }
-//  }
-//
-//  a {
-//    &:active, &:hover, &:focus {
-//      text-decoration: none;
-//      color: theme-color("blue");
-//    }
-//
-//    color: color("white");
-//  }
-//
-//  .clubs {
-//    .logo {
-//      height: 36px;
-//      padding-left: 0px;
-//      margin-top: 24px;
-//    }
-//
-//    i {
-//      padding-left: 4px;
-//    }
-//  }
-//
-//  .social {
-//    margin-top: 64px;
-//
-//    i {
-//      font-size: $font-xlrg;
-//      margin: 8px;
-//    }
-//  }
-//
-//  .agreements-and-links {
-//    a {
-//      margin: 0 8px;
-//    }
-//
-//    .if-mobile {
-//      display: none;
-//    }
-//
-//    article {
-//      padding-right: 0;
-//    }
-//  }
-//
-//  .agreements-and-links {
-//    margin-top: $font-xlrg;
-//  }
-//
-//  .rights-reserved {
-//    position: absolute;
-//    right: 0;
-//  }
-//
-//
-//  @media #{$tablet} {
-//    padding: $font-xlrg 0px $font-xlrg 12px;
-//
-//    .row {
-//      width: calc(100% + 15px);
-//      font-size: $font-sml;
-//    }
-//
-//    .clubs {
-//      .logo {
-//        margin-top: 0;
-//        margin-left: 8px;
-//        margin-bottom: 24px;
-//      }
-//
-//      .col-xs-6 {
-//        padding: 0 0 0 8px;
-//        margin-top: 24px;
-//      }
-//
-//      dt {
-//        font-size: $font-sml;
-//      }
-//    }
-//
-//    .social {
-//      margin: 2 * 24px -15px 0;
-//
-//      i {
-//        margin: 6px;
-//        font-size: $font-lrg;
-//      }
-//    }
-//
-//    .agreements-and-links {
-//      margin-top: 0;
-//      padding-left: 4px;
-//
-//      a {
-//        margin: 0 4px;
-//      }
-//
-//      .if-mobile {
-//        display: block;
-//        margin-top: 10px;
-//      }
-//
-//      .col-xs-12 {
-//        margin-top: $font-xlrg;
-//      }
-//    }
-//
-//    .rights-reserved {
-//      padding-left: 4px;
-//      position: relative;
-//      font-size: $font-sml;
-//    }
-//  }
-//}
