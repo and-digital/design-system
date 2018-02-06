@@ -44,7 +44,7 @@ gulp.task('gen-sass', () => {
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', function (err) {
       console.log('error');
-      return process.env.CI ? this.emit(err) : sass.logError;
+      return process.env.CI ? process.exit(1) : sass.logError;
     }))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest(dir.dist))
