@@ -7,7 +7,7 @@
     "start": "gulp",
     "build": "gulp build",
     "prepublish": "npm build",
-    "test": "npm build"
+    "test": "gulp gen-sass"
   },
   "keywords": [
     "css",
