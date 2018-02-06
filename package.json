@@ -6,8 +6,8 @@
   "scripts": {
     "start": "gulp",
     "build": "gulp build",
-    "prepublish": "npm run build",
-    "test": "gulp run build"
+    "prepublish": "npm build",
+    "test": "npm build"
   },
   "keywords": [
     "css",
