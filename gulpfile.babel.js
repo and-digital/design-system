@@ -3,7 +3,7 @@ import sass from 'gulp-sass';
 import sourcemaps from 'gulp-sourcemaps';
 import browserSync from 'browser-sync';
 import cleanCSS from 'gulp-clean-css';
-import rename from "gulp-rename";
+import rename from 'gulp-rename';
 
 const reload = browserSync.reload;
 
@@ -13,41 +13,52 @@ const dir = {
   base: './'
 };
 
+const options = {
+  server: {
+    baseDir: dir.base
+  },
+
+  cleanCSS: {
+    compatibility: 'ie8'
+  },
+
+  rename: {
+    suffix: '.min'
+  }
+};
+
+
 gulp.task('default', ['gen-sass', 'serve', 'watch']);
-gulp.task('build', ['gen-sass', 'minify']);
+gulp.task('build', ['minify']);
 
 gulp.task('serve', () => {
   browserSync.init({
-    server: { baseDir: dir.base }
+    server: options.server
   });
 });
 
 gulp.task('gen-sass', () => {
-  gulp.src(`${dir.sass}/brand.scss`)
+  return gulp.src([
+      `${dir.sass}/*.scss`
+    ])
     .pipe(sourcemaps.init())
-    .pipe(sass().on('error', sass.logError))
-    .pipe(sourcemaps.write())
-    .pipe(gulp.dest(dir.dist))
-    .pipe(reload({ stream: true }));
-
-  gulp.src(`${dir.sass}/brand-components.scss`)
-    .pipe(sourcemaps.init())
-    .pipe(sass().on('error', sass.logError))
+    .pipe(sass().on('error', function (err) {
+      console.log(err);
+      return process.env.CI ? process.exit(1) : sass.logError;
+    }))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest(dir.dist))
     .pipe(reload({ stream: true }));
 });
 
-gulp.task('minify', () => {
-  gulp.src(`${dir.sass}/brand.css`)
-    .pipe(cleanCSS({compatibility: 'ie8'}))
-    .pipe(rename(`brand.min.css`))
+gulp.task('minify', ['gen-sass'], () => {
+  return gulp.src([
+      `${dir.dist}/*.css`,
+      `!${dir.dist}/*.min.css`
+    ])
+    .pipe(cleanCSS(options.cleanCSS))
+    .pipe(rename(options.rename))
     .pipe(gulp.dest(dir.dist));
-
-  gulp.src(`${dir.sass}/brand-components.css`)
-    .pipe(cleanCSS({compatibility: 'ie8'}))
-    .pipe(rename(`brand-components.min.css`))
-    .pipe(gulp.dest(`${dir.src}/dist`));
 });
 
 gulp.task('watch', () => {
