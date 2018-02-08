@@ -7,7 +7,7 @@
     "start": "gulp",
     "build": "gulp build",
     "prepublish": "npm build",
-    "test": "gulp gen-sass",
+    "test": "gulp sass-lint & gulp gen-sass",
     "lint": "gulp sass-lint",
     "lint:watch": "gulp lint-watch",
     "dev:lint": "gulp dev-lint"
@@ -33,6 +33,7 @@
     "gulp-postcss": "^7.0.1",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
+    "gulp-sass-lint": "^1.3.4",
     "gulp-sourcemaps": "^2.6.4",
     "node-sass": "^4.5.3",
     "postcss-scss": "^1.0.3",
