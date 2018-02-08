@@ -15,6 +15,7 @@
   }
 
   &__item {
+    @extend .col-md-6;
     margin-bottom: 24px;
 
     @include tablet {
@@ -35,6 +36,7 @@
   }
 
   &__list {
+    @extend .row;
     display: flex;
     flex-wrap: wrap;
   }
@@ -76,22 +78,8 @@
   }
 }
 
-.feature-list.feature-list--triple {
+.feature-list--triple {
   .feature-list__item {
     @extend .col-md-4;
-  }
-
-  .feature-list__list {
-    @extend .row;
-  }
-}
-
-.feature-list.feature-list--dual {
-  .feature-list__item {
-    @extend .col-md-6;
-  }
-
-  .feature-list__list {
-    @extend .row;
   }
 }
