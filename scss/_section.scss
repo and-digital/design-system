@@ -1,17 +1,10 @@
 .section {
   @extend .row;
-  padding: 0 $section-horizontal-spacing-mobile $section-horizontal-spacing-mobile;
-  margin-bottom: $section-margin-bottom;
-  margin-left: $row-margin;
-  margin-right: $row-margin;
-
-  @include tablet {
-    padding: 0 $section-horizontal-spacing-tablet;
-  }
+  margin: 0 (-$row-margin) $section-margin-bottom;
+  padding: $section-horizontal-spacing-mobile - $row-margin;
 
   @include desktop {
-    padding: 0 $section-horizontal-spacing;
-    margin-bottom: $section-margin-bottom;
+    padding: $section-horizontal-spacing - $row-margin;
   }
 
   &--red,
@@ -22,16 +15,10 @@
   &--pink,
   &--charcoal {
     color: color("white");
-    margin-left: --$row-margin;
-    margin-right: --$row-margin;
-    padding: $section-horizontal-spacing-mobile;
-
-    @include tablet {
-      padding: $section-horizontal-spacing-tablet;
-    }
+    padding: $section-vertical-spacing-mobile ($section-horizontal-spacing-mobile - $row-margin);
 
     @include desktop {
-      padding: $section-horizontal-spacing;
+      padding: $section-vertical-spacing ($section-horizontal-spacing - $row-margin);
     }
   }
 
@@ -72,17 +59,17 @@
 
   &__header-header {
     margin-bottom: 24px;
+    border-top: 2px solid;
+    margin-top: 0;
+    max-width: 200px;
+    padding-top: 16px;
 
     @include tablet {
       width: 100%;
     }
   }
 
-  &__header-title {
-    border-top: 2px solid;
-    max-width: 200px;
-    margin-top: 0;
-    padding-top: 16px;
+  &__title {
     @include font-size($font-heading-2-mobile);
 
     @include tablet {
@@ -104,11 +91,11 @@
   }
 
   &--image {
-    padding: 0;
     display: flex;
     flex-wrap: wrap;
-    margin-right: -15px;
     margin-left: -15px;
+    margin-right: -15px;
+    padding: 0;
 
     .section__text,
     .section__image {
@@ -118,19 +105,27 @@
       }
     }
 
+    &__title {
+      margin-bottom: 32px;
+    }
+
     .section__text {
       padding: $section-horizontal-spacing-mobile;
 
       @include tablet {
-        padding: $section-horizontal-spacing;
+        padding: $section-vertical-spacing-mobile ($section-horizontal-spacing - $row-margin);
+      }
+
+      @include tablet {
+        padding: $section-vertical-spacing ($section-horizontal-spacing - $row-margin);
       }
     }
 
     .section__image {
+      background-position: center;
+      background-size: cover;
       display: none;
       padding: 0;
-      background-size: cover;
-      background-position: center;
 
       @include tablet {
         display: block;
@@ -139,44 +134,38 @@
   }
 }
 
-.red-theme,
-.section.red-theme {
-  .section__header-title {
+.red-theme {
+  .section__header-header {
     border-color: theme-color("red");
   }
 }
 
-.yellow-theme,
-.section.yellow-theme {
-  .section__header-title {
+.yellow-theme {
+  .section__header-header {
     border-color: theme-color("yellow");
   }
 }
 
-.green-theme,
-.section.green-theme {
-  .section__header-title {
+.green-theme {
+  .section__header-header {
     border-color: theme-color("green");
   }
 }
 
-.blue-theme,
-.section.blue-theme {
-  .section__header-title {
+.blue-theme {
+  .section__header-header {
     border-color: theme-color("blue");
   }
 }
 
-.purple-theme,
-.section.purple-theme {
-  .section__header-title {
+.purple-theme {
+  .section__header-header {
     border-color: theme-color("purple");
   }
 }
 
-.pink-theme,
-.section.pink-theme {
-  .section__header-title {
+.pink-theme {
+  .section__header-header {
     border-color: theme-color("pink");
   }
 }
@@ -184,7 +173,7 @@
 .section--green,
 .section--pink,
 .section--yellow {
-  .section__header-title {
+  .section__header-header {
     border-color: theme-color("charcoal");
   }
 }
@@ -194,8 +183,8 @@
 .section--purple,
 .section--red,
 .section--blue,
-.section--purple{
-  .section__header-title {
+.section--purple {
+  .section__header-header {
     border-color: color("white");
   }
 }
@@ -211,8 +200,8 @@
   .section--purple,
   .section--red,
   .section--blue,
-  .section--purple{
-    .section__header-title {
+  .section--purple {
+    .section__header-header {
       border-color: color("white");
     }
   }
@@ -220,7 +209,7 @@
   .section--green,
   .section--pink,
   .section--yellow {
-    .section__header-title {
+    .section__header-header {
       border-color: theme-color("charcoal");
     }
   }

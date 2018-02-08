@@ -1,6 +1,7 @@
-@mixin font-size($sizeValue: $font-base) {
-  font-size: $sizeValue + px;
-  font-size: ($sizeValue / 10) + rem;
+@mixin font-size($size-value: $font-base) {
+  // sass-lint:disable-block no-duplicate-properties
+  font-size: $size-value + px;
+  font-size: ($size-value / 10) + rem;
 }
 
 @mixin tablet {

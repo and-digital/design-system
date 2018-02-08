@@ -1,13 +1,13 @@
 .header {
-  background-color: #FFFFFF;
+  background-color: color("white");
   display: flex;
   justify-content: space-between;
-  padding-left: $grid-margin;
-  padding-right: $grid-margin;
+  padding-left: $row-margin;
+  padding-right: $row-margin;
 
   &__logo {
-    display: flex;
     align-items: center;
+    display: flex;
     z-index: 2;
   }
 
@@ -37,10 +37,10 @@
 
     a,
     .header__menu-button {
-      text-decoration: none;
-      padding: 23px 12px 20px;
       display: block;
       font-size: 20px;
+      padding: 23px 12px 20px;
+      text-decoration: none;
     }
 
   }
@@ -55,35 +55,65 @@
   }
 
   &__link {
+    background-color: transparent;
+    border-left-style: solid;
+    border-left-width: 4px;
     color: theme-color("charcoal");
+    transition: background-color .4s ease;
 
     &--green {
       border-color: theme-color("green-accessible");
+
+      &:hover {
+        background-color: theme-color("green-accessible");
+        color: theme-color("green-accessible");
+      }
     }
 
     &--red  {
       border-color: theme-color("red");
+
+      &:hover {
+        background-color: theme-color("red");
+        color: color("white");
+      }
     }
 
     &--purple  {
       border-color: theme-color("purple");
+
+      &:hover {
+        background-color: theme-color("purple");
+        border-color: theme-color("purple");
+        color: color("white");
+      }
     }
 
     &--pink  {
       border-color: theme-color("pink-accessible");
+
+      &:hover {
+        background-color: theme-color("pink-accessible");
+        color: color("white");
+      }
     }
 
     &--blue {
       border-color: theme-color("blue");
+
+      &:hover {
+        background-color: theme-color("blue");
+        color: color("white");
+      }
     }
   }
 
 
   &__menu-button {
-    margin: 0;
-    color: theme-color("charcoal");
     background-color: transparent;
     border: none;
+    color: theme-color("charcoal");
+    margin: 0;
 
     &:hover,
     &:focus,
@@ -107,15 +137,15 @@
   }
 
   &__main-navigation {
-    position: fixed;
+    background-color: color("white");
     height: 100%;
-    width: 100%;
     left: 100%;
     list-style: none;
-    background-color: #FFFFFF;
     padding-top: 76px;
-    z-index: 1;
+    position: fixed;
     transition: left .3s ease;
+    width: 100%;
+    z-index: 1;
 
     .header__navigation-item {
       display: block;
@@ -124,39 +154,6 @@
 
     &--show {
       left: 0;
-    }
-  }
-
-  &__link {
-    border-left-width: 4px;
-    border-left-style: solid;
-    background-color: transparent;
-    transition: background-color 0.4s ease;
-
-    &--green:hover {
-      background-color: theme-color("green-accessible");
-      color: theme-color("green-accessible");
-    }
-
-    &--red:hover {
-      background-color: theme-color("red");
-      color: color("white")
-    }
-
-    &--purple:hover {
-      background-color: theme-color("purple");
-      border-color: theme-color("purple");
-      color: color("white");
-    }
-
-    &--pink:hover {
-      background-color: theme-color("pink-accessible");
-      color: color("white");
-    }
-
-    &--blue:hover {
-      background-color: theme-color("blue");
-      color: color("white");
     }
   }
 }
@@ -184,11 +181,11 @@
     }
 
     &__main-navigation {
-      position: relative;
+      left: initial;
       margin: 0;
       padding-top: 0;
+      position: relative;
       width: auto;
-      left: initial;
 
       .header__navigation-item {
         display: inline-block;
@@ -230,24 +227,34 @@
       border-left: none;
       border-top: 4px solid transparent;
 
-      &--green:hover {
-        @extend %green-hover;
+      &--green {
+        &:hover {
+          @extend %green-hover;
+        }
       }
 
-      &--red:hover {
-        @extend %red-hover;
+      &--red {
+        &:hover {
+          @extend %red-hover;
+        }
       }
 
-      &--purple:hover {
-        @extend %purple-hover;
+      &--purple {
+        &:hover {
+          @extend %purple-hover;
+        }
       }
 
-      &--pink:hover {
-        @extend %pink-hover;
+      &--pink {
+        &:hover {
+          @extend %pink-hover;
+        }
       }
 
-      &--blue:hover {
-        @extend %blue-hover;
+      &--blue {
+        &:hover {
+          @extend %blue-hover;
+        }
       }
     }
 

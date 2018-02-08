@@ -42,8 +42,6 @@ $desktop-wide: 1920px !default;
 
 $ms-only: "screen and (-ms-high-contrast: active), (-ms-high-contrast: none)";
 
-$grid-margin: 15px;
-
 // Font
 $brand-font-regular: "Brown-Pro-Regular", Helvetica, Arial, sans-serif;
 $brand-font-family-bold: "Brown-Pro-Bold", Helvetica, Arial, sans-serif;
@@ -88,10 +86,11 @@ $font-feature-list-link-mobile: 20;
 $font-feature-list-link: 28;
 
 // Sections
-$row-margin: -15px;
+$row-margin: 15px;
 $section-horizontal-spacing: 48px;
-$section-horizontal-spacing-tablet: 48px;
 $section-horizontal-spacing-mobile: 32px;
+$section-vertical-spacing: 48px;
+$section-vertical-spacing-mobile: 32px;
 $section-margin-bottom: $section-horizontal-spacing;
 
 // Paragraph

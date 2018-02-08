@@ -18,8 +18,8 @@ html {
 .container {
   margin-right: auto;
   margin-left: auto;
-  padding-right: $grid-margin;
-  padding-left: $grid-margin;
+  padding-right: $row-margin;
+  padding-left: $row-margin;
   width: 100%;
 }
 
@@ -45,8 +45,8 @@ html {
   width: 100%;
   margin-right: auto;
   margin-left: auto;
-  padding-right: $grid-margin;
-  padding-left: $grid-margin;
+  padding-right: $row-margin;
+  padding-left: $row-margin;
   width: 100%;
 }
 
@@ -55,8 +55,8 @@ html {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin-right: -$grid-margin;
-  margin-left: -$grid-margin;
+  margin-right: -$row-margin;
+  margin-left: -$row-margin;
 }
 
 .no-gutters {
@@ -78,8 +78,8 @@ html {
   position: relative;
   width: 100%;
   min-height: 1px;
-  padding-right: $grid-margin;
-  padding-left: $grid-margin;
+  padding-right: $row-margin;
+  padding-left: $row-margin;
 }
 
 .col {
