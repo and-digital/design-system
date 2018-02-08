@@ -1,20 +1,22 @@
 html {
-  font-size: 62.5%;
   box-sizing: border-box;
+  font-size: 62.5%;
 }
 
+// sass-lint:disable no-universal-selectors
 *,
 *::before,
 *::after {
   box-sizing: inherit;
 }
+// sass-lint:enable no-universal-selectors
 
 body {
-  font-family: $brand-font-regular;
   @include font-size($font-base-mobile);
-  min-width: 320px;
-  line-height: 1.42857143;
   color: theme-color("charcoal");
+  font-family: $brand-font-regular;
+  line-height: 1.42857143;
+  min-width: 320px;
 
   @include tablet {
     @include font-size($font-base);
@@ -22,17 +24,17 @@ body {
 }
 
 button {
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
   background: none;
-  border: 0;
+  border: none;
   color: inherit;
   cursor: pointer;
   font: inherit;
   line-height: normal;
   overflow: visible;
   padding: 0;
+
+  // sass-lint:disable-block no-vendor-prefixes, no-css-comments, property-sort-order
+  box-sizing: content-box;
   -webkit-appearance: button; /* for input */
   -webkit-user-select: none; /* for button */
   -moz-user-select: none;

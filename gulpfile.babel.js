@@ -4,6 +4,8 @@ import sourcemaps from 'gulp-sourcemaps';
 import browserSync from 'browser-sync';
 import cleanCSS from 'gulp-clean-css';
 import rename from 'gulp-rename';
+import sassLint from 'gulp-sass-lint';
+import postCss from 'gulp-postcss';
 
 const reload = browserSync.reload;
 
@@ -12,6 +14,10 @@ const dir = {
   dist: 'dist',
   base: './'
 };
+
+const autoprefixerOptions = {
+  browsers: ['last 2 versions', 'ie > 7']
+}
 
 const options = {
   server: {
@@ -24,34 +30,52 @@ const options = {
 
   rename: {
     suffix: '.min'
-  }
+  },
+
+  postCssPlugins: [
+    require('autoprefixer')(autoprefixerOptions)
+  ]
 };
 
 
-gulp.task('default', ['gen-sass', 'serve', 'watch']);
+gulp.task('default', ['serve', 'lint:dev']);
 gulp.task('build', ['minify']);
 
-gulp.task('serve', () => {
+gulp.task('serve', ['sass'], () => {
   browserSync.init({
     server: options.server
   });
 });
 
-gulp.task('gen-sass', () => {
+gulp.task('sass:lint', () => {
+  return gulp.src([
+      `${dir.sass}/*.scss`
+    ])
+    .pipe(sassLint())
+    .pipe(sassLint.format())
+    .pipe(sassLint.failOnError());
+});
+
+gulp.task('sass', () => {
   return gulp.src([
       `${dir.sass}/*.scss`
     ])
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', function (err) {
-      console.log(err);
-      return process.env.CI ? process.exit(1) : sass.logError;
+      if(process.env.CI) {
+        console.log(err);
+        return process.exit(1)
+      }
+
+      return sass.logError;
     }))
+    .pipe(postCss(options.postCssPlugins))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest(dir.dist))
     .pipe(reload({ stream: true }));
 });
 
-gulp.task('minify', ['gen-sass'], () => {
+gulp.task('minify', ['sass'], () => {
   return gulp.src([
       `${dir.dist}/*.css`,
       `!${dir.dist}/*.min.css`
@@ -61,6 +85,14 @@ gulp.task('minify', ['gen-sass'], () => {
     .pipe(gulp.dest(dir.dist));
 });
 
-gulp.task('watch', () => {
-  gulp.watch(`${dir.sass}/**/*.scss`, ['gen-sass']);
+gulp.task('sass:watch', ['sass'], () => {
+  gulp.watch(`${dir.sass}/**/*.scss`, ['sass']);
+});
+
+gulp.task('lint:watch', ['sass:lint'], () => {
+  gulp.watch(`${dir.sass}/**/*.scss`, ['sass:lint']);
+});
+
+gulp.task('lint:dev', ['sass:lint', 'sass'], () => {
+  gulp.watch(`${dir.sass}/**/*.scss`, ['sass:lint', 'sass']);
 });
