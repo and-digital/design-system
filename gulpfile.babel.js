@@ -38,16 +38,16 @@ const options = {
 };
 
 
-gulp.task('default', ['serve', 'watch']);
+gulp.task('default', ['serve', 'lint:dev']);
 gulp.task('build', ['minify']);
 
-gulp.task('serve', ['gen-sass'], () => {
+gulp.task('serve', ['sass'], () => {
   browserSync.init({
     server: options.server
   });
 });
 
-gulp.task('sass-lint', () => {
+gulp.task('sass:lint', () => {
   return gulp.src([
       `${dir.sass}/*.scss`
     ])
@@ -56,7 +56,7 @@ gulp.task('sass-lint', () => {
     .pipe(sassLint.failOnError());
 });
 
-gulp.task('gen-sass', () => {
+gulp.task('sass', () => {
   return gulp.src([
       `${dir.sass}/*.scss`
     ])
@@ -75,7 +75,7 @@ gulp.task('gen-sass', () => {
     .pipe(reload({ stream: true }));
 });
 
-gulp.task('minify', ['gen-sass'], () => {
+gulp.task('minify', ['sass'], () => {
   return gulp.src([
       `${dir.dist}/*.css`,
       `!${dir.dist}/*.min.css`
@@ -85,14 +85,14 @@ gulp.task('minify', ['gen-sass'], () => {
     .pipe(gulp.dest(dir.dist));
 });
 
-gulp.task('watch', () => {
-  gulp.watch(`${dir.sass}/**/*.scss`, ['gen-sass']);
+gulp.task('sass:watch', ['sass'], () => {
+  gulp.watch(`${dir.sass}/**/*.scss`, ['sass']);
 });
 
-gulp.task('lint-watch', ['sass-lint'], () => {
-  gulp.watch(`${dir.sass}/**/*.scss`, ['sass-lint']);
+gulp.task('lint:watch', ['sass:lint'], () => {
+  gulp.watch(`${dir.sass}/**/*.scss`, ['sass:lint']);
 });
 
-gulp.task('dev-lint', ['sass-lint', 'gen-sass'], () => {
-  gulp.watch(`${dir.sass}/**/*.scss`, ['sass-lint', 'gen-sass']);
+gulp.task('lint:dev', ['sass:lint', 'sass'], () => {
+  gulp.watch(`${dir.sass}/**/*.scss`, ['sass:lint', 'sass']);
 });

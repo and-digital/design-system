@@ -5,12 +5,12 @@
   "main": "scss/brand.scss",
   "scripts": {
     "start": "gulp",
+    "lint": "gulp sass:lint",
+    "sass:watch": "gulp sass:watch",
+    "lint:watch": "gulp lint:watch",
     "build": "gulp build",
     "prepublish": "npm build",
-    "test": "gulp sass-lint & gulp gen-sass",
-    "lint": "gulp sass-lint",
-    "lint:watch": "gulp lint-watch",
-    "dev:lint": "gulp dev-lint"
+    "test": "npm run lint & npm run build"
   },
   "keywords": [
     "css",
