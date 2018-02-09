@@ -24,8 +24,8 @@
   }
 
   &__navigation-item {
-    display: inline-block;
-    float: left;
+    display: block;
+    float: none;
 
     a,
     .header__menu-button {
@@ -126,11 +126,6 @@
     }
   }
 
-  &__navigation-item {
-    display: block;
-    float: none;
-  }
-
   &__navigation {
     background-color: color("white");
     height: 100%;
@@ -144,9 +139,9 @@
   }
 
   //&--mobile-show {
-    .header__navigation {
-      left: 0;
-    }
+  .header__navigation {
+    left: 0;
+  }
   //}
 
   &--empty {
@@ -164,7 +159,7 @@
   .header__link,
   .header__search {
     color: theme-color("charcoal");
-  }
+  //}
 }
 
 @include tablet {
