@@ -55,5 +55,5 @@ BrAND uses assets stored on the CDN to load fonts and icons so you will need to 
 ## Issues and features
 
 Please raise all feature and issues on [Github](https://github.com/andigtial/brand/issues). Follow the
-[guidlines](https://github.com/andigital/brand/wiki/issues-and-features) for information and guidlines 
+[guidlines](https://github.com/fakesamgregory/brAND/blob/develop/.github/ISSUE_GUIDELINES.md) for information and guidlines 
 on raising an issue.
