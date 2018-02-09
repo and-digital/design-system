@@ -1,22 +1,14 @@
 .header {
   background-color: color("white");
-  display: flex;
-  justify-content: space-between;
   padding-left: $row-margin;
   padding-right: $row-margin;
 
   &__logo {
-    align-items: center;
-    display: flex;
     z-index: 2;
   }
 
   &__logo-image {
     height: 36px;
-  }
-
-  &__secondary-navigation {
-    display: none;
   }
 
   &__secondary-navigation,
@@ -124,8 +116,6 @@
     }
   }
 
-
-
   &__mobile-menu,
   &__navigation-item--search {
     height: 100%;
@@ -136,7 +126,12 @@
     }
   }
 
-  &__main-navigation {
+  &__navigation-item {
+    display: block;
+    float: none;
+  }
+
+  &__navigation {
     background-color: color("white");
     height: 100%;
     left: 100%;
@@ -146,15 +141,17 @@
     transition: left .3s ease;
     width: 100%;
     z-index: 1;
+  }
 
-    .header__navigation-item {
-      display: block;
-      float: none;
-    }
-
-    &--show {
+  //&--mobile-show {
+    .header__navigation {
       left: 0;
     }
+  //}
+
+  &--empty {
+    padding-bottom: 12px;
+    padding-top: 12px;
   }
 }
 
@@ -172,6 +169,14 @@
 
 @include tablet {
   .header {
+    display: flex;
+    justify-content: space-between;
+
+    &__logo {
+      align-items: center;
+      display: flex;
+    }
+
     &__secondary-navigation {
       display: block;
     }
@@ -180,17 +185,17 @@
       display: none;
     }
 
-    &__main-navigation {
+    &__navigation {
       left: initial;
       margin: 0;
       padding-top: 0;
       position: relative;
       width: auto;
+    }
 
-      .header__navigation-item {
-        display: inline-block;
-        float: left;
-      }
+    &__navigation-item {
+      display: inline-block;
+      float: left;
     }
 
     %green-hover {
