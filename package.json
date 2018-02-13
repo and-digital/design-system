@@ -25,9 +25,6 @@
   ],
   "author": "sgregory@and.digital",
   "license": "ISC",
-  "dependencies": {
-    "babel-polyfill": "^6.26.0"
-  },
   "devDependencies": {
     "autoprefixer": "^7.2.5",
     "babel-core": "^6.26.0",
@@ -59,5 +56,8 @@
   "browserslist": [
     "last 2 major version",
     ">= 2%"
-  ]
+  ],
+  "dependencies": {
+    "babel-polyfill": "^6.26.0"
+  }
 }
