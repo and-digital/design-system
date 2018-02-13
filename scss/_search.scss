@@ -3,7 +3,6 @@
 
   &__form {
     @include font-size(32);
-
     margin: 0 auto;
     opacity: 0;
     transition: opacity .3s ease .4s;
