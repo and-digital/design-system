@@ -6,8 +6,10 @@
   "scripts": {
     "start": "gulp",
     "lint": "gulp sass:lint",
+    "scripts": "gulp scripts",
     "sass:watch": "gulp sass:watch",
     "lint:watch": "gulp lint:watch",
+    "scripts:watch": "gulp scripts:watch",
     "build": "gulp build",
     "prepublish": "npm build",
     "test": "npm run lint & npm run build"
@@ -23,13 +25,19 @@
   ],
   "author": "sgregory@and.digital",
   "license": "ISC",
+  "dependency": {
+    "babel-polyfill": "^6.26.0"
+  },
   "devDependencies": {
     "autoprefixer": "^7.2.5",
     "babel-core": "^6.26.0",
     "babel-preset-es2015": "^6.24.1",
+    "babelify": "^8.0.0",
     "browser-sync": "^2.18.13",
+    "browserify": "^16.0.0",
     "gulp": "^3.9.1",
     "gulp-clean-css": "^3.9.0",
+    "gulp-load-plugins": "^1.5.0",
     "gulp-postcss": "^7.0.1",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
@@ -37,6 +45,8 @@
     "gulp-sourcemaps": "^2.6.4",
     "node-sass": "^4.5.3",
     "postcss-scss": "^1.0.3",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-source-stream": "^2.0.0",
     "yarn": "^0.27.5"
   },
   "bugs": {

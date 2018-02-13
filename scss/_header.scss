@@ -1,26 +1,57 @@
 .header {
+  align-content: center;
   background-color: color("white");
+  display: flex;
+  justify-content: space-between;
+  min-height: $header-height;
   padding-left: $row-margin;
   padding-right: $row-margin;
+  z-index: 1;
 
   &__logo {
+    align-self: center;
+    display: block;
     z-index: 2;
   }
 
   &__logo-image {
+    align-self: center;
     height: 36px;
+  }
+
+  &__navigation {
+    background-color: color("white");
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    left: 100%;
+    list-style: none;
+    margin-top: $header-height;
+    overflow-y: scroll;
+    position: absolute;
+    transition: left .3s ease;
+    width: 100%;
+    z-index: 1;
+
+    .header__logo {
+      display: none;
+    }
   }
 
   &__secondary-navigation,
   &__main-navigation,
   &__mobile-navigation {
+    display: block;
     margin: 0;
     padding: 0;
   }
 
   &__mobile-navigation {
-    margin-top: 4px;
     z-index: 2;
+
+    .header__navigation-item {
+      display: inline-block;
+    }
   }
 
   &__navigation-item {
@@ -58,7 +89,7 @@
 
       &:hover {
         background-color: theme-color("green-accessible");
-        color: theme-color("green-accessible");
+        color: color("white");
       }
     }
 
@@ -100,7 +131,6 @@
     }
   }
 
-
   &__menu-button {
     background-color: transparent;
     border: none;
@@ -126,24 +156,6 @@
     }
   }
 
-  &__navigation {
-    background-color: color("white");
-    height: 100%;
-    left: 100%;
-    list-style: none;
-    padding-top: 76px;
-    position: fixed;
-    transition: left .3s ease;
-    width: 100%;
-    z-index: 1;
-  }
-
-  //&--mobile-show {
-  .header__navigation {
-    left: 0;
-  }
-  //}
-
   &--empty {
     padding-bottom: 12px;
     padding-top: 12px;
@@ -162,14 +174,26 @@
   }
 }
 
+.mobile-menu-show {
+  overflow: hidden;
+
+  .header__navigation {
+    left: 0;
+  }
+
+  .and-icon-menu {
+    &::before {
+      content: "\e943";
+    }
+  }
+}
+
 @include tablet {
   .header {
-    display: flex;
-    justify-content: space-between;
+    position: relative;
 
     &__logo {
-      align-items: center;
-      display: flex;
+      display: none;
     }
 
     &__secondary-navigation {
@@ -181,11 +205,18 @@
     }
 
     &__navigation {
+      align-self: center;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
       left: initial;
       margin: 0;
       padding-top: 0;
       position: relative;
-      width: auto;
+
+      .header__logo {
+        display: block;
+      }
     }
 
     &__navigation-item {
@@ -281,260 +312,3 @@
     }
   }
 }
-
-//.search-overlay {
-//  align-items: center;
-//  background: none;
-//  bottom: 0;
-//  display: flex;
-//  height: 100%;
-//  justify-content: center;
-//  left: 0;
-//  opacity: 1;
-//  position: fixed;
-//  right: 0;
-//  top: 0;
-//  z-index: 60;
-//
-//  &-background {
-//    background: color("white");
-//    bottom: 0;
-//    left: 0;
-//    opacity: 0.7;
-//    position: fixed;
-//    right: 0;
-//    top: 0;
-//    z-index: -2;
-//  }
-//
-//  &-exit {
-//    @include font-size($font-search-icon);
-//    animation: 0.5s 0.4s forwards fadein;
-//    cursor: pointer;
-//    display: block;
-//    opacity: 0;
-//    position: absolute;
-//    right: 1%;
-//    top: 2%;
-//    text-decoration: none;
-//  }
-//
-//  &-form {
-//    @include font-size($font-search-input);
-//    animation: 0.5s 0.4s forwards fadein;
-//    display: inline-block;
-//    opacity: 0;
-//    width: 772px;
-//
-//    &-label {
-//      @include font-size($font-heading-4);
-//      font-weight: 400;
-//    }
-//    &-input {
-//
-//      &-input {
-//        background: none;
-//        border: none;
-//        display: inline-block;
-//        font-weight: bold;
-//        outline: none;
-//        width: 700px;
-//      }
-//      &-submit {
-//        @include font-size($font-search-icon);
-//        color: $brand-charcoal;
-//        background: none;
-//        border: none;
-//        margin: 0;
-//        outline: none;
-//        padding: 0;
-//        width: auto;
-//
-//        &-icon:hover {
-//          color: $brand-blue;
-//        }
-//        &-icon:focus {
-//          color: $brand-blue;
-//        }
-//      }
-//    }
-//  }
-//}
-//
-//@keyframes slidein {
-//  from { width: 0 }
-//  to { width: 100% }
-//}
-//@-webkit-keyframes slidein{
-//  from { width: 0 }
-//  to { width: 100% }
-//}
-//@-moz-keyframes slidein {
-//  from { width: 0 }
-//  to { width: 100% }
-//}
-//@keyframes slideout {
-//  from { width: 100% }
-//  to { width: 0 }
-//}
-//@-webkit-keyframes slideout{
-//  from { width: 100% }
-//  to { width: 0 }
-//}
-//@-moz-keyframes slideout {
-//  from { width: 100% }
-//  to { width: 0 }
-//}
-//@keyframes fadein {
-//  from { opacity: 0 }
-//  to { opacity: 1 }
-//}
-//@-webkit-keyframes fadein {
-//  from { opacity: 0 }
-//  to { opacity: 1 }
-//}
-//@-moz-keyframes fadein {
-//  from { opacity: 0 }
-//  to { opacity: 1 }
-//}
-//
-///* DESKTOP */
-//@media #{$breakpoint-desktop}, #{$breakpoint-desktop-wide} {
-//  .menu-button {
-//    display: none;
-//  }
-//}
-///* TABLET / MOBILE */
-//@media #{$breakpoint-tablet} {
-//  #header {
-//    z-index: 50;
-//    nav {
-//      .navigation {
-//        display: block;
-//        position: fixed;
-//        font-size: 40px;
-//        text-align: left;
-//        width: 0;
-//        right: 0;
-//        top: 0;
-//        bottom: 0;
-//        padding-top: 70px;
-//        background-color: color("white");
-//        -webkit-transition: width 0.2s ease-in-out;
-//        -moz-transition: width 0.2s ease-in-out;
-//        -ms-transition: width 0.2s ease-in-out;
-//        -o-transition: width 0.2s ease-in-out;
-//        transition: width 0.2s ease-in-out;
-//
-//        li a {
-//          background: transparent;
-//          padding: 0 15px;
-//          -ms-transition: all 0.2s ease-in-out;
-//          transition: all 0.2s ease-in-out;
-//        }
-//
-//        &.on {
-//          // display: block;
-//          width: 100%;
-//          overflow-y: scroll;
-//
-//          li {
-//            width: 100%;
-//
-//            a {
-//              font-size: 20px;
-//              padding-left: 20px;
-//              border-left: solid 4px;
-//            }
-//
-//            &.active a,
-//            &:hover a {
-//              border-top: none;
-//              padding-top: 24px;
-//
-//              &.header-blue {
-//                background-color: $brand-blue;
-//                color: white;
-//              }
-//
-//              &.header-red {
-//                background-color: $brand-red;
-//                color: color("white");
-//              }
-//
-//              &.header-purple {
-//                background-color: $brand-purple;
-//                color: color("white");
-//              }
-//
-//              &.header-green {
-//                background-color: $color-la-palma;
-//                color: color("white");
-//              }
-//
-//              &.header-pink {
-//                background-color: $color-orchid;
-//                color: color("white");
-//              }
-//            }
-//          }
-//        }
-//      }
-//
-//      .search-button {
-//        margin: auto 12px auto auto;
-//        font-size: 24px;
-//        padding: 0;
-//        height: 50%;
-//        display: inline-block;
-//        z-index: 50;
-//      }
-//
-//      .menu-button {
-//        height: 50%;
-//        background: none;
-//        border: 0;
-//        font-size: 24px;
-//        color: theme-color("charcoal");
-//        display: inline-block;
-//        margin: auto 0;
-//        padding: 0;
-//        z-index: 50;
-//
-//        &:focus {
-//          outline:0;
-//        }
-//      }
-//    }
-//  }
-//  .search-overlay {
-//    z-index: 60;
-//
-//    &-exit {
-//      @include font-size($font-search-icon-mobile);
-//      top: 2%;
-//      right: 2%;
-//    }
-//    &-form {
-//      @include font-size($font-search-input-mobile);
-//      padding: 10px;
-//      width: 380px;
-//
-//      &-label {
-//        @include font-size($font-heading-3);
-//        display: block;
-//      }
-//      &-input {
-//        display: flex;
-//        justify-content: center;
-//
-//        &-input {
-//          width: 100%;
-//        }
-//        &-submit {
-//          @include font-size($font-search-icon-mobile);
-//        }
-//      }
-//    }
-//  }
-//}
