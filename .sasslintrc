@@ -35,7 +35,11 @@ rules:
       leading-underscore: 0
       filename-extension: 0
   declarations-before-nesting: 1
-  empty-line-between-blocks: 1
+  empty-line-between-blocks:
+    - 1
+    -
+      include: true
+      allow-single-line-rulesets: false
   extends-before-declarations: 1
   extends-before-mixins: 1
   final-newline: 1

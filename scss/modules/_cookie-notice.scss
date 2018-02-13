@@ -10,7 +10,7 @@
   &__message {
     @extend .col-md-6;
     @extend .offset-md-3;
-    padding-right: 20px;
+    padding-right: 50px;
   }
 
   &__link {
@@ -28,6 +28,5 @@
     transform: translate(0, -50%);
     color: color("white");
     text-decoration: none;
-
   }
 }

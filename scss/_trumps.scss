@@ -8,3 +8,13 @@
   padding-left: 0 !important;
   padding-right: 0 !important;
 }
+
+.no-overflow {
+  overflow: hidden !important;
+}
+
+// sass-lint:disable no-combinators, no-universal-selectors
+.blur-page > *:not([aria-role="dialog"]) {
+  filter: blur(10px);
+}
+// sass-lint:enable no-combinators, no-universal-selectors

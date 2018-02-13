@@ -1,0 +1,59 @@
+.search {
+  @extend .modal;
+
+  &__form {
+    @include font-size(32);
+    margin: 0 auto;
+    opacity: 0;
+    transition: opacity .3s ease .4s;
+    width: 380px;
+  }
+
+  &__input {
+    background: none;
+    border: none;
+    font-family: "Brown-Pro-Bold", Helvetica, Arial, sans-serif;
+    outline: none;
+  }
+
+  &__label {
+    @include font-size(18);
+  }
+
+  &__form-inputs {
+    padding-right: 45px;
+    position: relative;
+  }
+
+  &__submit {
+    @include font-size(24);
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  &__close {
+    @include font-size(20);
+    color: theme-color("charcoal");
+    position: absolute;
+    right: 25px;
+    text-decoration: none;
+    top: 25px;
+
+    &:hover,
+    &:focus {
+      color: theme-color("charcoal");
+    }
+  }
+}
+
+.search--show {
+  .search {
+    background: $modal-transparent;
+    left: 0;
+
+    &__form {
+      opacity: 1;
+    }
+  }
+}
