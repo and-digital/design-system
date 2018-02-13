@@ -47,13 +47,13 @@ address {
 
 .modal {
   align-items: center;
+  background: $modal-transparent-invisible;
   display: flex;
   height: 100%;
   left: -100%;
   position: absolute;
   top: 0;
+  transition: left .3s ease, background .3s ease;
   width: 100%;
   z-index: 2;
-  background: rgba(255, 255, 255, 0);
-  transition: left .3s ease, background .3s ease;
 }
