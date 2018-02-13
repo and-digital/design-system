@@ -44,3 +44,16 @@ button {
 address {
   font-style: normal;
 }
+
+.modal {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  left: -100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0);
+  transition: left .3s ease, background .3s ease;
+}
