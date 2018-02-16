@@ -2,6 +2,7 @@ h1, .heading-1,
 h2, .heading-2,
 h3, .heading-3 {
   font-family: $brand-font-family-bold;
+  font-weight: 400;
   margin-bottom: 10px;
 }
 
@@ -15,6 +16,7 @@ h1, .heading-1 {
 
 h2, .heading-2 {
   @include font-size($font-heading-2-mobile);
+  margin-top: 0;
 
   @include tablet {
     @include font-size($font-heading-2);
@@ -80,7 +82,7 @@ h3, .heading-3 {
 a {
   &.heading-1,
   &.heading-2,
-  &.heading-3, {
+  &.heading-3 {
     text-decoration: none;
     display: block;
   }

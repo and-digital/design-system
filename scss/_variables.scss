@@ -42,8 +42,6 @@ $desktop-wide: 1920px !default;
 
 $ms-only: "screen and (-ms-high-contrast: active), (-ms-high-contrast: none)";
 
-$grid-margin: 15px;
-
 // Font
 $brand-font-regular: "Brown-Pro-Regular", Helvetica, Arial, sans-serif;
 $brand-font-family-bold: "Brown-Pro-Bold", Helvetica, Arial, sans-serif;
@@ -53,15 +51,6 @@ $font-weight-bold: 700;
 $font-weight-regular: 400;
 
 // Font sizes (in pixels)
-$font-hero: 112;
-$font-hero-mobile: 30;
-$font-sidekick: 80;
-$font-butler: 42;
-$font-cascade-step: 105;
-$font-testimonial-quote: 20;
-$font-search-input: 42;
-$font-search-icon: 42;
-
 $font-heading-1: 42;
 $font-heading-2: 22;
 $font-heading-3: 18;
@@ -72,11 +61,23 @@ $font-small: 14;
 $font-heading-1-mobile: 32;
 $font-heading-2-mobile: 20;
 $font-heading-3-mobile: 18;
-
 $font-base-mobile: 14;
 $font-lead-mobile: 16;
 $font-small-mobile: 12;
 
+$icon-xl: 32;
+$icon-lrg: 28;
+$icon-med: 24;
+
+// Module font sizes
+$font-hero: 112;
+$font-hero-mobile: 30;
+$font-sidekick: 80;
+$font-butler: 42;
+$font-cascade-step: 105;
+$font-testimonial-quote: 20;
+$font-search-input: 42;
+$font-search-icon: 42;
 $font-search-input-mobile: 32;
 $font-search-icon-mobile: 24;
 $font-superhero-mobile: 40;
@@ -84,15 +85,12 @@ $external-link-icon-small: .75em;
 $font-feature-list-link-mobile: 20;
 $font-feature-list-link: 28;
 
-$icon-xl: 32;
-$icon-lrg: 28;
-$icon-med: 24;
-
 // Sections
-$row-margin: -15px;
+$row-margin: 15px;
 $section-horizontal-spacing: 48px;
-$section-horizontal-spacing-tablet: 48px;
 $section-horizontal-spacing-mobile: 32px;
+$section-vertical-spacing: 48px;
+$section-vertical-spacing-mobile: 32px;
 $section-margin-bottom: $section-horizontal-spacing;
 
 // Paragraph
@@ -120,3 +118,10 @@ $footer-heading-font-size: 14;
 $footer-social-icon: 28;
 $footer-social-icon-mobile: 24;
 $footer-margin: 28px;
+
+// Header
+$header-height: 75px;
+
+// Search
+$modal-transparent: rgba(255, 255, 255, .7);
+$modal-transparent-invisible: rgba(255, 255, 255, 0);

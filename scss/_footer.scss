@@ -1,8 +1,8 @@
 .footer {
   @include font-size($font-small);
 
-  color: color("white");
   background: theme-color("charcoal");
+  color: color("white");
   padding: 20px 48px 40px;
 
   &__row {
@@ -12,6 +12,7 @@
 
   &__logo-area {
     @extend .section__header;
+    margin-bottom: 24px;
   }
 
   &__body {
@@ -22,14 +23,14 @@
 
   &__heading {
     @include font-size($footer-heading-font-size);
-    padding-bottom: 8px;
     color: theme-color("red");
-    margin-bottom: 0;
+    padding-bottom: 8px;
   }
 
   &__section {
     @extend .col-6;
     @extend .col-md-4;
+    margin-bottom: 24px;
   }
 
   &__links-link {
@@ -69,14 +70,14 @@
 
 
   &__links-item {
-    &:before {
+    &::before {
       content: "/ ";
-      padding-right: 8px;
       display: inline-block;
+      padding-right: 8px;
     }
 
     &:first-child {
-      &:before {
+      &::before {
         content: "";
         padding: 0;
       }
