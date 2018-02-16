@@ -1,23 +1,30 @@
-import gulp from 'gulp';
-import sass from 'gulp-sass';
-import sourcemaps from 'gulp-sourcemaps';
+import 'babel-polyfill';
+import babelify from 'babelify';
+import browserify from 'browserify';
 import browserSync from 'browser-sync';
+import buffer from 'vinyl-buffer';
 import cleanCSS from 'gulp-clean-css';
-import rename from 'gulp-rename';
-import sassLint from 'gulp-sass-lint';
+import gulp from 'gulp';
+import plugins from 'gulp-load-plugins';
 import postCss from 'gulp-postcss';
+import rename from 'gulp-rename';
+import sass from 'gulp-sass';
+import sassLint from 'gulp-sass-lint';
+import source from 'vinyl-source-stream';
+import sourcemaps from 'gulp-sourcemaps';
 
 const reload = browserSync.reload;
 
 const dir = {
   sass: 'scss',
+  scripts: 'js',
   dist: 'dist',
   base: './'
 };
 
 const autoprefixerOptions = {
   browsers: ['last 2 versions', 'ie > 7']
-}
+};
 
 const options = {
   server: {
@@ -37,27 +44,14 @@ const options = {
   ]
 };
 
-
-gulp.task('default', ['serve', 'lint:dev']);
-gulp.task('build', ['minify']);
-
-gulp.task('serve', ['sass'], () => {
+gulp.task('serve', ['lint:dev'], () => {
   browserSync.init({
     server: options.server
   });
 });
 
-gulp.task('sass:lint', () => {
-  return gulp.src([
-      `${dir.sass}/*.scss`
-    ])
-    .pipe(sassLint())
-    .pipe(sassLint.format())
-    .pipe(sassLint.failOnError());
-});
-
 gulp.task('sass', () => {
-  return gulp.src([
+  gulp.src([
       `${dir.sass}/*.scss`
     ])
     .pipe(sourcemaps.init())
@@ -71,11 +65,39 @@ gulp.task('sass', () => {
     }))
     .pipe(postCss(options.postCssPlugins))
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest(dir.dist))
+    .pipe(gulp.dest(dir.dist));
+});
+
+gulp.task('scripts', () => {
+  return browserify({
+      debug: true,
+      entries: ['node_modules/babel-polyfill', `${dir.scripts}/main.js`],
+      transform: [
+        babelify.configure({
+          presets: ['es2015']
+        })
+      ]
+    })
+    .bundle()
+    .on('error', (err) => console.log(err))
+    .pipe(source('bundle.js'))
+    .pipe(buffer())
+    .pipe(plugins().sourcemaps.init({'loadMaps': true}))
+    .pipe(plugins().sourcemaps.write('.'))
+    .pipe(gulp.dest(`${dir.dist}/`))
     .pipe(reload({ stream: true }));
 });
 
-gulp.task('minify', ['sass'], () => {
+gulp.task('sass:lint', () => {
+  gulp.src([
+      `${dir.sass}/*.scss`
+    ])
+    .pipe(sassLint())
+    .pipe(sassLint.format())
+    .pipe(sassLint.failOnError());
+});
+
+gulp.task('sass:minify', ['sass'], () => {
   return gulp.src([
       `${dir.dist}/*.css`,
       `!${dir.dist}/*.min.css`
@@ -85,14 +107,22 @@ gulp.task('minify', ['sass'], () => {
     .pipe(gulp.dest(dir.dist));
 });
 
+gulp.task('default', ['serve', 'lint:dev']);
+gulp.task('build', ['sass:minify', 'scripts']);
+
 gulp.task('sass:watch', ['sass'], () => {
   gulp.watch(`${dir.sass}/**/*.scss`, ['sass']);
+});
+
+gulp.task('scripts:watch', ['scripts'], () => {
+  gulp.watch(`${dir.scripts}/**/*.js`, ['scripts']);
 });
 
 gulp.task('lint:watch', ['sass:lint'], () => {
   gulp.watch(`${dir.sass}/**/*.scss`, ['sass:lint']);
 });
 
-gulp.task('lint:dev', ['sass:lint', 'sass'], () => {
+gulp.task('lint:dev', ['sass:lint', 'sass', 'scripts'], () => {
   gulp.watch(`${dir.sass}/**/*.scss`, ['sass:lint', 'sass']);
+  gulp.watch(`${dir.scripts}/**/*.js`, ['scripts']);
 });
