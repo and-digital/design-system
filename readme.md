@@ -3,7 +3,7 @@
 The AND Digital Design System is a CSS library that should be used for all AND Digital products to maintain consistency and branding. It should 
 speed up intial set up and help you remain on brand even if it changes.
 
-For more information on how to use BrAND, visit the [Wiki](https://github.com/and-digital/design-system/wiki/)
+For more information on how to use The AND Digital Design System, visit the [Wiki](https://github.com/and-digital/design-system/wiki/)
 
 ## Quick start
 Several quick start options are available:
